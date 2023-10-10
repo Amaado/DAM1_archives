@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Tarea 2.7</title>
+		<a id="inicio"></a>
+	</head>
+	<body>
+		<form action="amado_cibreiro_andres_LM27b.html" method="post" enctype="multipart/form-data">
+		
+			<fieldset>
+				<legend>Datos de login</legend>
+				<p><b>Nombre de usuario:*</b></p>
+				<p><input type="text" placeholder="Introduce tu nombre" name="nombre"></p>
+				<p><b>Contraseña:*</b></p>
+				<p><input type="password" placeholder="Introduce tu contraseña" name="contraseña"></p>
+				<p><input type="password" placeholder="Repite tu contraseña" name="contraseña2"></p>
+				<p><b>Correo electrónico:*</b></p>
+				<p><input type="email" placeholder="Dirección de e-mail" name="email"></p>
+				<p><input type="email" placeholder="Repite tu e-mail" name="email2"></p>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Otra información</legend>
+				<p><b>Fecha:</b></p>
+				<p><input type="date" value=2023-09-11></p>
+				<p><b>Número de teléfono:</b></p>
+				<p><input type="tel" placeholder="Introduce tu teléfono" name="telefono"></p>
+				<p><input type="checkbox" name="noticias">Quiero recibir periódicamente correos con las últimas noticias</p>
+				<p><b>Tratamiento:</b></p>
+				<p><input type="radio" name="trat" value="1" /> Neutro</p>
+				<p><input type="radio" name="trat" value="2" /> Femenino</p>
+				<p><input type="radio" name="trat" value="3" /> Masculino</p>
+				<p><b>Selecciona tu provincia</b></p>
+				<p><label for="prov"></label>
+				  <select name="provincia" id="prov">
+					<option value="" selected="selected">- selecciona -</option>
+					<optgroup label="Cataluña">
+						<option value="Barcelona">Barcelona</option>
+						<option value="Gerona">Gerona</option>
+						<option value="Lérida">Lérida</option>
+						<option value="Tarragona">Tarragona</option>
+					</optgroup>
+					<optgroup label="Esukadi">
+						<option value="Álava">Álava</option>
+						<option value="Guipúzcoa">Guipúzcoa</option>
+						<option value="Vizcaya">Vizcaya</option>
+					</optgroup>
+					<optgroup label="Galicia">
+						<option value="A Coruña">A Coruña</option>
+						<option value="Lugo">Lugo</option>
+						<option value="Ourense">Ourense</option>
+						<option value="Pontevedra">Pontevedra</option>
+					</optgroup>
+				  </select></p>
+				 <p><b>Escribe una pequeña presentación:</b></p>
+				 <textarea name="presentacion" rows="5" cols="40"></textarea>
+			</fieldset>
+			
+			<fieldset>
+			<legend>Personalización</legend>
+				<p><b>Sube una imagen para tu cuenta:</b></p>
+				<p><input type="file" name="foto"></p>
+				<p><b>Selecciona un color personalizado para tu cuenta de usuario:</b></p>
+				<p><input type="color" name="color"></p>
+				<p><b>Indica el grado de familiaridad con los siguientes lenguajes:</b></p>
+				<table>
+					<tr>
+						<td><b>HTML:</b></td>
+						<td><input type="range"></td>
+					</tr>
+					<tr>
+						<td><b>CSS:</b></td>
+						<td><input type="range"></td>
+					</tr>
+					<tr>
+						<td><b>Java Script:</b></td>
+						<td><input type="range"></td>
+					</tr>
+					<tr>
+						<td><b>PHP:</b></td>
+						<td><input type="range"></td>
+					</tr>
+				</table>
+			</fieldset>
+				 <p><input type="reset" value="Borrar datos del formulario"/></p>
+				 <p><input type="submit" value="Enviar datos"/></p>
+				 <p><a id="fondo" href=#inicio>⬆️Ascensor⬆️</a></p>
+		</form>
+	</body>
