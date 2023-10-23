@@ -1,0 +1,16 @@
+#titulo{ color: #088F86; }
+p strong{color:red}
+.destacado{color:#F9B34A}
+p a{color:red}
+p a em {color:blue}
+.especial{color:#B17DCB}
+table{color:black; border:1px; border-style:solid}
+table th,table td{border:1px solid black;}
+table caption{color:blue}
+table .especial{color:#F9B34A}
+th{color:red}
+td{color:#61E8A8}
+td strong{color:#F9B34A}
+div{color:#95986C}
+#especial{color:#B17DCB}
+div p a {color:#61E8A8}
