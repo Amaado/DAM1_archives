@@ -1,4 +1,4 @@
-public class main {
+public class PROGT3_Ejerc1 {
     public static void main(String[] args){
         final short valormax=5000;
         boolean carne=true;
