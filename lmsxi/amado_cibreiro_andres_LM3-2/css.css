@@ -1,0 +1,9 @@
+nav {border-width: 1px; border-color: black; border-style: solid; padding: 20px;}
+a{text-decoration: none; border: 1px solid black; margin-right: 10px}
+a {background-color: red;}
+a ~ a {background-color: cyan;}
+a ~ a ~ a {background-color: lime;}
+a ~ a ~ a ~ a{background-color: yellow;}
+a:hover {background-color: blue; color: pink;}
+a:active {background-color: pink; color: blue;}
+a:visited {color: grey;}

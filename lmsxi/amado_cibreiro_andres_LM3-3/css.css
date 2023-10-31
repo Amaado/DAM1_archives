@@ -1,0 +1,8 @@
+body {font-family:arial; font-width:normal;}
+header{position: sticky; top:0; margin-left: 5%;margin-right: 5%;margin-top:20px;padding: 15px;border-width: 2px; border-color: black;border-style: solid; background-color: gray;color: white;text-align: center; width:auto;}
+th {border-width: 2px; border-color: black; border-style: solid; background-color: gray;color: white;text-align: center;padding: 7px;}
+table {margin-left: 5%;margin-right: 5%;margin-top:20px;width: 90%;border-collapse:collapse;}
+td{border-width: 2px; border-color: black; border-style: solid;padding: 9px}
+tr:nth-child(even) {}
+tr:nth-child(odd) {background-color:grey; color:white;}
+tr:hover {color:blue; background-color:pink;}

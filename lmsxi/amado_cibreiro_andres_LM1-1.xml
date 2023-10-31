@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UFT-8" standalone="no"?>
+<albums>
+	<album>
+		<titulo> Homework </titulo>
+		<ventas> 2300000 </ventas>
+		<date> 20-01-1997 </date>
+	</album>
+	<album>
+		<titulo> Discovery </titulo>
+		<ventas> 3000000 </ventas>
+		<date> 13-03-2001 </date>
+	</album>
+	<album>
+		<titulo> Human After All </titulo>
+		<ventas> 1200000 </ventas>
+		<date> 14-03-2005 </date>
+	</album>
+	<album>
+		<titulo> Random Access Memories </titulo>
+		<ventas> 5000000 </ventas>
+		<date> 17-05-2013 </date>
+	</album>
+</albums>
