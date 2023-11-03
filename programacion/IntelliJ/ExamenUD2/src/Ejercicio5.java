@@ -8,7 +8,8 @@ public class Ejercicio5 {
         System.out.println("Introduce cinco dígitos juntos: ");
         String digitos = sc.nextLine();
 
-        //Dividimos la cadena por posiciones y las separamos con espacios
-        System.out.println(digitos.charAt(0)+" "+digitos.charAt(1)+" "+digitos.charAt(2)+" "+digitos.charAt(3)+" "+digitos.charAt(4));
+        for (int i = 0; i<digitos.length(); i++) { //Variable; condición; paso
+            System.out.print(digitos.charAt(i)+" ");
+        }
     }
 }
