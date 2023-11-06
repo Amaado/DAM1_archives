@@ -1,11 +1,63 @@
-body {font-family: Liberation-serif;  width:58%; font-size:20px}
-.navbar {background:linear-gradient(to right, firebrick, deeppink, darkturquoise, yellow); display:flex; justify-content:space-around; align-items:center; border:1px solid black}
-.navbar a {text-decoration:none; color:white; transition:background-color 0.3s;padding:16px;}
-.navbar a:hover {background-color:red;}
-.dropdown-content a:hover {background-color:blue;}
-.dropdown {position:relative; display:inline-block;}
-.dropdown-content {display:none; position:absolute; min-width:150px; z-index: 1;}
+body {
+    font-family: Liberation-serif;
+    width: 58%;
+    font-size: 20px
+}
+
+.navbar {
+    background: linear-gradient(to right, firebrick, deeppink, darkturquoise, yellow);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid blac
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+    padding: 16px;
+}
+
+.navbar a:hover {
+    background-color: red;
+}
+
+.dropdown-content a:hover {
+    background-color: blue;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 150px;
+    z-index: 1;
+}
+
 .dropdown:hover
-.dropdown-content {display:block; background-color:ivory; border:1px solid black;top:39px;}
-.dropdown-content a {color:black; width:40%; height:20px; display:block; min-width:150px; text-align:left; padding:10px; padding-left:20px;}
-.tittle {font-size:32px}
+.dropdown-content {
+    display: block;
+    background-color: ivory;
+    border: 1px solid black;
+    top: 39px;
+}
+
+.dropdown-content a {
+    color: black;
+    width: 40%;
+    height: 20px;
+    display: block;
+    min-width: 150px;
+    text-align: left;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.tittle {
+    font-size: 32px
+}
