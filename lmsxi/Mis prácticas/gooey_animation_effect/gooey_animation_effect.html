@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <section>
+        <div class="gooey">
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Lista de colores por defecto de CSS
+            var colors = ["#000, #fff"];
+            
+            // Obtén todos los elementos <span>
+            var spans = $(".gooey span");
+
+            // Asigna colores aleatorios a cada <span>
+            spans.each(function() {
+                var randomColor = colors[Math.floor(Math.random() * colors.length)];
+                $(this).css("background-color", randomColor);
+            });
+
+            // Hacer los <span> arrastrables
+            spans.draggable();
+        });
+    </script>
+</body>
+</html>
