@@ -1,4 +1,4 @@
-class VehiculoDemo {
+/*class VehiculoDemo {
     public static void main(String[] args) {
 // Creamos dos nuevas instancias de la clase Vehiculo
         Vehiculo miCoche = new Vehiculo();
@@ -20,3 +20,4 @@ class VehiculoDemo {
         miCoche.autonomia();
     }
 }
+*/
