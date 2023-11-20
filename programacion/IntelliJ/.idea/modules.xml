@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Ejercicios/Ejercicios.iml" filepath="$PROJECT_DIR$/Ejercicios/Ejercicios.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ExamenUD2/ExamenUD2.iml" filepath="$PROJECT_DIR$/ExamenUD2/ExamenUD2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/IntelliJ.iml" filepath="$PROJECT_DIR$/.idea/IntelliJ.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PORGT4/PORGT4.iml" filepath="$PROJECT_DIR$/PORGT4/PORGT4.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Ejercicios/PROG02_Ejerc1/PROG02_Ejerc1.iml" filepath="$PROJECT_DIR$/Ejercicios/PROG02_Ejerc1/PROG02_Ejerc1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PROGT3/PROGT3.iml" filepath="$PROJECT_DIR$/PROGT3/PROGT3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PROG02_T1-T2/PROG02_Ejerc1/PROG02_Ejerc1.iml" filepath="$PROJECT_DIR$/PROG02_T1-T2/PROG02_Ejerc1/PROG02_Ejerc1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PROG02_Examen/PROG02_Examen.iml" filepath="$PROJECT_DIR$/PROG02_Examen/PROG02_Examen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PROG02_T1-T2/PROG02_T1-T2.iml" filepath="$PROJECT_DIR$/PROG02_T1-T2/PROG02_T1-T2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PROG02_T3/PROG02_T3.iml" filepath="$PROJECT_DIR$/PROG02_T3/PROG02_T3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PROG02_T4/PROG02_T4.iml" filepath="$PROJECT_DIR$/PROG02_T4/PROG02_T4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PROG02_T5/PROG02_T5.iml" filepath="$PROJECT_DIR$/PROG02_T5/PROG02_T5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PROG02_T5_Soluciones/PROG02_T5_Soluciones.iml" filepath="$PROJECT_DIR$/PROG02_T5_Soluciones/PROG02_T5_Soluciones.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PROG03_T1/PROG03_T1.iml" filepath="$PROJECT_DIR$/PROG03_T1/PROG03_T1.iml" />
       <module fileurl="file://$PROJECT_DIR$/PROGT4/PROGT4.iml" filepath="$PROJECT_DIR$/PROGT4/PROGT4.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PROGT5/PROGT5.iml" filepath="$PROJECT_DIR$/PROGT5/PROGT5.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PROGT5 Soluciones/PROGT5 Soluciones.iml" filepath="$PROJECT_DIR$/PROGT5 Soluciones/PROGT5 Soluciones.iml" />
-      <module fileurl="file://$PROJECT_DIR$/t2PROGT1/t2PROGT1.iml" filepath="$PROJECT_DIR$/t2PROGT1/t2PROGT1.iml" />
     </modules>
   </component>
 </project>
