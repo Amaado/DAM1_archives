@@ -1,106 +1,58 @@
-:root{
-    --naranja:#FF9933; --amarillo:#FFFF99; --morado:#FF33FF; --cian:#00E6E6; --verde:#66FF99; --rojo:#FF6666;
+:root {
+    --naranja: #FF9933;
+    --amarillo: #FFFF99;
+    --morado: #FF33FF;
+    --cian: #00E6E6;
+    --verde: #66FF99;
+    --rojo: #FF6666;
 }
 
 * {
     padding: 1px;
 }
 
-body{
+body {
     margin-left: 5%;
     margin-right: 5%;
 }
 
-.bloque_superior{
-    margin:15px;
-    display:grid;
-    background-color: var(--cian);
-    border: 2px solid black;
-    height: 100px;
-}
+/* En este css se encuentra el bloque de la barra de navegación, el resto en el html. */
 
-.bloque_barra{
-    margin:15px;
-    display:grid;
+.bloque_barra {
+    margin: 15px;
+    display: grid;
     background-color: var(--rojo);
     border: 2px solid black;
     height: 50px;
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
 .bloque_barra section {
     width: 100%;
-    display: frid;
-    justify-content: center;
+    display: flex;
     align-items: center;
 }
 
-.bloque_desplegable{
-
-}
-
-.bloque_medio{
-    display:grid;
-}
-
-
-.columna1{
-    margin:15px;
-    background-color: var(--naranja);
-    border: 2px solid black;
-    width: 2500px;
-    min-height: 20px;
-    max-height: 450px;
-    overflow: auto;
-}
-
-.columna2{
-    margin:15px;
-    background-color: var(--verde);
-    border: 2px solid black;
-    min-height: 20px;
-    max-height: 450px;
-    overflow: auto;
-}
-
-.columna3{
-    margin:15px;
-    background-color: var(--amarillo);
-    border: 2px solid black;
-    width: 2500px;
-    min-height: 20px;
-    max-height: 450px;
-    overflow: auto;
-}
-
-.bloque_inferior{
-    margin:15px;
-    display:grid;
-    background-color: var(--morado);
-    border: 2px solid black;
-    height: 50px;
-}
-
-
-.bloque_desplegable{
-    display:inline-block;
-	text-align:center;
-
-}
-
-.categorias{
+.categorias {
+    flex-grow: 1;
     position: relative;
     display: inline-block;
-    text-align:center;
+    text-align: center;
     align-items: center;
     height: 100%;
-    width: 24.6%;
+    margin-right: 10px;
 }
 
-.categorias:hover{
+.categorias:last-child {
+    margin-right: 0;
+}
+
+.categorias:hover {
     background-color: red;
 }
 
-.categorias a{
+.categorias a {
     height: 100%;
     text-decoration: none;
     color: white;
@@ -109,27 +61,25 @@ body{
     align-items: center;
 }
 
-.desplegables{
+.desplegables {
     background-color: ivory;
     display: none;
     position: absolute;
     width: 100%;
+    border: 2px solid black;
+    margin-left:-1px;
 }
 
-.desplegables a:hover{
+.desplegables a:hover {
     background-color: red;
 }
 
-.desplegables a{
+.desplegables a {
     text-decoration: none;
     color: black;
     padding: 10px;
 }
 
-.categorias:hover .desplegables{
+.categorias:hover .desplegables {
     display: block;
-}
-
-.categorias .desplegables{
-    
 }

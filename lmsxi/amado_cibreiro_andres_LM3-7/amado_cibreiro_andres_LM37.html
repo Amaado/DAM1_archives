@@ -11,10 +11,17 @@
 
 			.contenedorRejilla {
 				display:grid;
+				grid-template-columns: 20% auto 20%;
 			}
 
 			.contenedorRejilla > header {
 				min-height:150px;
+				margin:15px;
+				display:grid;
+				background-color: var(--cian);
+				border: 2px solid black;
+				height: 100px;
+				grid-column-start: 1; grid-column-end: 4;
 			}
 
 			.contenedorRejilla > nav {
@@ -24,21 +31,48 @@
 			.contenedorRejilla > div {
 				min-height:500px;
 			}
-
+			
 			.contenedorRejilla > .columna1 {
-
+				margin:15px;
+				display:grid;
+				background-color: var(--naranja);
+				border: 2px solid black;
+				min-height: 20px;
+				max-height: 450px;
+				overflow: auto;
+				height: 500px;
 			}
 
 			.contenedorRejilla > .columna2 {
-
+				margin:15px;
+				display:grid;
+				background-color: var(--verde);
+				border: 2px solid black;
+				min-height: 20px;
+				max-height: 450px;
+				overflow: auto;
+				height: 500px;
 			}
 
 			.contenedorRejilla > .columna3 {
-
+				margin:15px;
+				display:grid;
+				background-color: var(--amarillo);
+				border: 2px solid black;
+				min-height: 20px;
+				max-height: 450px;
+				overflow: auto;
+				height: 500px;
 			}
 
 			.contenedorRejilla > footer {
 				min-height:60px;
+				margin:15px;
+				display:grid;
+				background-color: var(--morado);
+				border: 2px solid black;
+				height: 50px;
+				grid-column-start: 1; grid-column-end: 4;
 			}
 
 		</style>
@@ -49,7 +83,7 @@
 	</head>
 	<body>
 		<div class="contenedorRejilla">
-			<header class="bloque_superior"></header>
+			<header></header>
 			<nav class="bloque_barra">
                 <section>
                     <div class="categorias">
@@ -81,12 +115,73 @@
                     </div>
                 </section>
             </nav>
-            <section class="bloque_medio">
-                <div class="columna1"><p></p></div>
-			    <div class="columna2"><p></p></div>
-			    <div class="columna3"><p></p></div>
-            </section>
-			<footer></footer>
+			<div class="columna1"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
+				interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+				ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris
+				ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
+				hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero
+				sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis.
+				Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo
+				purus. Mauris quis diam velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+				imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis
+				dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+				augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna
+				a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
+				dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget
+				tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh
+				tempor porta. Cras ac leo purus. Mauris quis diam velit.Lorem ipsum dolor sit amet, consectetur
+				adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+				scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae
+				massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+				lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+				dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
+				ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non
+				fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p></div>
+			<div class="columna2"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
+				interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+				ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris
+				ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
+				hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero
+				sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis.
+				Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo
+				purus. Mauris quis diam velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+				imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis
+				dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+				augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna
+				a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
+				dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget
+				tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh
+				tempor porta. Cras ac leo purus. Mauris quis diam velit.Lorem ipsum dolor sit amet, consectetur
+				adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+				scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae
+				massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+				lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+				dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
+				ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non
+				fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p></div>
+			<div class="columna3"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
+				interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+				ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris
+				ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
+				hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero
+				sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis.
+				Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo
+				purus. Mauris quis diam velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+				imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis
+				dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+				augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna
+				a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
+				dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget
+				tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh
+				tempor porta. Cras ac leo purus. Mauris quis diam velit.Lorem ipsum dolor sit amet, consectetur
+				adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+				scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae
+				massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+				lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis
+				dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed
+				ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non
+				fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p></div>
+			<footer><a></a></footer>
 		</div>
 	</body>
 </html>
