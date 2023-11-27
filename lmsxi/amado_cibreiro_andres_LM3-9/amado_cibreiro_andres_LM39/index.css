@@ -1,0 +1,135 @@
+:root{
+    --naranja:#FF9933; --amarillo:#FFFF99; --morado:#FF33FF; --cian:#00E6E6; --verde:#66FF99; --rojo:#FF6666;
+}
+
+* {
+    padding: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.bloque_superior_contenedor{
+    margin:15px;
+    display:flex;
+    background-color: var(--verde);
+    border: 2px solid black;
+    height: 200px;
+}
+
+.bloque_superior{
+    margin:15px;
+    display:flex;
+    position:initial ;
+    background-color: var(--rojo);
+    border: 2px solid black;
+    height: 50px;
+}
+
+.bloque_superior section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bloque_medio{
+    display:flex;
+    flex-direction: row;
+}
+
+
+.bloque_izquierda{
+    margin:15px;
+    background-color: var(--naranja);
+    border: 2px solid black;
+    width: 2500px;
+    min-height: 20px;
+    max-height: 450px;
+    overflow: auto;
+}
+
+.bloque_centro{
+    margin:15px;
+    background-color: var(--verde);
+    border: 2px solid black;
+    min-height: 20px;
+    max-height: 450px;
+    overflow: auto;
+}
+
+.bloque_derecha{
+    margin:15px;
+    background-color: var(--amarillo);
+    border: 2px solid black;
+    width: 2500px;
+    min-height: 20px;
+    max-height: 450px;
+    overflow: auto;
+}
+
+.bloque_inferior{
+    margin:15px;
+    display:flex;
+    background-color: var(--morado);
+    border: 2px solid black;
+    height: 50px;
+}
+
+
+.bloque_desplegable{
+    display:inline-block;
+	text-align:center;
+
+}
+
+.categorias{
+    position: relative;
+    display: inline-block;
+    text-align:center;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+}
+
+.categorias:hover{
+    background-color: red;
+}
+
+.categorias a{
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desplegables{
+    background-color: ivory;
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+.desplegables a:hover{
+    background-color: red;
+}
+
+.desplegables a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.categorias:hover .desplegables{
+    display: block;
+}
+
+.bloque_superior img{
+    width: 100px;
+}
