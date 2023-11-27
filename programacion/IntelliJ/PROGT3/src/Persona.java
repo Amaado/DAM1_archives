@@ -1,3 +1,5 @@
+package src;
+
 // CLASE
 public class Persona {
     // ATRIBUTOS / PROPIEDADES
@@ -15,7 +17,7 @@ public class Persona {
     }
 
     public Persona(String nombre, int edad, float altura) {
-        setNombre(nombre);
+        this.nombre = nombre;
         this.edad = edad;
         this.altura = altura;
     }
@@ -36,11 +38,8 @@ public class Persona {
     // SETTERS
     // public... void <nombre del método>(<parametros para asignar>) {}
     public void setNombre(String nombre) {
-        if (nombre.length() > 10) {
-            System.out.println("ERROR");
-        } else {
             this.nombre = nombre;
-        }
+
     }
 
     public void setEdad(int edad) {

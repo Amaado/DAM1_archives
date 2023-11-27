@@ -1,3 +1,5 @@
+package src;
+
 public class PROGT2_Ejerc2 {
     public static void main(String[] args) {
 

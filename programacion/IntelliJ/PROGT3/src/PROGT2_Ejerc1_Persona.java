@@ -1,3 +1,5 @@
+package src;
+
 public class PROGT2_Ejerc1_Persona {
     String nombre;
     int edad;
