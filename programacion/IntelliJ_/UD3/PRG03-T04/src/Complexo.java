@@ -27,10 +27,10 @@ public class Complexo {
 
     @Override
     public String toString() {
-        return real+imax+"i";
+        return this.real + " + " + this.imax + "i";
     }
-    public void Sumar(Complexo b){
-        this.real=this.real+b.real;
-        this.imax=this.imax+b.imax;
+    public void sumar(Complexo b) {
+        this.real += b.real;
+        this.imax += b.imax;
     }
 }
