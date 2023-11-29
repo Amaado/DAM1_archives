@@ -1,0 +1,195 @@
+/*Ejercicio 31*/
+SELECT ename, (comm *100.0/ sal) AS porcentaje_comision FROM emp ORDER BY ename;
+
+
+
+/*Ejercicio 32*/
+SELECT ename FROM emp WHERE deptno = 10 AND ename NOT LIKE '%LA%';
+
+
+
+/*Ejercicio 33*/
+SELECT * FROM emp WHERE mgr IS NULL;
+
+
+
+/*Ejercicio 34*/
+SELECT dname FROM dept WHERE dname NOT IN ('SALES', 'RESEARCH') ORDER BY loc;
+
+
+
+/*Ejercicio 35*/
+SELECT ename, deptno FROM emp WHERE job LIKE ('CLERK') AND deptno != 10 AND sal>800 ORDER BY sal
+
+
+
+/*Ejercicio 36*/
+SELECT ename, sal*1.0 / COALESCE(comm, 1) AS cociente FROM emp WHERE comm IS NOT NULL AND comm!=0 ORDER BY ename;
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+
+/*Ejercicio */
+
+
+
+

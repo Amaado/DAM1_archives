@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../IntelliJ_/UD2/UD2.iml" filepath="$PROJECT_DIR$/../IntelliJ_/UD2/UD2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Calculadora.iml" filepath="$PROJECT_DIR$/Calculadora.iml" />
     </modules>
   </component>
 </project>

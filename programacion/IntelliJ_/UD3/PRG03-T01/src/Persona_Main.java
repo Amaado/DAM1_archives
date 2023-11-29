@@ -1,5 +1,3 @@
-package src;
-
 public class Persona_Main {
     public static void main(String[] args) {
         Persona steven = new Persona();
@@ -8,3 +6,5 @@ public class Persona_Main {
         System.out.println("Altura: " + steven.getAltura());
     }
 }
+
+//Persona_main
