@@ -1,9 +1,4 @@
-:root{
-    --naranja:#FF9933; --amarillo:#FFFF99; --morado:#FF33FF; --cian:#00E6E6; --verde:#66FF99; --rojo:#FF6666;
-}
-
 * {
-    padding: 1px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -13,73 +8,45 @@ body{
 }
 
 .bloque_superior_contenedor{
-    margin:15px;
+    margin:auto;
     display:flex;
-    background-color: var(--verde);
-    border: 2px solid black;
-    height: 200px;
+    background-image: url("Material adicional/img/cabecera.png");
+    border-radius: 30px;
+    border-bottom-right-radius: 20px;
+    height: 172px;
+    justify-content: space-between;
 }
 
 .bloque_superior{
-    margin:15px;
     display:flex;
-    position:initial ;
-    background-color: var(--rojo);
-    border: 2px solid black;
+    align-items: right;
+    margin-top:122px;
+    background-color: #2f3330af;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     height: 50px;
+    width: 82%;
 }
 
 .bloque_superior section {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: right;
 }
-
 
 .bloque_medio{
     display:flex;
-    flex-direction: row;
-}
-
-
-.bloque_izquierda{
-    margin:15px;
-    background-color: var(--naranja);
+    flex-direction: column;
+    margin:auto;
+    margin-top:15px;
+    background-color: rgba(255, 255, 255, 0.75);
     border: 2px solid black;
-    width: 2500px;
-    min-height: 20px;
-    max-height: 450px;
+    border-radius: 30px;
     overflow: auto;
+    width: 100%;
+    height: 500px;
 }
-
-.bloque_centro{
-    margin:15px;
-    background-color: var(--verde);
-    border: 2px solid black;
-    min-height: 20px;
-    max-height: 450px;
-    overflow: auto;
-}
-
-.bloque_derecha{
-    margin:15px;
-    background-color: var(--amarillo);
-    border: 2px solid black;
-    width: 2500px;
-    min-height: 20px;
-    max-height: 450px;
-    overflow: auto;
-}
-
-.bloque_inferior{
-    margin:15px;
-    display:flex;
-    background-color: var(--morado);
-    border: 2px solid black;
-    height: 50px;
-}
-
 
 .bloque_desplegable{
     display:inline-block;
@@ -130,6 +97,26 @@ body{
     display: block;
 }
 
-.bloque_superior img{
-    width: 100px;
+.bloque_superior_contenedor img{
+    margin: 15px;
+    height: 80%;
+}
+
+footer{
+    display:flex;
+    margin:auto;
+    margin-top:15px;
+    background-color: #2F3330;
+    border-radius: 20px;
+    width: 100%;
+    height: 50px;
+}
+
+.bloque_footer section {
+    display: flex;
+    margin:auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 50px;
 }
