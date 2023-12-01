@@ -1,0 +1,152 @@
+/*Ejercicio 31*/
+SELECT ename, (comm *100.0/ sal) AS porcentaje_comision FROM emp ORDER BY ename;
+
+
+
+/*Ejercicio 32*/
+SELECT ename FROM emp WHERE deptno = 10 AND ename NOT LIKE '%LA%';
+
+
+
+/*Ejercicio 33*/
+SELECT * FROM emp WHERE mgr IS NULL;
+
+
+
+/*Ejercicio 34*/
+SELECT dname FROM dept WHERE dname NOT IN ('SALES', 'RESEARCH') ORDER BY loc;
+
+
+
+/*Ejercicio 35*/
+SELECT ename, deptno FROM emp WHERE job LIKE ('CLERK') AND deptno != 10 AND sal>800 ORDER BY sal
+
+
+
+/*Ejercicio 36*/
+SELECT ename, sal*1.0 / COALESCE(comm, 1) AS cociente FROM emp WHERE comm IS NOT NULL AND comm!=0 ORDER BY ename;
+
+
+
+/*Ejercicio 37*/
+SELECT * FROM emp WHERE LENGTH (ename)= 5;
+
+
+
+/*Ejercicio 38*/
+SELECT * FROM emp WHERE LENGTH (ename)>=5;
+
+
+
+/*Ejercicio 39*/
+SELECT * FROM emp WHERE ename LIKE 'A%' AND sal > 1000 OR comm IS NOT NULL AND deptno = 30;
+
+
+
+/*Ejercicio 40*/
+SELECT ename, sal, sal + COALESCE(comm, 0) AS sueldo_total FROM emp ORDER BY sal, sueldo_total;
+
+
+
+/*Ejercicio 41*/
+SELECT ename, comm, sal FROM emp WHERE sal BETWEEN comm/2 AND comm;
+
+
+
+
+/*Ejercicio 42*/
+SELECT ename, comm, sal FROM emp WHERE NOT (sal BETWEEN comm/2 AND comm);
+
+
+
+/*Ejercicio 43*/
+SELECT ename, job FROM emp WHERE ename LIKE 'A%' AND job LIKE '%MAN%';
+
+
+
+/*Ejercicio 44*/
+SELECT ename, job FROM emp WHERE ename LIKE 'A%' INTERSECT SELECT ename,job FROM emp WHERE job LIKE '%MAN%';
+
+
+
+
+/*Ejercicio 45*/
+SELECT ename FROM emp WHERE LENGTH(ename) <= 5;
+
+
+
+/*Ejercicio 46*/
+SELECT COUNT(DISTINCT job) AS empleos_diferentes, COUNT(ename) AS total_empleados, COUNT(DISTINCT sal) AS salarios_diferentes, SUM(sal) AS suma_salarios FROM emp WHERE deptno = 30;
+
+
+
+/*Ejercicio 47*/
+SELECT ename, hiredate FROM emp WHERE job IS NOT '%SALEMAN%'
+
+
+
+
+/*Ejercicio 48*/
+
+
+
+
+/*Ejercicio 49*/
+
+
+
+
+/*Ejercicio 50*/
+
+
+
+
+/*Ejercicio 51*/
+
+
+
+
+/*Ejercicio 52*/
+
+
+
+
+/*Ejercicio 53*/
+
+
+
+
+/*Ejercicio 54*/
+
+
+
+
+/*Ejercicio 55*/
+
+
+
+
+/*Ejercicio 56*/
+
+
+
+
+/*Ejercicio 57*/
+
+
+
+
+/*Ejercicio 58*/
+
+
+
+
+/*Ejercicio 59*/
+
+
+
+
+/*Ejercicio 60*/
+
+
+
