@@ -28,168 +28,125 @@ SELECT ename, sal*1.0 / COALESCE(comm, 1) AS cociente FROM emp WHERE comm IS NOT
 
 
 
-/*Ejercicio */
+/*Ejercicio 37*/
+SELECT * FROM emp WHERE LENGTH (ename)= 5;
 
 
 
+/*Ejercicio 38*/
+SELECT * FROM emp WHERE LENGTH (ename)>=5;
 
-/*Ejercicio */
 
 
+/*Ejercicio 39*/
+SELECT * FROM emp WHERE ename LIKE 'A%' AND sal > 1000 OR comm IS NOT NULL AND deptno = 30;
 
 
-/*Ejercicio */
 
+/*Ejercicio 40*/
+SELECT ename, sal, sal + COALESCE(comm, 0) AS sueldo_total FROM emp ORDER BY sal, sueldo_total;
 
 
 
-/*Ejercicio */
+/*Ejercicio 41*/
+SELECT ename, comm, sal FROM emp WHERE sal BETWEEN comm/2 AND comm;
 
 
 
 
-/*Ejercicio */
+/*Ejercicio 42*/
+SELECT ename, comm, sal FROM emp WHERE NOT (sal BETWEEN comm/2 AND comm);
 
 
 
+/*Ejercicio 43*/
+SELECT ename, job FROM emp WHERE ename LIKE 'A%' AND job LIKE '%MAN%';
 
-/*Ejercicio */
 
 
+/*Ejercicio 44*/
+SELECT ename, job FROM emp WHERE ename LIKE 'A%' INTERSECT SELECT ename,job FROM emp WHERE job LIKE '%MAN%';
 
 
-/*Ejercicio */
 
 
+/*Ejercicio 45*/
+SELECT ename FROM emp WHERE LENGTH(ename) <= 5;
 
 
-/*Ejercicio */
 
+/*Ejercicio 46*/
+SELECT COUNT(DISTINCT job) AS empleos_diferentes, COUNT(ename) AS total_empleados, COUNT(DISTINCT sal) AS salarios_diferentes, SUM(sal) AS suma_salarios FROM emp WHERE deptno = 30;
 
 
 
-/*Ejercicio */
+/*Ejercicio 47*/
+SELECT ename, hiredate FROM emp WHERE job IS NOT '%SALEMAN%'
 
 
 
 
-/*Ejercicio */
+/*Ejercicio 48*/
 
 
 
 
-/*Ejercicio */
+/*Ejercicio 49*/
 
 
 
 
-/*Ejercicio */
+/*Ejercicio 50*/
 
 
 
 
-/*Ejercicio */
+/*Ejercicio 51*/
 
 
 
 
-/*Ejercicio */
+/*Ejercicio 52*/
 
 
 
 
-/*Ejercicio */
+/*Ejercicio 53*/
 
 
 
 
-/*Ejercicio */
+/*Ejercicio 54*/
 
 
 
 
-/*Ejercicio */
+/*Ejercicio 55*/
 
 
 
 
-/*Ejercicio */
+/*Ejercicio 56*/
 
 
 
 
-/*Ejercicio */
+/*Ejercicio 57*/
 
 
 
 
-/*Ejercicio */
+/*Ejercicio 58*/
 
 
 
 
-/*Ejercicio */
+/*Ejercicio 59*/
 
 
 
 
-/*Ejercicio */
-
-
-
-
-/*Ejercicio */
-
-
-
-
-/*Ejercicio */
-
-
-
-
-/*Ejercicio */
-
-
-
-
-/*Ejercicio */
-
-
-
-
-/*Ejercicio */
-
-
-
-
-/*Ejercicio */
-
-
-
-
-/*Ejercicio */
-
-
-
-
-/*Ejercicio */
-
-
-
-
-/*Ejercicio */
-
-
-
-
-/*Ejercicio */
-
-
-
-
-/*Ejercicio */
-
+/*Ejercicio 60*/
 
 
 
