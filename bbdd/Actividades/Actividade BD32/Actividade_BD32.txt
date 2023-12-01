@@ -1,258 +1,150 @@
-||~ EJERCICIO 1 ~||
-Obtener todos los datos de los empleados
---  --  --  --  --
+/*Ejercicio 1*/
 SELECT * FROM emp;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 2 ~||
-Obtener todos los datos de todos los departamentos
---  --  --  --  --
+/*Ejercicio 2*/
 SELECT * FROM dept;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 3 ~||
-Obtener todos los datos de los administrativos (su trabajo es, en inglés,
-'CLERK')
---  --  --  --  --
+/*Ejercicio 3*/
 SELECT * FROM emp WHERE job = 'CLERK';
---  --  --  --  --
 
 
 
-||~ EJERCICIO 4 ~||
-Lo mismo que la anterior, pero ordenado por el nombre
---  --  --  --  --
+/*Ejercicio 4*/
 SELECT * FROM emp WHERE job = 'CLERK' ORDER BY ename;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 5 ~||
-Obtén el mismo resultado de la pregunta anterior, pero modificando la sentencia
---  --  --  --  --
+/*Ejercicio 5*/
 SELECT * FROM empleados WHERE trabajo = 'CLERK' ORDER BY 2;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 6 ~||
-Obtén el número, nombre y salario de los empleados
---  --  --  --  --
+/*Ejercicio 6*/
 SELECT empno, ename, sal FROM emp;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 7 ~||
-Lista los nombres de todos los departamentos
---  --  --  --  --
+/*Ejercicio 7*/
 SELECT dname FROM dept;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 8 ~||
-Lo mismo que la anterior, pero ordenándolos por nombre
---  --  --  --  --
+/*Ejercicio 8*/
 SELECT dname FROM dept ORDER BY dname;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 9 ~||
-Lo mismo que la anterior, pero ordenándolo por la ciudad (no se debe
-seleccionar la ciudad en el resultado)
---  --  --  --  --
+/*Ejercicio 9*/
 SELECT dname FROM dept ORDER BY loc;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 10 ~||
-Lo mismo que la anterior, pero el resultado debe mostrarse ordenado por la
-ciudad en orden inverso
---  --  --  --  --
+/*Ejercicio 10*/
 SELECT dname FROM dept ORDER BY loc DESC;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 11 ~||
-Obtener el nombre y empleo de todos los empleados, ordenado por salario
---  --  --  --  --
+/*Ejercicio 11*/
 SELECT ename, job FROM emp ORDER BY sal;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 12 ~||
-Obtener el nombre y empleo de todos los empleados, ordenado primero por su
-trabajo y luego por su salario
---  --  --  --  --
+/*Ejercicio 12*/
 SELECT ename, job FROM emp ORDER BY job, sal;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 13 ~||
-Lo mismo que la anterior, pero ordenando inversamente por empleo y
-normalmente por salario
---  --  --  --  --
+/*Ejercicio 13*/
 SELECT ename, job FROM emp ORDER BY job DESC, sal;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 14 ~||
-Obtén los salarios y las comisiones de los empleados del departamento 30
---  --  --  --  --
+/*Ejercicio 14*/
 SELECT sal, comm FROM emp WHERE deptno = 30;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 15 ~||
-Lo mismo que la anterior, pero ordenado por comisión
---  --  --  --  --
+/*Ejercicio 15*/
 SELECT sal, comm FROM emp WHERE deptno = 30 ORDER BY comm;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 16 ~||
-Obtén las comisiones de todos los empleados y las comisiones de los
-empleados de forma que no se repitan (dos consultas)
---  --  --  --  --
+/*Ejercicio 16*/
 SELECT DISTINCT comm FROM emp;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 17 ~||
-Obtén los distintos pares (empleado, comisión)
---  --  --  --  --
+/*Ejercicio 17*/
 SELECT DISTINCT ename || ' -- ' || comm FROM emp WHERE comm IS NOT NULL
---  --  --  --  --
 
 
 
-||~ EJERCICIO 18 ~||
-Obtén los nombres de los empleados y sus salarios, de forma que no se
-repitan filas
---  --  --  --  --
+/*Ejercicio 18*/
 SELECT DISTINCT ename, sal FROM emp;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 19 ~||
-Obtén las comisiones de los empleados y sus números de departamento, de
-forma que no se repitan filas
---  --  --  --  --
+/*Ejercicio 19*/
 SELECT DISTINCT comm, depno FROM emp
---  --  --  --  --
 
 
 
-||~ EJERCICIO 20 ~||
-Obtén los nuevos salarios de los empleados del departamento 30, que
-resultarían de sumar a su salario una gratificación de 1000. Muestra también los
-nombres de los empleados
---  --  --  --  --
+/*Ejercicio 20*/
 SELECT ename, sal + 1000 FROM emp WHERE deptno = 30;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 21 ~||
-Lo mismo que la anterior, pero mostrando también su salario original, y haz
-que la columna que almacena el nuevo salario se denomine NUEVO_SALARIO
---  --  --  --  --
+/*Ejercicio 21*/
 SELECT ename, sal + 1000 AS NUEVO_SALARIO FROM emp WHERE deptno = 30;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 22 ~||
-Halla los empleados que tienen una comisión superior a la mitad de su salario
---  --  --  --  --
+/*Ejercicio 22*/
 SELECT * FROM emp WHERE comm > sal / 2;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 23 ~||
-Halla los empleados cuya comisión sea desconocida o estrictamente menor
-que el 25% de su salario
---  --  --  --  --
+/*Ejercicio 23*/
 SELECT * FROM emp WHERE comm IS NULL OR comm< sal*0.25;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 24 ~||
-Obtén una lista de nombres de empleados y sus salarios, de forma que en la
-salida aparezca en todas las filas "Nombre:" y "Salario:" antes del respectivo
-campo.
---  --  --  --  --
+/*Ejercicio 24*/
 SELECT 'Nombre:' || ename, 'Salario:' || sal FROM emp;
---  --  --  --  --
 
 
 
-||~ EJERCICIO 25 ~||
-Hallar el código, salario y comisión de los empleados cuyo código sea mayor o
-igual a 7500
---  --  --  --  --
+/*Ejercicio 25*/
 SELECT empno, sal, comm FROM emp WHERE empno>=7500
---  --  --  --  --
 
 
 
-||~ EJERCICIO 26 ~||
-Obtén todos los datos de los empleados cuyo nombre empiece por J o letra
-posterior en el alfabeto.
---  --  --  --  --
+/*Ejercicio 26*/
 SELECT * FROM emp WHERE ename >= 'J';
---  --  --  --  --
 
 
 
-||~ EJERCICIO 27 ~||
-Obtén el salario, comisión y salario total (salario + comisión) de los empleados
-con comisión, ordenando el resultado por número de empleado
---  --  --  --  --
-
---  --  --  --  --
+/*Ejercicio 27*/
+SELECT empno, sal, comm, sal + comm AS salario_total FROM emp WHERE comm IS NOT NULL ORDER BY empno;
 
 
 
-||~ EJERCICIO 28 ~||
-Lista la misma información, pero para los empleados que no tienen comisión
---  --  --  --  --
-
---  --  --  --  --
+/*Ejercicio 28*/
+SELECT empno, sal, comm, sal + comm AS salario_total FROM emp WHERE comm IS NULL OR comm=0 ORDER BY empno;
 
 
 
-||~ EJERCICIO 29 ~||
-Muestra el nombre de los empleados que, teniendo un salario superior a 1000,
-tengan como jefe al empleado cuyo código es 7698
---  --  --  --  --
-
---  --  --  --  --
+/*Ejercicio 29*/
+SELECT ename FROM emp WHERE sal > 1000 AND empno = 7698;
 
 
 
-||~ EJERCICIO 30 ~||
-Halla el conjunto complementario del resultado del ejercicio anterior
---  --  --  --  --
-
---  --  --  --  --
+/*Ejercicio 30*/
+SELECT ename FROM emp WHERE sal <= 1000 OR empno != 7698;
 
 
 
