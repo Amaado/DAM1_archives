@@ -15,7 +15,7 @@
         background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
         background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;}
     </style>
-	<title>Hoteles XYZ</title>
+	<title>Formulario de contacto</title>
 	<link rel="shortcut icon" href="Material adicional/img/favicon.png" />
 	<link rel="stylesheet" href="index.css">
 </head>
@@ -46,16 +46,39 @@
 			</nav>
         </div>
     </nav>
-	<section class=bloque_medio>
+	<section class="bloque_medio">
 		<div>
-			<h1>Bienvenidos a la página web de la cadena de hoteles xyz</h1>
-			<img src="Material adicional\img\fotoindex.jpg"/>
+			<h1>Contacto</h1>
+            <p>Rellene el siguiente formulario y nos pondremos en contacto con usted en la mayor brevedad posible.</p>
 		</div>
+        
 	</section>
+    <section class=bloque_medio>
+        <form action="#" target="" method="get" name="formDatosPersonales">
+
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre"/>
+        
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos"/>
+        
+            <label for="email" />Email</label>
+            <input type="email" name="email" id="email"required />
+        
+            <label for="asunto">Asunto</label>
+            <input type ="text" name="asunto" id="asunto"/>
+        
+            <label for="mensaje">Mensaje</label>
+            <textarea name="mensaje" for="mensaje" maxlength="300"></textarea>
+            
+            <input class="boton" type="submit" name="enviar" value="enviar datos"/>
+        </form>
+	</section>
+    
 	<footer>
 			<section>
 					<div class="categorias">
-						<a href="contacto.html">Contacto</a>
+						<a href="#">Contacto</a>
 					</div>
 					<div class="categorias">
 						<p>© Diseño de Interfaces Web</p>
