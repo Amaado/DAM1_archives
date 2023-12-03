@@ -164,6 +164,13 @@ footer section {
     margin: auto;
 }
 
+.bloque_medio form div label{
+    margin: auto;
+    display:flex;
+s
+    flex-direction: row;
+}
+
 .bloque_medio form>input, textarea{
     width:37%;
     margin:auto;
@@ -174,6 +181,6 @@ footer section {
 
 }
 
-.boton{
-    margin-top: 40px;
+.bloque_medio form .boton {
+    margin-top: 10px;
 }
