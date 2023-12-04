@@ -30,7 +30,7 @@
 							<a href="index.html">Inicio</a>
 						</div>
 						<div class="categorias">
-							<a href="#">Información</a>
+							<a href="informacion.html">Información</a>
 						</div>
 						<div class="categorias">
 							<a href="#">Reservas</a>
@@ -53,32 +53,34 @@
 		</div>
         
 	</section>
-    <section class=bloque_medio>
+    <section class="bloque_medio">
         <form action="#" target="" method="get" name="formDatosPersonales">
 
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre"/>
+            <label for="nombre">Nombre*:</label>
+            <input type="text" name="nombre" id="nombre"required/>
         
             <label for="apellidos">Apellidos</label>
             <input type="text" name="apellidos" id="apellidos"/>
         
-            <label for="email">Email</label>
+            <label for="email">Email*:</label>
             <input type="email" name="email" id="email"required />
         
-            <label for="asunto">Asunto</label>
-            <input type ="text" name="asunto" id="asunto"/>
+            <label for="telefono">Teléfono*:</label>
+            <input type ="text" name="asunto" id="telefono"required/>
         
-            <label for="mensaje">Mensaje</label>
-            <textarea name="mensaje" for="mensaje" maxlength="300"></textarea>
-            <input class="boton" type="button"value="Borrar Datos" onclick="borrarDatos()"/>
-            <input class="boton" type="submit" name="enviar" value="enviar datos"/>
+            <label for="mensaje">Motivo de la consulta*:</label>
+            <textarea name="mensaje" for="mensaje" maxlength="1000"required></textarea>
+			<div>
+				<input class="boton" type="reset"value="Borrar Datos"/>
+				<input class="boton" type="submit" name="enviar" value="Enviar datos"/>
+			</div>
         </form>
 	</section>
     
 	<footer>
 			<section>
 					<div class="categorias">
-						<a href="#">Contacto</a>
+						<a href="contacto.html">Contacto</a>
 					</div>
 					<div class="categorias">
 						<p>© Diseño de Interfaces Web</p>
