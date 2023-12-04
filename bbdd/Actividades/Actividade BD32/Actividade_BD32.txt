@@ -129,18 +129,17 @@ SELECT * FROM emp WHERE ename >= 'J';
 
 
 /*Ejercicio 27*/
-SELECT empno, sal, comm, sal + comm AS salario_total FROM emp WHERE comm IS NOT NULL ORDER BY empno;
+SELECT empno, sal, comm, sal + comm AS salario_total FROM emp WHERE comm IS NOT NULL AND comm>0 ORDER BY empno;
 
 
 
 /*Ejercicio 28*/
-SELECT empno, sal, comm, sal + comm AS salario_total FROM emp WHERE comm IS NULL OR comm=0 ORDER BY empno;
+SELECT empno, sal, comm, sal + comm AS salario_total FROM emp WHERE comm=0 ORDER BY empno;
 
 
 
 /*Ejercicio 29*/
-SELECT ename FROM emp WHERE sal > 1000 AND empno = 7698;
-
+SELECT ename FROM emp EXCEPT SELECT ename FROM emp WHERE sal>1000 AND mrg=7698;
 
 
 /*Ejercicio 30*/
