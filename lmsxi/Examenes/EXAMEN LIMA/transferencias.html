@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="es-ES">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Transferencias</title>
+	<link rel="shortcut icon" href="imagenes/favicon.svg" />
+	<link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <header>
+            <img class="logo" src="imagenes\logo.svg"/>
+            <div>
+                <a class="usuario" >
+                    <img src="imagenes\usuario.svg"/>
+                    <p>Bienvenido, Mister Marshall</p>
+                </a>
+            </div>
+    </header>
+    <nav class="bloque_superior">
+        <section>
+                <div class="categorias">
+                    <a class="underline" href="cuentas.html">Mis cuentas</a>
+                </div>
+                <div class="categorias">
+                    <a href="#">Movimientos</a>
+                </div>
+                <div class="categorias">
+                    <a href="transferencias.html">Transferencias</a>
+                </div>
+            </div>
+        </section>
+    </nav>
+
+    <section class="bloque_medio">
+        <h1>Transferencias Nacionales</h1>
+        <a></a>
+        <form action="cuentas.html" target="" method="get" name="formDatosPersonales">
+            <div>
+                <label for="cuenta_origen">Cuenta origen (IBAN):</label>
+                <input type="cuenta_origen" name="cuenta_origen" id="cuenta_origen"/>
+            </div>
+            <div>
+                <label for="cuenta_destino">Cuenta destino (IBAN):</label>
+                <input type="text" name="cuenta_destino" id="cuenta_destino"/>
+            </div>
+            <div>
+                <label for="beneficiario">Beneficiario:</label>
+                <input type="text" name="beneficiario" id="beneficiario"/>
+            </div>
+            <div>
+                <label for="importe">Importe (EUR):</label>
+                <input type="text" name="importe" id="importe"/>
+            </div>
+            <div>
+                <label for="concepto">Concepto:</label>
+                <input type="text" name="concepto" id="concepto"/>
+            </div>
+            <div>
+                <label for="observaciones">Observaciones:</label>
+                <input type="text" name="observaciones" id="observaciones"/>
+            </div>
+
+            <a></a>
+
+            <div>
+                <label for="fecha">Para que la transferencia se realice en otra fecha diferente a la de hoy, por favor, indiquenos la fecha de ejecución:<br>Fecha de ejecución:</label>
+                <input type="date" name="fecha" id="fecha"/>
+            </div>
+
+            <a></a>
+
+            <div>
+                <label for="email">Escriba una dirección de email para dar aviso al beneficiario:<br>Email del beneficiario:</label>
+                <input type="email" name="email" id="eamil"/>
+            </div>
+
+            <a></a>
+
+            <div class="color">
+                <input class="boton" type="submit" name="enviar" value="Realizar Transferencia"/>
+            </div>
+            
+        </form>
+	</section>
+    <footer>
+        <img src="imagenes\logo_footer.svg"/>
+    </footer>
+</body>
+</html>
