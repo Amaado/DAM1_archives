@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curriculum>
+    <nombre>Jesús</nombre>
+    <apellidos>Ramirez León</apellidos>
+    <fecha_nacimineto>22/11/2000</fecha_nacimineto>
+
+    <residencia>
+        <direccion>Calle 13 Rúa del percebe</direccion>
+        <ciudad>Algeciras</ciudad>
+        <cp>11201</cp>
+        <pais>España</pais>
+    </residencia>
+    
+    <datos_contacto>
+        <telefono>666767676</telefono>
+        <correo>jesusuin.jesusan@gmail.com</correo>
+    </datos_contacto>
+    
+    <descripcion>
+        Graduado en Ingeniería Informática con experiencia en desarrollo de software y sistemas.
+    </descripcion>
+    
+    <competencias>
+        <competencia>
+            <nombre>Desarrollo de Aplicaciones Web</nombre>
+            <nivel>Escaso</nivel>
+        </competencia>
+        <competencia>
+            <nombre>Programación en Python</nombre>
+            <nivel>Intermedio</nivel>
+        </competencia>
+    </competencias>
+    
+    <formacion_academica>
+        <titulacion>Ingeniería Informática</titulacion>
+        <centro_formacion>Universidad de Algeciras</centro_formacion>
+        <ano_titulacion>2005</ano_titulacion>
+    </formacion_academica>
+    
+    <experiencia_profesional>
+        <puesto>Desarrollador de Software</puesto>
+        <empresa>Algoritmos Algeciras</empresa>
+        <ano_inicio>2013</ano_inicio>
+        <ano_finalizacion>Activo</ano_finalizacion>
+    </experiencia_profesional>
+</curriculum>

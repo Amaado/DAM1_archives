@@ -16,19 +16,3 @@ Tarea fuera plazo -0,1:
 
 ______________________
 ______________________
-~~~~
-FOL:
-~~~~
-
--Trabajos.
-Entregados tarde  7/16
-Sin entregar      3/16
-
---------
--Porcentajes.
-70% EXAMEN:   
-30% PRÁCTICAS:
-Tarea fuera plazo -0,1:
-
-______________________
-______________________
