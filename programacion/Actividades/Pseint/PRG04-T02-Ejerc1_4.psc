@@ -17,15 +17,15 @@ Algoritmo Ejercicio1_4
 		SiNo
 			discriminante <- (b^2 - 4 * a * c)
 			Si discriminante >= 0 Entonces
-				x3 <- (-b + (discriminante)^(1/2)) / (2 * a)
-				x4 <- (-b - (discriminante)^(1/2)) / (2 * a)
-				Si x3==x4 Entonces
+				x2 <- (-b + (discriminante)^(1/2)) / (2 * a)
+				x3 <- (-b - (discriminante)^(1/2)) / (2 * a)
+				Si x2==x3 Entonces
 					Escribir "Una única solución:"
-					Escribir x4
+					Escribir x3
 				SiNo
 					Escribir "Dos soluciones:"
+					Escribir x2
 					Escribir x3
-					Escribir x4
 				FinSi
 				
 			SiNo
