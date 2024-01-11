@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"? standalone="yes">
+
+<vueling>
+	<viaje>
+		<datos_clientes>
+			<nombre>Francisco</nombre>
+			<apellidos>Rede Lapoli</apellidos>
+		</datos_clientes>
+		<fechas>
+			<fecha_inicio>11/01/2024</fecha_inicio>
+			<fecha_fin>11/01/2024</fecha_fin>
+		</fechas>
+		<lugares>
+			<lugar_origen>IES Antón Losada Dieguez, Aula 112</lugar_origen>
+			<lugar_destino>
+				<nombre_ciudad>San Francisco</nombre_ciudad>
+				<nombre_hotel>A NOSSA SAMBITA</nombre_hotel>
+				<num_noches>3</num_noches>
+			</lugar_destino>
+		</lugares>
+		<precio>2000€</precio>
+	</viaje>
+</vueling>

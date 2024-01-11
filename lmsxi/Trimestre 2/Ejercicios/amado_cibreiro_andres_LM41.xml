@@ -1,8 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE curriculum [
+	<!ELEMET curriculum (nombre,apellidos,fecha_nacimiento,residencia,datos_contacto,descripcion,competencias,formacion_academica,experiencia_profesional)>
+	<!ELEMET nombre (#PCDATA)>
+	<!ELEMET apellidos (#PCDATA)>
+	<!ELEMET fecha_nacimiento (#PCDATA)>
+	<!ELEMET residencia (direccion,ciudad,cp,pais)>
+	<!ELEMET direccion (#PCDATA)>
+	<!ELEMET ciudad (#PCDATA)>
+	<!ELEMET cp (#PCDATA)>
+	<!ELEMET pais (#PCDATA)>
+	<!ELEMET datos_contacto (telefono,correo)>
+	<!ELEMET telefono (#PCDATA)>
+	<!ELEMET correo (#PCDATA)>
+	<!ELEMET descripcion (#PCDATA)>
+	<!ELEMET competencias (competencia)>
+	<!ELEMET competencia (nombre,nivel)>
+	<!ELEMET nivel (#PCDATA)>
+	<!ELEMET formacion_academica(titulacion,centro_formacion,ano_titulacion)>
+	<!ELEMET titulacion (#PCDATA)>
+	<!ELEMET centro_formacion (#PCDATA)>
+	<!ELEMET ano_titulacion (#PCDATA)>
+	<!ELEMET experiencia_profesional (puesto,empresa,ano_inicio,ano_finalizacion)>
+	<!ELEMET puesto (#PCDATA)>
+	<!ELEMET empresa (#PCDATA)>
+	<!ELEMET ano_inicio (#PCDATA)>
+	<!ELEMET ano_finalizacion (#PCDATA)>
+	
+]>
+
 <curriculum>
     <nombre>Jesús</nombre>
     <apellidos>Ramirez León</apellidos>
-    <fecha_nacimineto>22/11/2000</fecha_nacimineto>
+    <fecha_nacimiento>22/11/2000</fecha_nacimiento>
 
     <residencia>
         <direccion>Calle 13 Rúa del percebe</direccion>
