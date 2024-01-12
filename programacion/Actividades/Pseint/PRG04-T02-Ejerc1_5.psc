@@ -76,6 +76,4 @@ Algoritmo Ejercicio1_5
 	SiNo
 		Escribir "Hay más de 8 números!"
 	FinSi
-	
-	
 FinAlgoritmo

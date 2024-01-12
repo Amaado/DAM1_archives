@@ -1,4 +1,4 @@
-Algoritmo Ejercicio1_2
+ Algoritmo Ejercicio1_2
 	Leer N1
 	Si N1==0
 		Escribir "0 es un número par"

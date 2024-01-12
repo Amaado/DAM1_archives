@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE curriculum [
-	<!ELEMET curriculum (nombre,apellidos,fecha_nacimiento,residencia,datos_contacto,descripcion,competencias,formacion_academica,experiencia_profesional)>
-	<!ELEMET nombre (#PCDATA)>
-	<!ELEMET apellidos (#PCDATA)>
-	<!ELEMET fecha_nacimiento (#PCDATA)>
-	<!ELEMET residencia (direccion,ciudad,cp,pais)>
-	<!ELEMET direccion (#PCDATA)>
-	<!ELEMET ciudad (#PCDATA)>
-	<!ELEMET cp (#PCDATA)>
-	<!ELEMET pais (#PCDATA)>
-	<!ELEMET datos_contacto (telefono,correo)>
-	<!ELEMET telefono (#PCDATA)>
-	<!ELEMET correo (#PCDATA)>
-	<!ELEMET descripcion (#PCDATA)>
-	<!ELEMET competencias (competencia)>
-	<!ELEMET competencia (nombre,nivel)>
-	<!ELEMET nivel (#PCDATA)>
-	<!ELEMET formacion_academica(titulacion,centro_formacion,ano_titulacion)>
-	<!ELEMET titulacion (#PCDATA)>
-	<!ELEMET centro_formacion (#PCDATA)>
-	<!ELEMET ano_titulacion (#PCDATA)>
-	<!ELEMET experiencia_profesional (puesto,empresa,ano_inicio,ano_finalizacion)>
-	<!ELEMET puesto (#PCDATA)>
-	<!ELEMET empresa (#PCDATA)>
-	<!ELEMET ano_inicio (#PCDATA)>
-	<!ELEMET ano_finalizacion (#PCDATA)>
+	<!ELEMENT curriculum (nombre,apellidos,fecha_nacimiento,residencia,datos_contacto,descripcion,competencias,formacion_academica,experiencia_profesional)>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT apellidos (#PCDATA)>
+	<!ELEMENT fecha_nacimiento (#PCDATA)>
+	<!ELEMENT residencia (direccion,ciudad,cp,pais)>
+	<!ELEMENT direccion (#PCDATA)>
+	<!ELEMENT ciudad (#PCDATA)>
+	<!ELEMENT cp (#PCDATA)>
+	<!ELEMENT pais (#PCDATA)>
+	<!ELEMENT datos_contacto (telefono,correo)>
+	<!ELEMENT telefono (#PCDATA)>
+	<!ELEMENT correo (#PCDATA)>
+	<!ELEMENT descripcion (#PCDATA)>
+	<!ELEMENT competencias (competencia+)>
+	<!ELEMENT competencia (nombre,nivel)>
+	<!ELEMENT nivel (#PCDATA)>
+	<!ELEMENT formacion_academica (titulacion,centro_formacion,ano_titulacion)>
+	<!ELEMENT titulacion (#PCDATA)>
+	<!ELEMENT centro_formacion (#PCDATA)>
+	<!ELEMENT ano_titulacion (#PCDATA)>
+	<!ELEMENT experiencia_profesional (puesto,empresa,ano_inicio,ano_finalizacion)>
+	<!ELEMENT puesto (#PCDATA)>
+	<!ELEMENT empresa (#PCDATA)>
+	<!ELEMENT ano_inicio (#PCDATA)>
+	<!ELEMENT ano_finalizacion (#PCDATA)>
 	
 ]>
 

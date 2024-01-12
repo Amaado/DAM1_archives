@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"? standalone="yes">
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<!DOCTYPE vueling [
+	<!ELEMENT vueling (viaje)>
+	<!ELEMENT viaje (datos_clientes,fechas,lugares,precio)>
+	<!ELEMENT datos_clientes (nombre,apellidos)>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT apellidos (#PCDATA)>
+	<!ELEMENT fechas (fecha_inicio,fecha_fin)>
+	<!ELEMENT fecha_inicio (#PCDATA)>
+	<!ELEMENT fecha_fin (#PCDATA)>
+	<!ELEMENT lugares (lugar_origen,lugar_destino)>
+	<!ELEMENT lugar_origen (#PCDATA)>
+	<!ELEMENT lugar_destino (nombre_ciudad,nombre_hotel,num_noches)>
+	<!ELEMENT nombre_ciudad (#PCDATA)>
+	<!ELEMENT nombre_hotel (#PCDATA)>
+	<!ELEMENT num_noches (#PCDATA)>
+	<!ELEMENT precio (#PCDATA)>
+]>
 
 <vueling>
 	<viaje>

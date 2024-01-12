@@ -34,4 +34,3 @@ Algoritmo Ejercicio1_4
 		FinSi
 	FinSi
 FinAlgoritmo
-	
