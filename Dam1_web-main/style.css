@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: currentColor;
+}
+
+body {
+    /*background-color: #1c2128;*/
+    color: #bfd4e9;
+    font-family: 'Roboto';
+    display: flex;
+    height: 100dvh;
+    justify-content: center;
+    flex-direction: column;
+    animation: cambiarFondo 1s
+}
+
+@keyframes cambiarFondo {
+    0%, 100% {
+      background-image: #1c2128; /* Ruta de la primera imagen */
+    }
+    50% {
+      background-image: url('img/blanco.png'); /* Ruta de la segunda imagen */
+    }
+  }
+
+nav {
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    justify-content: center;
+}
+
+nav a {
+    padding: 10px ;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #333c4a;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    padding-right: 20px;
+    gap: 10px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 550px;
+}
+
+.card:hover {
+    animation-name: animacion;
+    animation-duration: 1.5s;
+    background-image: linear-gradient(260deg, #333c4a, #2e3643, #20262e);
+}
+
+footer {
+    max-height: 100px;
+    margin-top: -850px;
+    position:absolute;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    max-height: 100px;
+}
+
+
+footer div a{   
+    align-items: left;
+    align-content: left;
+    width: 30px;
+    height: 30px;
+    margin-left: 13px;
+    margin-bottom: 200px;
+    background-color: #262B31;
+    border-radius: 5px;
+    position:absolute;
+
+}
+
+.back{
+    background-image: image("img/blanco.png");
+    background-size: cover;
+    animation-name: imgPop;
+    animation-duration: 1.5s;
+    opacity: 100%;
+}
+
+@keyframes imgPop {
+    0% {
+        opacity: 100%;
+        transform: scale(1);
+    }
+
+    10%{
+        opacity: 100%;
+    }
+
+    25% {
+        transform: scale(1.02);
+    }
+
+    50% {
+        transform: scale(0.995);
+    }
+
+    55% {
+        transform: scale(1);
+    }
+
+
+
+}
+
+@keyframes animacion {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.02);
+    }
+
+    50% {
+        transform: scale(0.995);
+    }
+
+    55% {
+        transform: scale(1);
+    }
+}
+
+.img {
+    margin-right: 70px;
+    width: 20%;
+}
+
+div img {
+    height: 90px;
+    border-radius: 5px;
+}
+
+#title {
+    font-size: 24px;
+}

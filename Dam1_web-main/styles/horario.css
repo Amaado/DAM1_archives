@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Round");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: currentColor;
+}
+
+body {
+    background-color: #1c2128;
+    color: #bfd4e9;
+    font-family: 'Roboto';
+    display: flex;
+    height: 100dvh;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/horario.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90%;
+}
+
+nav a span{
+    padding: 10px;
+    margin-left: 100px;
+    border-radius: 100px;
+}
+
+nav a span:hover {
+    background-color: #333c4a;
+}
