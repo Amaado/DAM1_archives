@@ -17,6 +17,38 @@
 	</nav>
 	<main>
 	</main>
+	<button onclick="mostrarImagen()"></button>
+
+  <img id="fullscreen-image" src="Cc2.png" alt="Imagen a pantalla completa">
+
+  <script>
+    function mostrarImagen() {
+      var imagen = document.getElementById("fullscreen-image");
+      imagen.style.opacity = "0"; // Inicia con opacidad al 0%
+
+      setTimeout(function() {
+        imagen.style.display = "block";
+        imagen.style.opacity = "0";
+      }, 0);
+
+      setTimeout(function() {
+        imagen.style.opacity = "0.5";
+      }, 1000);
+
+      setTimeout(function() {
+        imagen.style.opacity = "0.5";
+      }, 2000);
+
+      setTimeout(function() {
+        imagen.style.opacity = "0";
+      }, 3000);
+
+      setTimeout(function() {
+        imagen.style.opacity = "0";
+        imagen.style.display = "none";
+      }, 5500);
+    }
+  </script>
 </body>
 
 </html>
