@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+:root {
+    --img: url('img/Cc2.png');
+  }
+
 * {
     padding: 0;
     margin: 0;
@@ -62,6 +66,7 @@ nav a:hover {
     border-radius: 15px;
     text-align: center;
     min-width: 550px;
+    
 }
 
 .card:hover {
@@ -69,6 +74,35 @@ nav a:hover {
     animation-duration: 1.5s;
     background-image: linear-gradient(260deg, #333c4a, #2e3643, #20262e);
 }
+
+.card2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    padding-right: 20px;
+    gap: 10px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 550px;
+    
+}
+
+.card2:hover {
+    animation-name: animacion;
+    animation-duration: 1.5s;
+    background: url('img/Cc2.png') center/cover no-repeat;
+    /*background: linear-gradient(260deg, rgba(51, 60, 74, 0), #333c4a)*/
+}
+
+
+#cc-image{
+    display: none;
+    transition: opacity 2.5s ease-in-out;
+}
+
 
 #fullscreen-image {
     display: none;
@@ -81,7 +115,7 @@ nav a:hover {
     object-fit: cover;
     z-index: 999;
     transition: opacity 2.5s ease-in-out;
-  }
+}
 
   button {
     font-size: 16px;
@@ -102,7 +136,7 @@ nav a:hover {
     overflow: visible;
     padding: 0;
     cursor: pointer;
-  }
+}
 
 
 
@@ -124,6 +158,8 @@ nav a:hover {
         transform: scale(1);
     }
 }
+
+
 
 .img {
     margin-right: 70px;
