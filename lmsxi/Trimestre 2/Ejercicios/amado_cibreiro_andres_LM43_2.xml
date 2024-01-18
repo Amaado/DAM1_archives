@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE clases [
+	<!ELEMENT clases (clase+)>
+	<!ELEMENT clase (nombre,aula,grupo)>
+    <!ATTLIST clase codigo CDATA "Desconocido">
+	<!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT aula (#PCDATA)>
+    <!ELEMENT grupo (#PCDATA)>
+    <!ENTITY grupo "Desconocido">
+]>
+
+<clases>
+    <clase codigo="LM2DAMORD#2324">
+        <nombre>Lenguajes de marcas</nombre>
+        <aula>112</aula>
+        <grupo>&grupo;</grupo>
+    </clase>
+    <clase codigo="BD2DAMORD#2324">
+        <nombre>Base de datos</nombre>
+        <aula>112</aula>
+        <grupo>&grupo;</grupo>
+    </clase>
+</clases>
