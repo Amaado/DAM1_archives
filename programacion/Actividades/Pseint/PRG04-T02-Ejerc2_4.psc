@@ -8,7 +8,7 @@ Algoritmo Ejerc2_4
 		Para candidato desde 2 hasta num Hacer
 			esPrimo = Verdadero
 			
-			Para divisor desde 2 hasta candidato^(1/2) Hacer
+			Para divisor desde 2 hasta candidato/2 Hacer
 				Si candidato MOD divisor = 0 Entonces
 					esPrimo = Falso
 				Fin Si

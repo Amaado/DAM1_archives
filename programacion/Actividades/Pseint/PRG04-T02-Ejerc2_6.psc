@@ -1,26 +1,16 @@
 Algoritmo Ejerc2_6
-	caracterBuscado = NULO
-	texto = ""
-	contadorOcurrencias = 0
-	
-	Escribir "Introduce un carácter: "
-	Leer caracterBuscado
-
+	Definir caract Como Caracter
+	Escribir "Introducir un carácter: "
+	Leer caract
+	Escribir "Escribe lo que quieras: (<> para finalizar)"
 	Repetir
-		Escribir("Escribe lo que quieras (<> para finalizar)")
-		Leer linea
-		Mientras linea <> "<>"
-			
-			texto = texto + linea
-			
-			Para cada caracter en linea Hacer
-				Si caracter = caracterBuscado Entonces
-					contadorOcurrencias = contadorOcurrencias + 1
-				Fin Si
-			Fin Para
-		FinMientras
-	Hasta que linea = "<>"
-	
-	Escribir "Apariciones de ", caracterBuscado, ": ", contadorOcurrencias
+		Leer sentencia
+		Para i<-0 Hasta Longitud(sentencia) HAcer
+			Si(SubCadena(sentencia,i,i)=caract)
+				
+			FinSi
+		FinPara
+	Hasta Que sentencia = "<>"
+
 FinAlgoritmo
 //ERROR

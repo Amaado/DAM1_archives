@@ -60,23 +60,21 @@
         <a href="https://www.edu.xunta.gal/centros/ieslosadadieguez/aulavirtual/course/view.php?id=1067"
             target="_blank">
         
-            <div class="card2" onmouseover="mostrarCc()">
-                <img id="cc-image" src="img/Cc2.png">
+            <div class="contenedor" onmouseover="mostrarImagen2()" onmouseout="ocultarImagen()">
+                <div class="imagen-fondo"></div>
                 <script>
-                    function mostrarCc() {
-                      var contenedor = document.getElementById("cc-image");
-
-                      setTimeout(function() {
-                        imagen.style.display = "block";
-                        contenedor.style.background = "url('img/Cc2.png') center/cover no-repeat";
-                      }, 1000);
-
-                      setTimeout(function() {
-                        contenedor.style.opacity = "0.8";
-                      }, 5000);
+                    let imagenFondo = document.querySelector('.imagen-fondo');
+                
+                    function mostrarImagen2() {
+                      setTimeout(() => {
+                        imagenFondo.style.opacity = 0.8;
+                      }, 2000);
+                    }
+                
+                    function ocultarImagen() {
+                      imagenFondo.style.opacity = 0;
                     }
                   </script>
-
                 <div class="img">
                     <img id="kotlin" src="img/g_cont.jpg">
                 </div>
