@@ -62,24 +62,26 @@
         
             <div class="contenedor" onmouseover="mostrarImagen2()" onmouseout="ocultarImagen()">
                 <div class="imagen-fondo"></div>
-                <script>
-                    let imagenFondo = document.querySelector('.imagen-fondo');
-                
-                    function mostrarImagen2() {
-                      setTimeout(() => {
-                        imagenFondo.style.opacity = 0.8;
-                      }, 2000);
-                    }
-                
-                    function ocultarImagen() {
-                      imagenFondo.style.opacity = 0;
-                    }
-                  </script>
+              </div>
+            
+              <script>
+                let imagenFondo = document.querySelector('.imagen-fondo');
+            
+                function mostrarImagen2() {
+                  setTimeout(() => {
+                    imagenFondo.style.opacity = 0.8;
+                  }, 2000);
+                }
+            
+                function ocultarImagen() {
+                  imagenFondo.style.opacity = 0;
+                }
+              </script>
                 <div class="img">
                     <img id="kotlin" src="img/g_cont.jpg">
                 </div>
                 <div class="info">
-                    <h4 id="title">Contornos de desarrollo</h4>
+                    <h4 id="title" class="kotlin">Contornos de desarrollo</h4>
                 </div>
             </div>
         </a>

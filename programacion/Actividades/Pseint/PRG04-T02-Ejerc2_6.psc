@@ -7,10 +7,10 @@ Algoritmo Ejerc2_6
 		Leer sentencia
 		Para i<-0 Hasta Longitud(sentencia) HAcer
 			Si(SubCadena(sentencia,i,i)=caract)
-				
+				contador=contador+1
 			FinSi
 		FinPara
 	Hasta Que sentencia = "<>"
+	Escribir "Estribiste el caracter _",caract,"_ un total de ", contador, " veces."
 
 FinAlgoritmo
-//ERROR

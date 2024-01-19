@@ -2,7 +2,7 @@
 
 <!DOCTYPE famosos [
 	<!ELEMENT famosos (famoso+)>
-    <!ELEMENT famoso (nombre,apodo,fechaNacimiento?,profesion+)>
+    <!ELEMENT famoso (nombre,apodo,fechaNacimiento?,profesion*)>
     <!ELEMENT nombre (#PCDATA)>
     <!ELEMENT apodo (#PCDATA)>
     <!ELEMENT profesion (#PCDATA)>
