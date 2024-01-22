@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-
+<!-- 
 <!DOCTYPE vueling [
 	<!ELEMENT vueling (viaje)>
 	<!ELEMENT viaje (datos_clientes,fechas,lugares,precio)>
@@ -17,8 +17,9 @@
 	<!ELEMENT num_noches (#PCDATA)>
 	<!ELEMENT precio (#PCDATA)>
 ]>
-
-<vueling>
+-->
+<vueling xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="amado_cibreiro_andres_LM42.xsd">
 	<viaje>
 		<datos_clientes>
 			<nombre>Francisco</nombre>
