@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-<xs:element name="vueling">
+  <xs:element name="vueling">
     <xs:complexType>
-        <xs:sequence>
-        <xs:element name="viaje" type="viajeType"/>
-        </xs:sequence>
+      <xs:sequence>
+        <xs:element name="viaje" type="viajeType" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
     </xs:complexType>
-    </xs:element>
+  </xs:element>
 
   <xs:complexType name="viajeType">
     <xs:sequence>
-      <xs:element name="datos_clientes" type="datosClientesType"/>
-      <xs:element name="fechas" type="fechasType"/>
-      <xs:element name="lugares" type="lugaresType"/>
-      <xs:element name="precio" type="xs:string"/>
+      <xs:element name="datos_clientes" type="datosClientesType" />
+      <xs:element name="fechas" type="fechasType" />
+      <xs:element name="lugares" type="lugaresType" />
+      <xs:element name="precio" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
 
   <xs:complexType name="datosClientesType">
     <xs:sequence>
-      <xs:element name="nombre" type="xs:string"/>
-      <xs:element name="apellidos" type="xs:string"/>
+      <xs:element name="nombre" type="xs:string" />
+      <xs:element name="apellidos" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
 
   <xs:complexType name="fechasType">
     <xs:sequence>
-      <xs:element name="fecha_inicio" type="xs:string"/>
-      <xs:element name="fecha_fin" type="xs:string"/>
+      <xs:element name="fecha_inicio" type="xs:date" />
+      <xs:element name="fecha_fin" type="xs:date" />
     </xs:sequence>
   </xs:complexType>
 
   <xs:complexType name="lugaresType">
     <xs:sequence>
-      <xs:element name="lugar_origen" type="xs:string"/>
-      <xs:element name="lugar_destino" type="lugarDestinoType"/>
+      <xs:element name="lugar_origen" type="xs:string" />
+      <xs:element name="lugar_destino" type="lugarDestinoType" />
     </xs:sequence>
   </xs:complexType>
 
   <xs:complexType name="lugarDestinoType">
     <xs:sequence>
-      <xs:element name="nombre_ciudad" type="xs:string"/>
-      <xs:element name="nombre_hotel" type="xs:string"/>
-      <xs:element name="num_noches" type="xs:integer"/>
+      <xs:element name="nombre_ciudad" type="xs:string" />
+      <xs:element name="nombre_hotel" type="xs:string" />
+      <xs:element name="num_noches" type="xs:integer" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

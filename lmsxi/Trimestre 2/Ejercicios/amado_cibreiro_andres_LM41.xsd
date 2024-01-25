@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="curriculum" type="CurriculumType" />
+    <xs:complexType name="CurriculumType">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="apellidos" type="xs:string" />
+            <xs:element name="fecha_nacimiento" type="xs:date" />
+            <xs:element name="residencia" type="ResidenciaType" />
+            <xs:element name="datos_contacto" type="DatosContactoType" />
+            <xs:element name="descripcion" type="xs:string" />
+            <xs:element name="competencias" type="CompetenciasType" />
+            <xs:element name="formacion_academica" type="FormacionAcademicaType" />
+            <xs:element name="experiencia_profesional" type="ExperienciaProfesionalType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ResidenciaType">
+        <xs:sequence>
+            <xs:element name="direccion" type="xs:string" />
+            <xs:element name="ciudad" type="xs:string" />
+            <xs:element name="cp" type="xs:integer" />
+            <xs:element name="pais" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DatosContactoType">
+        <xs:sequence>
+            <xs:element name="telefono" type="xs:integer" />
+            <xs:element name="correo" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="CompetenciaType">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="nivel" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="CompetenciasType">
+        <xs:sequence>
+            <xs:element name="competencia" type="CompetenciaType" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="FormacionAcademicaType">
+        <xs:sequence>
+            <xs:element name="titulacion" type="xs:string" />
+            <xs:element name="centro_formacion" type="xs:string" />
+            <xs:element name="ano_titulacion" type="xs:integer" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ExperienciaProfesionalType">
+        <xs:sequence>
+            <xs:element name="puesto" type="xs:string" />
+            <xs:element name="empresa" type="xs:string" />
+            <xs:element name="ano_inicio" type="xs:integer" />
+            <xs:element name="ano_finalizacion" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

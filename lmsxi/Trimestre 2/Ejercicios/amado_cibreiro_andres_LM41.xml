@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!--
 <!DOCTYPE curriculum [
 	<!ELEMENT curriculum (nombre,apellidos,fecha_nacimiento,residencia,datos_contacto,descripcion,competencias,formacion_academica,experiencia_profesional)>
 	<!ELEMENT nombre (#PCDATA)>
@@ -27,11 +28,12 @@
 	<!ELEMENT ano_finalizacion (#PCDATA)>
 	
 ]>
-
-<curriculum>
+-->
+<curriculum xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="amado_cibreiro_andres_LM41.xsd">
     <nombre>Jesús</nombre>
     <apellidos>Ramirez León</apellidos>
-    <fecha_nacimiento>22/11/2000</fecha_nacimiento>
+    <fecha_nacimiento>2000-11-22</fecha_nacimiento>
 
     <residencia>
         <direccion>Calle 13 Rúa del percebe</direccion>
