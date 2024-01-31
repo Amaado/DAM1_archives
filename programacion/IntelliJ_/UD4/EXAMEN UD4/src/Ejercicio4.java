@@ -2,21 +2,32 @@ import java.util.Scanner;
 
 public class Ejercicio4 {
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println("Ingresa un número: ");
-        String numString = entrada.nextLine();
-        int suma =0;
-        int numLongitud = numString.length();
+        // Solicitar al usuario que ingrese un número
+        System.out.print("Ingresa un número: ");
+        int numero = sc.nextInt();
 
-        for (numLongitud=0;numLongitud==numLongitud;numLongitud++){
-            String caracter = numString.substring(0, numLongitud);
+        // Llamar a la función para sumar los dígitos e imprimir el resultado
+        int suma = sumarDigitos(numero);
+        System.out.println("La suma de los dígitos es: " + suma);
 
-            suma = suma + Integer.parseInt(caracter);
+        sc.close();
+    }
+
+    // Función para sumar los dígitos de un número
+    public static int sumarDigitos(int num) {
+        int suma = 0;
+
+        // Iterar mientras haya dígitos en el número
+        while (num != 0) {
+            // Obtener el último dígito y sumarlo
+            suma += num % 10;
+
+            // Eliminar el último dígito del número
+            num /= 10;
         }
 
-        System.out.println(suma);
-
-        //Programa con errores. No funciona!
+        return suma;
     }
 }
