@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curso xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="amado_cibreiro_andres_LM47_3.xsd">
+    <num>2023-24</num>
+    <horario_recreo>
+        <primero>
+            <hora_inicio>17:10</hora_inicio>
+            <hora_fin>17:30</hora_fin>
+        </primero>
+
+        <segundo>
+            <hora_inicio>20:00</hora_inicio>
+            <hora_fin>20:20</hora_fin>
+        </segundo>
+
+    </horario_recreo>
+
+    <materias>
+        <materia>
+            <nombre>Linguaxes de marcas e sistemas de xestión de información</nombre>
+            <profesor>Miguel Ixem Couto Pérez</profesor>
+            <horario>
+                <dia dia="Lunes">
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>18:20</hora_inicio>
+                        <hora_fin>19:10</hora_fin>
+                    </sesion>
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>19:10</hora_inicio>
+                        <hora_fin>20:00</hora_fin>
+                    </sesion>
+                </dia>
+
+                <dia dia="Jueves">
+                    <sesion>
+                        <aula>105</aula>
+                        <hora_inicio>14:40</hora_inicio>
+                        <hora_fin>15:30</hora_fin>
+                    </sesion>
+                    <sesion>
+                        <aula>105</aula>
+                        <hora_inicio>15:30</hora_inicio>
+                        <hora_fin>16:20</hora_fin>
+                    </sesion>
+                </dia>
+
+                <dia dia="Viernes">
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>17:30</hora_inicio>
+                        <hora_fin>18:20</hora_fin>
+                    </sesion>
+                </dia>
+            </horario>
+        </materia>
+
+        <materia>
+            <nombre>Bases de datos</nombre>
+            <profesor>Miguel Ixem Couto Pérez</profesor>
+            <horario>
+                <dia dia="Lunes">
+                    <sesion>
+                        <aula>105</aula>
+                        <hora_inicio>15:30</hora_inicio>
+                        <hora_fin>16:20</hora_fin>
+                    </sesion>
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>16:20</hora_inicio>
+                        <hora_fin>17:10</hora_fin>
+                    </sesion>
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>17:30</hora_inicio>
+                        <hora_fin>18:20</hora_fin>
+                    </sesion>
+                </dia>
+
+                <dia dia="Martes">
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>19:10</hora_inicio>
+                        <hora_fin>20:00</hora_fin>
+                    </sesion>
+                </dia>
+
+                <dia dia="Miercoles">
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>16:20</hora_inicio>
+                        <hora_fin>17:10</hora_fin>
+                    </sesion>
+                </dia>
+
+                <dia dia="Jueves">
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>16:20</hora_inicio>
+                        <hora_fin>17:10</hora_fin>
+                    </sesion>
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>17:30</hora_inicio>
+                        <hora_fin>18:20</hora_fin>
+                    </sesion>
+                </dia>
+            </horario>
+        </materia>
+
+        <materia>
+            <nombre>Sistemas informáticos</nombre>
+            <profesor>Fernando Gómez Folgar</profesor>
+            <horario>
+                <dia dia="Lunes">
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>20:20</hora_inicio>
+                        <hora_fin>21:10</hora_fin>
+                    </sesion>
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>21:10</hora_inicio>
+                        <hora_fin>22:00</hora_fin>
+                    </sesion>
+                </dia>
+
+                <dia dia="Martes">
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>16:20</hora_inicio>
+                        <hora_fin>17:10</hora_fin>
+                    </sesion>
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>17:10</hora_inicio>
+                        <hora_fin>18:20</hora_fin>
+                    </sesion>
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>18:20</hora_inicio>
+                        <hora_fin>19:10</hora_fin>
+                    </sesion>
+                </dia>
+
+                <dia dia="Viernes">
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>20:20</hora_inicio>
+                        <hora_fin>21:10</hora_fin>
+                    </sesion>
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>21:10</hora_inicio>
+                        <hora_fin>22:00</hora_fin>
+                    </sesion>
+                </dia>
+            </horario>
+        </materia>
+
+        <materia>
+            <nombre>Formación e orientación laboral</nombre>
+            <profesor>Mónica Arca Vilariño</profesor>
+            <horario>
+
+                <dia dia="Martes">
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>15:30</hora_inicio>
+                        <hora_fin>16:20</hora_fin>
+                    </sesion>
+                </dia>
+
+                <dia dia="Miercoles">
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>15:30</hora_inicio>
+                        <hora_fin>16:20</hora_fin>
+                    </sesion>
+                </dia>
+
+                <dia dia="Viernes">
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>15:30</hora_inicio>
+                        <hora_fin>16:20</hora_fin>
+                    </sesion>
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>16:20</hora_inicio>
+                        <hora_fin>17:10</hora_fin>
+                    </sesion>
+                </dia>
+            </horario>
+        </materia>
+
+        <materia>
+            <nombre>Programación</nombre>
+            <profesor>Rosalia Calleja Gómez</profesor>
+            <horario>
+
+                <dia dia="Martes">
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>20:20</hora_inicio>
+                        <hora_fin>21:10</hora_fin>
+                    </sesion>
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>21:10</hora_inicio>
+                        <hora_fin>22:00</hora_fin>
+                    </sesion>
+                </dia>
+
+                <dia dia="Miercoles">
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>17:30</hora_inicio>
+                        <hora_fin>18:20</hora_fin>
+                    </sesion>
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>18:20</hora_inicio>
+                        <hora_fin>19:10</hora_fin>
+                    </sesion>
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>19:10</hora_inicio>
+                        <hora_fin>20:00</hora_fin>
+                    </sesion>
+                </dia>
+
+                <dia dia="Jueves">
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>19:10</hora_inicio>
+                        <hora_fin>20:00</hora_fin>
+                    </sesion>
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>20:20</hora_inicio>
+                        <hora_fin>21:10</hora_fin>
+                    </sesion>
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>21:10</hora_inicio>
+                        <hora_fin>22:00</hora_fin>
+                    </sesion>
+                </dia>
+
+                <dia dia="Viernes">
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>18:20</hora_inicio>
+                        <hora_fin>19:10</hora_fin>
+                    </sesion>
+                </dia>
+            </horario>
+        </materia>
+
+        <materia>
+            <nombre>Contornos de desnvolvemento</nombre>
+            <profesor>Antón Orduna Viguera</profesor>
+            <horario>
+
+                <dia dia="Miercoles">
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>20:20</hora_inicio>
+                        <hora_fin>21:10</hora_fin>
+                    </sesion>
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>21:10</hora_inicio>
+                        <hora_fin>22:00</hora_fin>
+                    </sesion>
+                </dia>
+
+                <dia dia="Jueves">
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>18:20</hora_inicio>
+                        <hora_fin>19:10</hora_fin>
+                    </sesion>
+                </dia>
+
+                <dia dia="Viernes">
+                    <sesion>
+                        <aula>112</aula>
+                        <hora_inicio>19:10</hora_inicio>
+                        <hora_fin>20:00</hora_fin>
+                    </sesion>
+                </dia>
+            </horario>
+        </materia>
+    </materias>
+</curso>

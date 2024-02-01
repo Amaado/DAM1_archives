@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedidos xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="amado_cibreiro_andres_LM47_2.xsd">
+    <pedido>
+        <direccion_envio>
+            <nombre>Antonio</nombre>
+            <apellidos>Reverendo Rebordelo</apellidos>
+            <calle>Calle Fontiñas</calle>
+            <numero>12</numero>
+            <numero_piso>4</numero_piso>
+            <letra>A</letra>
+            <cp>15707</cp>
+            <ciudad>Santiago de Compostela</ciudad>
+            <CA>A Coruña</CA>
+        </direccion_envio>
+
+        <direccion_facturacion>
+            <nombre>Antonio</nombre>
+            <apellidos>Reverendo Rebordelo</apellidos>
+            <calle>Calle Fontiñas</calle>
+            <numero>12</numero>
+            <numero_piso>4</numero_piso>
+            <letra>A</letra>
+            <cp>15707</cp>
+            <ciudad>Santiago de Compostela</ciudad>
+            <CA>A Coruña</CA>
+        </direccion_facturacion>
+
+        <productos>
+            <producto>
+                <id>84736</id>
+                <nombre_producto>La Batamanta</nombre_producto>
+                <cantidad>2</cantidad>
+                <precio>20</precio>
+            </producto>
+            <producto>
+                <id>84737</id>
+                <nombre_producto>La Chorrimangera</nombre_producto>
+                <cantidad>1</cantidad>
+                <precio>15</precio>
+            </producto>
+        </productos>
+    </pedido>
+</pedidos>

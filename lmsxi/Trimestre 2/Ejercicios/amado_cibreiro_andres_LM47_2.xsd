@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="pedidos" type="pedidosType"></xs:element>
+
+<xs:complexType name="pedidosType">
+    <xs:sequence maxOccurs="unbounded">
+        <xs:element name="pedido" type="pedidoType"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="pedidoType">
+    <xs:sequence>
+        <xs:element name="direccion_envio" type="direccion_envioType"></xs:element>
+        <xs:element name="direccion_facturacion" type="direccion_facturacionType"></xs:element>
+        <xs:element name="productos" type="productosType"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="direccion_envioType">
+    <xs:sequence>
+        <xs:element name="nombre" type="xs:string"></xs:element>
+        <xs:element name="apellidos" type="xs:string"></xs:element>
+        <xs:element name="calle" type="xs:string"></xs:element>
+        <xs:element name="numero" type="xs:integer"></xs:element>
+        <xs:element name="numero_piso" type="xs:integer" minOccurs="0"></xs:element>
+        <xs:element name="letra" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element name="cp" type="xs:integer"></xs:element>
+        <xs:element name="ciudad" type="xs:string"></xs:element>
+        <xs:element name="CA" type="xs:string"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="direccion_facturacionType">
+    <xs:sequence>
+        <xs:element name="nombre" type="xs:string"></xs:element>
+        <xs:element name="apellidos" type="xs:string"></xs:element>
+        <xs:element name="calle" type="xs:string"></xs:element>
+        <xs:element name="numero" type="xs:integer"></xs:element>
+        <xs:element name="numero_piso" type="xs:integer" minOccurs="0"></xs:element>
+        <xs:element name="letra" type="xs:string" minOccurs="0"></xs:element>
+        <xs:element name="cp" type="xs:integer"></xs:element>
+        <xs:element name="ciudad" type="xs:string"></xs:element>
+        <xs:element name="CA" type="xs:string"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="productosType">
+    <xs:sequence maxOccurs="unbounded">
+        <xs:element name="producto" type="productoType"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="productoType">
+    <xs:sequence>
+        <xs:element name="id" type="xs:integer"></xs:element>
+        <xs:element name="nombre_producto" type="xs:string"></xs:element>
+        <xs:element name="cantidad" type="xs:integer"></xs:element>
+        <xs:element name="precio" type="xs:integer"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+</xs:schema>
