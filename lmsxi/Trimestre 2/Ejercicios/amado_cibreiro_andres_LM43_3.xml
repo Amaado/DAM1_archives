@@ -12,7 +12,9 @@
     <!ELEMENT dia (#PCDATA)>
 ]>
 -->
-<discos xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="amado_cibreiro_andres_LM46_sub43_3.xsd">
+<discos xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation="amado_cibreiro_andres_LM46_sub43_3.xsd">
+    
     <disco grupo="Daft Punk">
         <titulo>Homework</titulo>
         <ventas>2300000</ventas>

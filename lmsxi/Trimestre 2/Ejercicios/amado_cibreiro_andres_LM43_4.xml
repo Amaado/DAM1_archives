@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!--
 <!DOCTYPE discos [
 	<!ELEMENT mundialesFutbol (mundial+)>
 	<!ELEMENT mundial (anfitrion,finalistas)>
@@ -9,8 +9,10 @@
     <!ELEMENT finalista (#PCDATA)>
     <!ATTLIST finalista ganador CDATA (si | no) #REQUIRED>
 ]>
+-->
+<mundialesFutbol xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="amado_cibreiro_andres_LM46_sub43_4.xsd">
 
-<mundialesFutbol>
     <mundial anho="1982">
         <anfitrion>España</anfitrion>
         <finalistas>
