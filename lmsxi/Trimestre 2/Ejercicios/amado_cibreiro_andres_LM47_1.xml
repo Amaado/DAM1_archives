@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pedidos  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="amado_cibreiro_andres_LM47_1.xsd">
+    <pedido codigo="142">
+        <nombre_cliente>Juan Perez Castellon</nombre_cliente>
+        <mesa>4</mesa>
+        <fecha>22/11/2023</fecha>
+        <contenido>
+            <hamburguesa>
+                <nombre>Burguer-Kangreburger</nombre>
+                <numero>3</numero>
+                <precio>20$</precio>
+            </hamburguesa>
+            <complemento>
+                <nombre>Agua mineral</nombre>
+                <numero>1</numero>
+                <precio>1,5$</precio>
+            </complemento>
+        </contenido>
+    </pedido>
+</pedidos>

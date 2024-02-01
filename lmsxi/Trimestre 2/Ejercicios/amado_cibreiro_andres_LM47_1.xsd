@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="pedidos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pedido" type="xs:string" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:choice>
+                            <xs:element name="nombre_cliente" type="xs:string"></xs:element>
+                        </xs:choice>
+                        <xs:choice>
+                            <xs:element name="mesa" type="xs:integer"></xs:element>
+                        </xs:choice>
+                        <xs:choice>
+                            <xs:element name="fecha" type="xs:string"></xs:element>
+                        </xs:choice>
+                        <xs:choice>
+                            <xs:element name="contenido">
+                                <xs:complexType>
+                                    <xs:choice>
+                                        <xs:element name="hamburguesa" type="xs:string">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element name="nombre" type="xs:string"></xs:element>
+                                                    <xs:element name="numero" type="xs:integer"></xs:element>
+                                                    <xs:element name="precio" type="xs:string"></xs:element>
+                                                </xs:all>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:choice>
+                                    <xs:choice>
+                                        <xs:element name="complemento" type="xs:string">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element name="nombre" type="xs:string"></xs:element>
+                                                    <xs:element name="numero" type="xs:integer"></xs:element>
+                                                    <xs:element name="precio" type="xs:string"></xs:element>
+                                                </xs:all>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:choice>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:choice>
+                    </xs:complexType>
+                    <xs:attribute name="codigo" type="xs:integer"></xs:attribute>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
