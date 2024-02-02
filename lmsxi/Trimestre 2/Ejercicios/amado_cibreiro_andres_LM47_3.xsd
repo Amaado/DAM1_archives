@@ -25,7 +25,6 @@
             </xs:sequence>
         </xs:complexType>
 
-
         <xs:complexType name="materiasType">
             <xs:sequence maxOccurs="unbounded">
                 <xs:element name="materia" type="materiaType"></xs:element>
@@ -61,27 +60,27 @@
             </xs:sequence>
         </xs:complexType>
 
-        <xs:simpleType name="dias_semana">
-            <xs:restriction base="xs:string">
-                <xs:enumeration value="Lunes" />
-                <xs:enumeration value="Martes" />
-                <xs:enumeration value="Miercoles" />
-                <xs:enumeration value="Jueves" />
-                <xs:enumeration value="Viernes" />
-            </xs:restriction>
-        </xs:simpleType>
+    
 
-        <xs:simpleType name="filtro_hora">
-            <xs:restriction base="xs:string">
-                <xs:pattern value="([07-9]|1[0-9]|2[0-2]):(00|10|20|30|40|50)" />
-            </xs:restriction>
-        </xs:simpleType>
+    <xs:simpleType name="dias_semana">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Lunes" />
+            <xs:enumeration value="Martes" />
+            <xs:enumeration value="Miercoles" />
+            <xs:enumeration value="Jueves" />
+            <xs:enumeration value="Viernes" />
+        </xs:restriction>
+    </xs:simpleType>
 
-        <xs:simpleType name="filtro_aula">
-            <xs:restriction base="xs:string">
-                <xs:pattern value="[0-9]{3}" />
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:element>
+    <xs:simpleType name="filtro_hora">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([07-9]|1[0-9]|2[0-2]):(00|10|20|30|40|50)" />
+        </xs:restriction>
+    </xs:simpleType>
 
+    <xs:simpleType name="filtro_aula">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{3}" />
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>
