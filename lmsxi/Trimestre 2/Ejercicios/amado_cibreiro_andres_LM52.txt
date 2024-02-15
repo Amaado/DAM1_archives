@@ -1,0 +1,6 @@
+1.
+a) //telefono
+b) /clinica_veterinaria/pacientes/paciente/propietario[nombre='Juan Pérez']/../nombre | /clinica_veterinaria/pacientes/paciente/propietario[nombre='Juan Pérez']/../especie 
+c) sum(/clinica_veterinaria/pacientes/paciente[ nombre= /clinica_veterinaria/consultas/consulta [veterinario = 'Pedro Martínez']/paciente]/edad)
+d) /clinica_veterinaria/consultas/consulta [paciente=/clinica_veterinaria/pacientes/paciente[especie="Gato"]/nombre]/motivo/string()
+e) /clinica_veterinaria/consultas/consulta [paciente=/clinica_veterinaria/pacientes/paciente/propietario[nombre="María García"]/../nombre]/tratamiento/string()

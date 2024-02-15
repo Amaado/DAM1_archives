@@ -10,10 +10,10 @@ a) count(//@anho)
 b) /mundialesFutbol/mundial/finalistas/finalista/string()
 c) distinct-values(/mundialesFutbol/mundial/finalistas/finalista/string())
 d) distinct-values(/mundialesFutbol/mundial/finalistas/finalista[@ganador="si"]/string())
-e) (/mundialesFutbol/mundial[1]/@anho)-(/mundialesFutbol/mundial[11]/@anho)
+e) max(/mundialesFutbol/mundial/@anho)-min(/mundialesFutbol/mundial/@anho)
 f) /mundialesFutbol/mundial [@anho=max(//mundial/@anho)]/finalistas/finalista[@ganador="si"]/string()
 
-2.
+3.
 a) /productos/producto
 b) /productos/producto[nombre="Camiseta"]//talla
 c) /productos/producto[nombre="Zapatos"]//precio
