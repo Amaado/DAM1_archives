@@ -1,0 +1,31 @@
+1.
+a) //titulo/text()
+b) count(//titulo)
+c) sum(//ventas)
+d) avg(//ventas)
+e) (/discos/disco[4]/lanzamiento/anho)-(/discos/disco[1]/lanzamiento/anho)
+
+2.
+a) count(//@anho)
+b) /mundialesFutbol/mundial/finalistas/finalista/string()
+c) distinct-values(/mundialesFutbol/mundial/finalistas/finalista/string())
+d) distinct-values(/mundialesFutbol/mundial/finalistas/finalista[@ganador="si"]/string())
+e) (/mundialesFutbol/mundial[1]/@anho)-(/mundialesFutbol/mundial[11]/@anho)
+f) /mundialesFutbol/mundial [@anho=max(//mundial/@anho)]/finalistas/finalista[@ganador="si"]/string()
+
+2.
+a) /productos/producto
+b) /productos/producto[nombre="Camiseta"]//talla
+c) /productos/producto[nombre="Zapatos"]//precio
+d) /productos/producto [precio>=15]//nombre
+e) //talla
+f) /productos/producto [precio=max (//precio)]//nombre
+g) avg(//precio)
+h) //producto[starts-with(nombre, 'P')]/nombre
+i) //producto[contains(descripcion, 'deportiva')]/nombre
+j) //producto[precio<20]/tallas/talla
+k) //producto[@categoria="ropa"]
+l) //producto[nombre='Gorra']/precio[@divisa='USD']/text()
+m) //producto/precio[@divisa='EUR']/../nombre
+n) //producto[precio[@divisa='USD']>20]/tallas/talla
+o) //producto/precio[@divisa='USD']/../nombre | //producto/precio[@divisa='USD']/../descripcion
