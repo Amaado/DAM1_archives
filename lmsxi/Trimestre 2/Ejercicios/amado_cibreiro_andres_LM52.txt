@@ -4,3 +4,10 @@ b) /clinica_veterinaria/pacientes/paciente/propietario[nombre='Juan Pérez']/../
 c) sum(/clinica_veterinaria/pacientes/paciente[ nombre= /clinica_veterinaria/consultas/consulta [veterinario = 'Pedro Martínez']/paciente]/edad)
 d) /clinica_veterinaria/consultas/consulta [paciente=/clinica_veterinaria/pacientes/paciente[especie="Gato"]/nombre]/motivo/string()
 e) /clinica_veterinaria/consultas/consulta [paciente=/clinica_veterinaria/pacientes/paciente/propietario[nombre="María García"]/../nombre]/tratamiento/string()
+
+2.
+a) //ciclo [@id='SMR']/nombre
+b) /ies/ciclos/ciclo[@id="DAM" and /ies/modulos/modulo/nombre="Bases de datos"]/nombre
+c) /ies/modulos/modulo[ciclo=/ies/ciclos/ciclo[grado='Superior']/@id]/nombre
+d) /ies/modulos/modulo[ciclo=/ies/ciclos/ciclo[decretoTitulo[@anho='2008']]/@id]/nombre
+e) /ies/ciclos/ciclo [@id=//modulo[curso='2']/ciclo]/grado
