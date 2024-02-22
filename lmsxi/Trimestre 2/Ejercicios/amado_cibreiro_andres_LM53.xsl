@@ -3,15 +3,15 @@
 <xsl:output method="html"></xsl:output>
   <xsl:template match="/">
     <html>
-        <style type="text/css">
-            table,th,td {
-                border: 2px solid blue;
-                border-collapse:collapse;
-                align-items: left;
-                text-align: left;
-            }
-        </style>
       <head>
+        <style type="text/css">
+          table,th,td {
+              border: 2px solid blue;
+              border-collapse:collapse;
+              align-items: left;
+              text-align: left;
+          }
+      </style>
         <title>Discografía de Daft Punk</title>
       </head>
       <body>
