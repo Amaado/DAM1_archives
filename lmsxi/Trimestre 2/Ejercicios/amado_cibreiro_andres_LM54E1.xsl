@@ -22,14 +22,14 @@
 
                     <table>
                         <tr>
-                            <td align="center">
+                            <td >
                                 <xsl:value-of select="nombre" />
                             </td>
                             <td>
                                 <xsl:value-of select="peso" />
                                 kg
                             </td>
-                            <td align="center">
+                            <td>
                                 <xsl:value-of select="lugar/@edificio" />
                                 <xsl:value-of select="lugar/aula" />
                             </td>
@@ -47,10 +47,10 @@
                 <xsl:for-each select="//producto[lugar[@edificio='B']]">
                 <table>
                     <tr>
-                        <td align="center">
+                        <td>
                             <xsl:value-of select="nombre" />
                         </td>
-                        <td align="center">
+                        <td>
                             <xsl:choose>
                                 <xsl:when test="peso[@unidad='g']">
                                     <xsl:value-of select="(peso*0.001)" />
@@ -61,7 +61,7 @@
                             </xsl:choose>
                             kg
                         </td>
-                        <td align="center">
+                        <td>
                             <xsl:value-of select="lugar/@edificio" />
                             <xsl:value-of select="lugar/aula" />
                         </td>
