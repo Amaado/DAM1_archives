@@ -15,7 +15,7 @@ public class PRG06_T03 {
                 continue;
             }
 
-            ar1[i][]=numInt;
+            //ar1[i][]=numInt;
         }
         System.out.println("\nArray aleatorio de 20 números (entre 0 y 9): \n"+ Arrays.toString(ar1));
 
