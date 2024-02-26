@@ -1,0 +1,13 @@
+*/Sentencias básicas MariaDB /*
+
+•Loggin:
+root
+toor
+
+•Root loggin:
+mariadb -u root -p
+
+•Creación de tabla:
+SHOW databases;
+CREATE DATABASE IF NOT EXISTS test
+USE test

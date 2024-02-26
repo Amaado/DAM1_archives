@@ -1,5 +1,0 @@
-sistemas operativos sen cambios. Para iso precisa da instalación da máquina virtual de Java.
-Os principais navegadores do mercado permiten executar miniaplicacións desenvolvidas en Java.
-O programa desenvolvido en Java funcionará sobre unha Máquina Virtual Java.
-polas aplicacións Java sempre do mesmo xeito con independencia da máquina real que haxa por
-debaixo da máquina virtual Java.

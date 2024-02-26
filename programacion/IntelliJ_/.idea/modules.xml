@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/UD6/ArrayDemo/ArrayDemo.iml" filepath="$PROJECT_DIR$/UD6/ArrayDemo/ArrayDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD6/ArrayDemo2/ArrayDemo2.iml" filepath="$PROJECT_DIR$/UD6/ArrayDemo2/ArrayDemo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD6/ArrayRef/ArrayRef.iml" filepath="$PROJECT_DIR$/UD6/ArrayRef/ArrayRef.iml" />
       <module fileurl="file://$PROJECT_DIR$/UD4/EXAMEN UD4/EXAMEN UD4.iml" filepath="$PROJECT_DIR$/UD4/EXAMEN UD4/EXAMEN UD4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD5/EXAMEN UD5/EXAMEN UD5.iml" filepath="$PROJECT_DIR$/UD5/EXAMEN UD5/EXAMEN UD5.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/IntelliJ_.iml" filepath="$PROJECT_DIR$/.idea/IntelliJ_.iml" />
       <module fileurl="file://$PROJECT_DIR$/UD2/PRG02-Examen/PRG02-Examen.iml" filepath="$PROJECT_DIR$/UD2/PRG02-Examen/PRG02-Examen.iml" />
       <module fileurl="file://$PROJECT_DIR$/UD2/PRG02-T00_1/PRG02-T00_1.iml" filepath="$PROJECT_DIR$/UD2/PRG02-T00_1/PRG02-T00_1.iml" />
@@ -29,11 +33,18 @@
       <module fileurl="file://$PROJECT_DIR$/UD5/PRG05-T05/PRG05-T05.iml" filepath="$PROJECT_DIR$/UD5/PRG05-T05/PRG05-T05.iml" />
       <module fileurl="file://$PROJECT_DIR$/UD5/PRG05-T06/PRG05-T06.iml" filepath="$PROJECT_DIR$/UD5/PRG05-T06/PRG05-T06.iml" />
       <module fileurl="file://$PROJECT_DIR$/UD5/PRG05-T07/PRG05-T07.iml" filepath="$PROJECT_DIR$/UD5/PRG05-T07/PRG05-T07.iml" />
-      <module fileurl="file://$PROJECT_DIR$/UD5/SOLUCIONES_EXAMEN/SOLUCIONES_EXAMEN.iml" filepath="$PROJECT_DIR$/UD5/SOLUCIONES_EXAMEN/SOLUCIONES_EXAMEN.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD6/PRG06-T01/PRG06-T01.iml" filepath="$PROJECT_DIR$/UD6/PRG06-T01/PRG06-T01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD6/PRG06-T02/PRG06-T02.iml" filepath="$PROJECT_DIR$/UD6/PRG06-T02/PRG06-T02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD6/PRG06-T03/PRG06-T03.iml" filepath="$PROJECT_DIR$/UD6/PRG06-T03/PRG06-T03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contornos/PRUEBAS Junit/PRUEBAS Junit.iml" filepath="$PROJECT_DIR$/contornos/PRUEBAS Junit/PRUEBAS Junit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD5/SOLUCIONS_repaso/SOLUCIONS_repaso.iml" filepath="$PROJECT_DIR$/UD5/SOLUCIONS_repaso/SOLUCIONS_repaso.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD5/SOLUCIONS_tarefasAV/SOLUCIONS_tarefasAV.iml" filepath="$PROJECT_DIR$/UD5/SOLUCIONS_tarefasAV/SOLUCIONS_tarefasAV.iml" />
       <module fileurl="file://$PROJECT_DIR$/UD2/UD2.iml" filepath="$PROJECT_DIR$/UD2/UD2.iml" />
       <module fileurl="file://$PROJECT_DIR$/UD3/UD3.iml" filepath="$PROJECT_DIR$/UD3/UD3.iml" />
       <module fileurl="file://$PROJECT_DIR$/UD4/UD4.iml" filepath="$PROJECT_DIR$/UD4/UD4.iml" />
       <module fileurl="file://$PROJECT_DIR$/UD5/UD5.iml" filepath="$PROJECT_DIR$/UD5/UD5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD6/UD6.iml" filepath="$PROJECT_DIR$/UD6/UD6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contornos/contornos.iml" filepath="$PROJECT_DIR$/contornos/contornos.iml" />
     </modules>
   </component>
 </project>
