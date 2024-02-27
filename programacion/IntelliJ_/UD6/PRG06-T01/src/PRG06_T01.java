@@ -7,7 +7,7 @@ public class PRG06_T01 {
 
         int[] ar1 = new int[10];
 
-
+        System.out.println("Contador de ");
         for (int i=0;i<=9;i++){
             System.out.println("Escribe un numero: ");
             int numero = entrada.nextInt();
@@ -30,8 +30,8 @@ public class PRG06_T01 {
             }
         }
 
-        System.out.println("\nNumero mayor: "+numMax+" (Posicion "+posiMax+"º posición)");
-        System.out.println("Numero menor: "+numMin+" (Posicion "+posiMin+"º posición)");
+        System.out.println("\nNumero mayor: "+numMax+" ("+posiMax+"º posición)");
+        System.out.println("Numero menor: "+numMin+" ("+posiMin+"º posición)");
 
     }
 }
