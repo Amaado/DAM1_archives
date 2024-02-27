@@ -17,17 +17,26 @@ public class prueba1 {
         }
 
         // Mostrar la matriz y calcular las sumas parciales
+
+
         for (int i = 0; i < 4; i++) {
             int sumaFila = 0;
+
             for (int j = 0; j < 5; j++) {
-                System.out.print(matriz[i][j] + "\t"); // Imprimir elemento de la matriz
-                sumaFila += matriz[i][j]; // Calcular la suma parcial de la fila
+                if (matriz[i][j]==(matriz[0][0]|matriz[1][0]|matriz[2][0]|matriz[3][0])){
+                    System.out.print("         "+matriz[i][j] + "\t"); // Imprimir elemento de la matriz
+                    sumaFila += matriz[i][j]; // Calcular la suma parcial de la fila
+                }else {
+                    System.out.print(matriz[i][j] + "\t"); // Imprimir elemento de la matriz
+                    sumaFila += matriz[i][j]; // Calcular la suma parcial de la fila
+                }
+
             }
-            System.out.println("| " + sumaFila); // Mostrar la suma parcial de la fila
+            System.out.println(" ——— Σ -> " + sumaFila); // Mostrar la suma parcial de la fila
         }
 
         // Mostrar las sumas de las columnas
-        System.out.println("-----------------------------");
+        System.out.println("ǀ   ǀ   ǀ   ǀ   ǀ\nΣ   Σ   Σ   Σ   Σ\n|   |   |   |   |\nv   v   v   v   v");
         System.out.print("   ");
         for (int j = 0; j < 5; j++) {
             int sumaColumna = 0;
@@ -58,7 +67,7 @@ public class prueba1 {
         List<String> lineasCaja = new ArrayList<>();
 
         // Agrega líneas a la caja
-        agregarLineaCaja(Arrays.asList("        ","1","2","3","4","5"," ——— Σ -> 3   "), lineasCaja);
+        agregarLineaCaja(Arrays.asList("        ","1","2","3","4","5",""), lineasCaja);
         agregarLineaCaja(Arrays.asList("        ","6","7","8","9","1"," ——— Σ -> 4"), lineasCaja);
         agregarLineaCaja(Arrays.asList("        ","2","3","4","5","6"," ——— Σ -> 5"), lineasCaja);
         agregarLineaCaja(Arrays.asList("        ","7","8","9","1","2"," ——— Σ -> 6"), lineasCaja);
