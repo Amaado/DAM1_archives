@@ -1,8 +1,3 @@
-import com.sun.xml.internal.ws.api.ha.StickyFeature;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
 public class prueba1 {
@@ -29,27 +24,25 @@ public class prueba1 {
 
             for (int j = 0; j < 5; j++) {
                 if (j==0) {
-                    System.out.print("| | |  "+matriz[i][j] + "   ");
+                    System.out.print("| | |  "+ANSI_CYAN+matriz[i][j]+ANSI_RESET+"   ");
                     sumaFila += matriz[i][j];
                 }else {
-                    System.out.print(matriz[i][j] + "   ");
+                    System.out.print(ANSI_CYAN+matriz[i][j]+ANSI_RESET+"   ");
                     sumaFila += matriz[i][j];
                 }
-
-
             }
 
             String sumaFilaStr = String.valueOf(sumaFila);
             if (sumaFilaStr.length()==1){
-                System.out.println(" ——— Σ -> " + sumaFila+"  | | |");
+                System.out.println(ANSI_YELLOW+" ——— Σ -> "+ANSI_GREEN+sumaFila+ANSI_RESET+"  | | |");
             }else {
-                System.out.println(" ——— Σ -> " + sumaFila+" | | |");
+                System.out.println(ANSI_YELLOW+" ——— Σ -> "+ANSI_GREEN+sumaFila+ANSI_RESET+" | | |");
             }
 
         }
 
 
-        System.out.println("| | |  ǀ   ǀ   ǀ   ǀ   ǀ              | | | |\n| | |  Σ   Σ   Σ   Σ   Σ              | | | |\n| | |  |   |   |   |   |         Σ    | | | |\n| | |  v   v   v   v   v       total  v | | |");
+        System.out.println("| | |"+ANSI_YELLOW+"  ǀ   ǀ   ǀ   ǀ   ǀ              | "+ANSI_RESET+"| | |\n"+"| | |"+ANSI_ORANGE+"  Σ   Σ   Σ   Σ   Σ"+ANSI_YELLOW+"              | "+ANSI_RESET+"| | |\n"+"| | |"+ANSI_YELLOW+"  |   |   |   |   |"+ANSI_ORANGE+"         Σ    "+ANSI_YELLOW+"| "+ANSI_RESET+"| | |\n| | |"+ANSI_YELLOW+"  v   v   v   v   v       "+ANSI_ORANGE+"total"+ANSI_YELLOW+"  v "+ANSI_RESET+"| | |");
         for (int j = 0; j < 5; j++) {
             int sumaColumna = 0;
             for (int i = 0; i < 4; i++) {
@@ -59,15 +52,15 @@ public class prueba1 {
             String sumaColumnaStr = String.valueOf(sumaColumna);
             if (sumaColumnaStr.length()==1){
                 if (j==0){
-                    System.out.print("| | |  "+sumaColumna + "   ");
+                    System.out.print("| | |  "+ANSI_GREEN+sumaColumna+ANSI_RESET+"   ");
                 }else {
-                    System.out.print(sumaColumna + "   ");
+                    System.out.print(ANSI_GREEN+sumaColumna+ANSI_RESET+"   ");
                 }
             }else {
                 if (j==0){
-                    System.out.print("| | |  "+sumaColumna + "  ");
+                    System.out.print("| | |  "+ANSI_GREEN+sumaColumna+ANSI_RESET+"  ");
                 }else {
-                    System.out.print(sumaColumna + "  ");
+                    System.out.print(ANSI_GREEN+sumaColumna+ANSI_RESET+"  ");
                 }
             }
 
@@ -82,9 +75,9 @@ public class prueba1 {
 
         String sumaTotalStr = String.valueOf(sumaTotal);
         if (sumaTotalStr.length()==2){
-            System.out.println("———————-> "+sumaTotal+" | | |");
+            System.out.println(ANSI_YELLOW+"———————-> "+ANSI_PURPLE+sumaTotal+ANSI_RESET+" | | |");
         }else {
-            System.out.println("———————-> "+sumaTotal+"| | |");
+            System.out.println(ANSI_YELLOW+"———————-> "+ANSI_PURPLE+sumaTotal+ANSI_RESET+"| | |");
         }
 
         System.out.println("| | |                                   | | |\n" +
@@ -108,18 +101,6 @@ public class prueba1 {
                 "|  .-----, .-----, .-----,  \\/ / v \\ \\/     |\n" +
                 "|  |ALPHA| |x-VAR| | DEL |     -._,-        |\n" +
                 "|  `-----' `-----' `-----'                  |\n" +
-                "|  SOLVER  SIMULT  POLY   CATLG-VARS        |\n" +
-                "|  .-----, .-----, .-----, .-----, .-----,  |\n" +
-                "|  |GRAPH| |TABLE| | PRGM| |CUSTM| |CLEAR|  |\n" +
-                "|  `-----' `-----' `-----' `-----' `-----'  |\n" +
-                "|  10x  A  SIN-1 B COS-1 C TAN-1 D pi   E   |\n" +
-                "|  .-----, .-----, .-----, .-----, .-----,  |\n" +
-                "|  | LOG | | SIN | | COS | | TAN | |  ^  |  |\n" +
-                "|  `-----' `-----' `-----' `-----' `-----'  |\n" +
-                "|  ex   F  x-1  G  [    H  ]    I  CALC J   |\n" +
-                "|  .-----, .-----, .-----, .-----, .-----,  |\n" +
-                "|  | LN  | | EE  | |  (  | |  )  | |     |  |\n" +
-                "|  `-----' `-----' `-----' `-----' `-----'  |\n" +
                 "|  ./~  K  MATRX L VECTR M CPLX N  MATH O   |\n" +
                 "|  .-----, .-----, .-----, .-----, .-----,  |\n" +
                 "|  | X2  | |  7  | |  8  | |  9  | |  x  |  |\n" +
@@ -144,4 +125,15 @@ public class prueba1 {
 
 
     }
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
+    public static final String ANSI_ORANGE = "\u001B[38;5;208m";
+
 }

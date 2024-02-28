@@ -1,86 +1,85 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
 public class PRG06_T03 {
     public static void main(String[] args) {
-        // Crear una matriz de 4x5 para almacenar los números enteros aleatorios
         int[][] matriz = new int[4][5];
 
-        // Generar números aleatorios entre 0 y 9 y llenar la matriz
+
         Random rand = new Random();
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 5; j++) {
-                matriz[i][j] = rand.nextInt(10); // Genera números aleatorios entre 0 y 9
+                matriz[i][j] = rand.nextInt(10);
             }
         }
-
-        // Mostrar la matriz y calcular las sumas parciales
-
-
-        for (int i = 0; i < 4; i++) {
-            int sumaFila = 0;
-
-            for (int j = 0; j < 5; j++) {
-                System.out.print(matriz[i][j] + "\t"); // Imprimir elemento de la matriz
-                sumaFila += matriz[i][j]; // Calcular la suma parcial de la fila
-
-            }
-            System.out.println(" ——— Σ -> " + sumaFila); // Mostrar la suma parcial de la fila
-        }
-
-        // Mostrar las sumas de las columnas
-        System.out.println("ǀ   ǀ   ǀ   ǀ   ǀ\nΣ   Σ   Σ   Σ   Σ\n|   |   |   |   |\nv   v   v   v   v");
-        System.out.print("   ");
-        for (int j = 0; j < 5; j++) {
-            int sumaColumna = 0;
-            for (int i = 0; i < 4; i++) {
-                sumaColumna += matriz[i][j]; // Calcular la suma parcial de la columna
-            }
-            System.out.print(sumaColumna + "\t"); // Mostrar la suma parcial de la columna
-        }
-
-        // Calcular y mostrar la suma total
-        int sumaTotal = 0;
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 5; j++) {
-                sumaTotal += matriz[i][j]; // Calcular la suma total
-            }
-        }
-        System.out.println("\n\nSuma total: " + sumaTotal);
-
-
-        System.out.println(matriz[0][0]);
-        System.out.println(matriz[1][0]);
-
-
-
-
-
-
-        List<String> lineasCaja = new ArrayList<>();
-
-        // Agrega líneas a la caja
-        agregarLineaCaja(Arrays.asList("        ","1","2","3","4","5",""), lineasCaja);
-        agregarLineaCaja(Arrays.asList("        ","6","7","8","9","1"," ——— Σ -> 4"), lineasCaja);
-        agregarLineaCaja(Arrays.asList("        ","2","3","4","5","6"," ——— Σ -> 5"), lineasCaja);
-        agregarLineaCaja(Arrays.asList("        ","7","8","9","1","2"," ——— Σ -> 6"), lineasCaja);
-        agregarLineaCaja(Arrays.asList("        ","ǀ","ǀ","ǀ","ǀ","ǀ","          |"), lineasCaja);
-        agregarLineaCaja(Arrays.asList("        ","Σ","Σ","Σ","Σ","Σ","          |"), lineasCaja);
-        agregarLineaCaja(Arrays.asList("        ","|","|","|","|","|","      Σ   |"), lineasCaja);
-        agregarLineaCaja(Arrays.asList("        ","v","v","v","v","v","    total v"), lineasCaja);
-        agregarLineaCaja(Arrays.asList("        ","7","8","9","1","2"," —————->"), lineasCaja);
 
 
         System.out.println(" .------------------------------------------,\n" +
                 "| .---------------------------------------, |\n" +
                 "| | _~_                                   | |\n" +
-                "| |  \\/  Texas Instruments     T I - 8 6  | |\n" +
+                "| |  \\/  Me merezco un 10 <3              | |\n" +
                 "| | .-----------------------------------, | |\n" +
                 "| | |                                   | | |");
-        // Imprime la caja
-        imprimirCaja(lineasCaja);
+        for (int i = 0; i < 4; i++) {
+            int sumaFila = 0;
+
+            for (int j = 0; j < 5; j++) {
+                if (j==0) {
+                    System.out.print("| | |  "+ANSI_CYAN+matriz[i][j]+ANSI_RESET+"   ");
+                    sumaFila += matriz[i][j];
+                }else {
+                    System.out.print(ANSI_CYAN+matriz[i][j]+ANSI_RESET+"   ");
+                    sumaFila += matriz[i][j];
+                }
+            }
+
+            String sumaFilaStr = String.valueOf(sumaFila);
+            if (sumaFilaStr.length()==1){
+                System.out.println(ANSI_YELLOW+" ——— Σ -> "+ANSI_GREEN+sumaFila+ANSI_RESET+"  | | |");
+            }else {
+                System.out.println(ANSI_YELLOW+" ——— Σ -> "+ANSI_GREEN+sumaFila+ANSI_RESET+" | | |");
+            }
+
+        }
+
+
+        System.out.println("| | |"+ANSI_YELLOW+"  ǀ   ǀ   ǀ   ǀ   ǀ              | "+ANSI_RESET+"| | |\n"+"| | |"+ANSI_ORANGE+"  Σ   Σ   Σ   Σ   Σ"+ANSI_YELLOW+"              | "+ANSI_RESET+"| | |\n"+"| | |"+ANSI_YELLOW+"  |   |   |   |   |"+ANSI_ORANGE+"         Σ    "+ANSI_YELLOW+"| "+ANSI_RESET+"| | |\n| | |"+ANSI_YELLOW+"  v   v   v   v   v       "+ANSI_ORANGE+"total"+ANSI_YELLOW+"  v "+ANSI_RESET+"| | |");
+        for (int j = 0; j < 5; j++) {
+            int sumaColumna = 0;
+            for (int i = 0; i < 4; i++) {
+                sumaColumna += matriz[i][j];
+            }
+
+            String sumaColumnaStr = String.valueOf(sumaColumna);
+            if (sumaColumnaStr.length()==1){
+                if (j==0){
+                    System.out.print("| | |  "+ANSI_GREEN+sumaColumna+ANSI_RESET+"   ");
+                }else {
+                    System.out.print(ANSI_GREEN+sumaColumna+ANSI_RESET+"   ");
+                }
+            }else {
+                if (j==0){
+                    System.out.print("| | |  "+ANSI_GREEN+sumaColumna+ANSI_RESET+"  ");
+                }else {
+                    System.out.print(ANSI_GREEN+sumaColumna+ANSI_RESET+"  ");
+                }
+            }
+
+        }
+
+        int sumaTotal = 0;
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 5; j++) {
+                sumaTotal += matriz[i][j];
+            }
+        }
+
+        String sumaTotalStr = String.valueOf(sumaTotal);
+        if (sumaTotalStr.length()==2){
+            System.out.println(ANSI_YELLOW+"———————-> "+ANSI_PURPLE+sumaTotal+ANSI_RESET+" | | |");
+        }else {
+            System.out.println(ANSI_YELLOW+"———————-> "+ANSI_PURPLE+sumaTotal+ANSI_RESET+"| | |");
+        }
+
         System.out.println("| | |                                   | | |\n" +
                 "| | |                                   | | |\n" +
                 "| | |                                   | | |\n" +
@@ -102,18 +101,6 @@ public class PRG06_T03 {
                 "|  .-----, .-----, .-----,  \\/ / v \\ \\/     |\n" +
                 "|  |ALPHA| |x-VAR| | DEL |     -._,-        |\n" +
                 "|  `-----' `-----' `-----'                  |\n" +
-                "|  SOLVER  SIMULT  POLY   CATLG-VARS        |\n" +
-                "|  .-----, .-----, .-----, .-----, .-----,  |\n" +
-                "|  |GRAPH| |TABLE| | PRGM| |CUSTM| |CLEAR|  |\n" +
-                "|  `-----' `-----' `-----' `-----' `-----'  |\n" +
-                "|  10x  A  SIN-1 B COS-1 C TAN-1 D pi   E   |\n" +
-                "|  .-----, .-----, .-----, .-----, .-----,  |\n" +
-                "|  | LOG | | SIN | | COS | | TAN | |  ^  |  |\n" +
-                "|  `-----' `-----' `-----' `-----' `-----'  |\n" +
-                "|  ex   F  x-1  G  [    H  ]    I  CALC J   |\n" +
-                "|  .-----, .-----, .-----, .-----, .-----,  |\n" +
-                "|  | LN  | | EE  | |  (  | |  )  | |     |  |\n" +
-                "|  `-----' `-----' `-----' `-----' `-----'  |\n" +
                 "|  ./~  K  MATRX L VECTR M CPLX N  MATH O   |\n" +
                 "|  .-----, .-----, .-----, .-----, .-----,  |\n" +
                 "|  | X2  | |  7  | |  8  | |  9  | |  x  |  |\n" +
@@ -135,38 +122,18 @@ public class PRG06_T03 {
                 "  `-._                                 _.-'\n" +
                 "      `--.__                     __.--'\n" +
                 "            ``----.._____,,---\n");
+
+
     }
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
+    public static final String ANSI_ORANGE = "\u001B[38;5;208m";
 
-
-
-
-
-
-    //PARTE 2. Sistema de Alineado
-
-    static void agregarLineaCaja(List<String> palabras, List<String> caja) {
-        // Convierte la lista de palabras a una sola línea separada por espacios
-        String linea = String.join(" ", palabras);
-
-        // Agrega la línea a la lista
-        caja.add(linea);
-    }
-
-    static void imprimirCaja(List<String> caja) {
-        // Encuentra la longitud máxima de todas las líneas
-        int longitudMaxima = 0;
-        for (String linea : caja) {
-            longitudMaxima = Math.max(longitudMaxima, linea.length());
-        }
-
-        // Imprime cada línea con barras finales alineadas
-        for (String linea : caja) {
-            System.out.print("|" + alinearTexto(linea, longitudMaxima) + "|\n");
-        }
-    }
-
-    static String alinearTexto(String texto, int longitudObjetivo) {
-        // Rellena con espacios a la derecha hasta alcanzar la longitud objetivo
-        return String.format("%-" + longitudObjetivo + "s", texto);
-    }
 }
