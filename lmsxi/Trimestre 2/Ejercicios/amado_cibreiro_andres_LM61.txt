@@ -52,8 +52,15 @@ return data(concat($baile/profesor, ' ', $baile/sala))
 nombre con todas las salas en la que da clase. Ordenar por nombre.
 ----------------------------------------------------------------------------------
 for $profesor in distinct-values(//baile/profesor)
+let $salas := distinct-values(//baile[profesor=$profesor]/sala)
 order by $profesor
-return concat($profesor, " - ", upper-case(substring(name((//baile[profesor = $profesor]/sala)[1]), 1, 1)), lower-case(substring(name((//baile[profesor = $profesor]/sala)[1]), 2, string-length(name((//baile[profesor = $profesor]/sala)[1])) - 1)), " ", (//baile[profesor = $profesor]/sala)[1])
+return data(
+  <span>{
+    $profesor, 
+    " - ",upper-case(substring(name(//baile[@id="1"]/sala), 1, 1)), lower-case(substring(name(//baile[@id="1"]/sala), 2, string-length(name(//baile[@id="1"]/sala)) - 1)), ":",  
+    string-join($salas, ", ")
+  }</span>
+)
 
 
 ----------------------------------------------------------------------------------
