@@ -51,12 +51,9 @@ return data(concat($baile/profesor, ' ', $baile/sala))
 7. Los nombres de los profesores, eliminando los repetidos y acompañando cada
 nombre con todas las salas en la que da clase. Ordenar por nombre.
 ----------------------------------------------------------------------------------
-for $baile in //baile
-where distinct-values($baile/profesor)
-order by $baile/profesor
-return data(concat($baile/profesor, ' ', $baile/sala))
-
-!!NO VAAAA
+for $profesor in distinct-values(//baile/profesor)
+order by $profesor
+return concat($profesor, " - ", upper-case(substring(name((//baile[profesor = $profesor]/sala)[1]), 1, 1)), lower-case(substring(name((//baile[profesor = $profesor]/sala)[1]), 2, string-length(name((//baile[profesor = $profesor]/sala)[1])) - 1)), " ", (//baile[profesor = $profesor]/sala)[1])
 
 
 ----------------------------------------------------------------------------------
@@ -123,9 +120,9 @@ return data(concat($baile/nombre, " - ", $baile/precio, " ", $baile/precio/@mone
 ----------------------------------------------------------------------------------
 for $baile in //baile
 order by $baile/nombre
-return data(concat($baile/nombre, " - ", $baile/precio, " ", $baile/precio/@moneda, " - ", $baile/plazas, " "))
+return data(concat($baile/nombre, " - ", $baile/precio, " ", $baile/precio/@moneda, " - ", $baile/plazas, " ", $baile/plazas/name(), " - ", upper-case(substring($baile/profesor/name(), 1, 1)), lower-case(substring($baile/profesor/name(), 2, string-length($baile/profesor/name()) - 1)), ": ", $baile/profesor, " - ", upper-case(substring($baile/sala/name(), 1, 1)), lower-case(substring($baile/sala/name(), 2, string-length($baile/sala/name()) - 1)), " ", $baile/sala))
 
-!!NO ACABADO
+
 ----------------------------------------------------------------------------------
 16.En una tabla de HTML, los nombres de los bailes y su profesor, cada uno en una
 fila.

@@ -7,12 +7,12 @@ public class PRG07_T04 {
         String [][] tablero = new String[8][8];
         final String negro = "░░";
         final String blanco = "▓▓";
-        final String dama = "♛";
+        final String dama = "ꁈ";
         System.out.println("  ╭—————————————————————————╮");
         for(int i=0;i<8;i++){
             for(int j=0;j<8;j++){
-                if (j==0){
-                    System.out.print(8-i+" │ ");
+                if (j==0) {
+                    System.out.print(8 - i + " │ ");
                 }
                 if (j==7 && i==0){
                     tablero[i][j]=blanco;
@@ -56,7 +56,7 @@ public class PRG07_T04 {
 
 
         while (true){
-            System.out.println("\nA que posicion quieres que mueva la reina? ('.' para salir)");
+            System.out.println("\nA que posicion quieres que mueva la reina? ( . para salir)");
             String posicion = entrada.nextLine();
 
             if (posicion.equals(".")){
@@ -78,9 +78,13 @@ public class PRG07_T04 {
                         if (j==0){
                             System.out.print(8-i+" │ ");
                         }
-                        System.out.print(tablero[i][j]+" ");
+                        System.out.print(tablero[i][j]+"  ");
+                        if (j==7){
+                            System.out.print("│");
+                        }
                         continue;
                     }
+
                     if (j==0){
                         System.out.print(8-i+" │ ");
                     }
