@@ -1,0 +1,136 @@
+
+Actividad LM6.1: Uso de XQuery
+
+----------------------------------------------------------------------------------
+1. Cada uno de los nombres de los bailes con la etiqueta <losbailes>.
+----------------------------------------------------------------------------------
+for $baile in //baile
+return <losbailes>{data($baile/nombre)}</losbailes>
+
+
+----------------------------------------------------------------------------------
+2. Los nombres de los bailes seguidos con el número de plazas entre paréntesis,
+ambos dentro de la misma etiqueta <losbailes>.
+----------------------------------------------------------------------------------
+for $baile in //baile
+return <losbailes>{data($baile/nombre)} ({data($baile/plazas)})</losbailes>
+
+
+----------------------------------------------------------------------------------
+3. Los nombres de los bailes cuyo precio sea mayor de 30.
+----------------------------------------------------------------------------------
+for $baile in //baile[precio>30]
+return data($baile/nombre)
+
+
+----------------------------------------------------------------------------------
+4. Los nombres de los bailes cuyo precio sea mayor de 30 y la moneda euro.
+----------------------------------------------------------------------------------
+for $baile in //baile[precio[@moneda='euro']>30]
+return data($baile/nombre)
+
+
+----------------------------------------------------------------------------------
+5. Los nombres y la fecha de comienzo de los bailes que comiencen el mes de enero
+(utiliza para buscarlo la cadena de texto /1/).
+----------------------------------------------------------------------------------
+for $baile in //baile
+where contains($baile,"/1/")
+return data(concat($baile/nombre, '  ', $baile/comienzo))
+
+
+----------------------------------------------------------------------------------
+6. Los nombres de los profesores y la sala en la que dan clase, ordenados por sala.
+----------------------------------------------------------------------------------
+for $baile in //baile
+order by $baile/sala
+return data(concat($baile/profesor, ' ', $baile/sala))
+
+
+----------------------------------------------------------------------------------
+7. Los nombres de los profesores, eliminando los repetidos y acompañando cada
+nombre con todas las salas en la que da clase. Ordenar por nombre.
+----------------------------------------------------------------------------------
+for $baile in //baile
+where distinct-values($baile/profesor)
+order by $baile/profesor
+return data(concat($baile/profesor, ' ', $baile/sala))
+
+!!NO VAAAA
+
+
+----------------------------------------------------------------------------------
+8. La media de los precios de todos los bailes.
+----------------------------------------------------------------------------------
+avg(for $baile in //baile
+return data($baile/precio))
+
+
+----------------------------------------------------------------------------------
+9. La suma de los precios de los bailes de la sala 1.
+----------------------------------------------------------------------------------
+sum(for $baile in //baile
+where $baile[sala=1]
+return data($baile/precio))
+
+
+----------------------------------------------------------------------------------
+10.La cantidad de plazas ofertadas por el profesor Jesus Lozano.
+----------------------------------------------------------------------------------
+sum(for $baile in //baile
+where $baile[profesor="Jesus Lozano"]
+return data($baile/plazas))
+
+
+----------------------------------------------------------------------------------
+11.El dinero que ganaría la profesora Laura Mendiola si se completaran todas las
+plazas de su baile, sabiendo que solo tiene un baile.
+----------------------------------------------------------------------------------
+for $baile in //baile
+where $baile[profesor="Laura Mendiola"]
+return data(concat($baile/plazas*$baile/precio, " ", $baile/precio/@moneda))
+
+
+----------------------------------------------------------------------------------
+12.El dinero que ganaría el profesor Jesus Lozano si se completaran todas las plazas
+de su baile, pero mostrando el beneficio de cada baile por separado.
+----------------------------------------------------------------------------------
+for $baile in //baile
+where $baile[profesor="Jesus Lozano"]
+return data(concat($baile/nombre, " - ", $baile/plazas*$baile/precio, " ", $baile/precio/@moneda))
+
+
+----------------------------------------------------------------------------------
+13.Mostrar el dinero que ganaría la profesora Laura (no conocemos su apellido) si se
+completaran todas las plazas de su baile.
+----------------------------------------------------------------------------------
+for $baile in //baile
+where $baile[contains(profesor, "Laura")]
+return data(concat($baile/plazas*$baile/precio, " ", $baile/precio/@moneda))
+
+
+----------------------------------------------------------------------------------
+14.El nombre del baile, su precio y el precio con un descuento del 15% para familias
+numerosas. Ordenar por el nombre del baile.
+----------------------------------------------------------------------------------
+for $baile in //baile
+order by $baile/nombre
+return data(concat($baile/nombre, " - ", $baile/precio, " ", $baile/precio/@moneda, " (precio original) - ",  (($baile/precio)-($baile/precio)*0.15), " ", $baile/precio/@moneda, " (precio familia numerosa)"))
+
+
+----------------------------------------------------------------------------------
+15.Todos los datos de cada baile excepto la fecha de comienzo y de fin.
+----------------------------------------------------------------------------------
+for $baile in //baile
+order by $baile/nombre
+return data(concat($baile/nombre, " - ", $baile/precio, " ", $baile/precio/@moneda, " - ", $baile/plazas, " "))
+
+!!NO ACABADO
+----------------------------------------------------------------------------------
+16.En una tabla de HTML, los nombres de los bailes y su profesor, cada uno en una
+fila.
+----------------------------------------------------------------------------------
+
+
+
+
