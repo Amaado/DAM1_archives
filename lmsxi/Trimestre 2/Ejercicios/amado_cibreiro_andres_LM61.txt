@@ -57,8 +57,8 @@ order by $profesor
 return data(
   <span>{
     $profesor, 
-    " - ",upper-case(substring(name(//baile[@id="1"]/sala), 1, 1)), lower-case(substring(name(//baile[@id="1"]/sala), 2, string-length(name(//baile[@id="1"]/sala)) - 1)), ":",  
-    string-join($salas, ", ")
+    " - Sala:",  
+    string-join($salas, " y ")
   }</span>
 )
 
@@ -92,7 +92,7 @@ plazas de su baile, sabiendo que solo tiene un baile.
 ----------------------------------------------------------------------------------
 for $baile in //baile
 where $baile[profesor="Laura Mendiola"]
-return data(concat($baile/plazas*$baile/precio, " ", $baile/precio/@moneda))
+return data(concat($baile/plazas*$baile/precio, " ", $baile/precio/@moneda,"s"))
 
 
 ----------------------------------------------------------------------------------
@@ -110,7 +110,7 @@ completaran todas las plazas de su baile.
 ----------------------------------------------------------------------------------
 for $baile in //baile
 where $baile[contains(profesor, "Laura")]
-return data(concat($baile/plazas*$baile/precio, " ", $baile/precio/@moneda))
+return data(concat($baile/plazas*$baile/precio, " ", $baile/precio/@moneda,"s"))
 
 
 ----------------------------------------------------------------------------------
