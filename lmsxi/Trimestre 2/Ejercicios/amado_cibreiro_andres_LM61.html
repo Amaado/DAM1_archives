@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Tabla de Bailes</title>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <th>Nombre del Baile</th>
+        <th>Profesor</th>
+      </tr>
+      {
+        for $baile in doc(amado_cibreiro_andres_LM61.xml)//baile
+        return
+          <tr>
+            <td>{data($baile/nombre)}</td>
+            <td>{data($baile/profesor)}</td>
+          </tr>
+      }
+    </table>
+  </body>
+</html>
