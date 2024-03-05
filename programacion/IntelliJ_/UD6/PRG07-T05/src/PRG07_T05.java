@@ -174,9 +174,6 @@ public class PRG07_T05 {
         System.out.println("  ‖                                                                                        ‖");
         System.out.println("  ╚════════════════════════════════════════════════════════════════════════════════════════╝     \n\n");
 
-
-
-
     }
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BLACK = "\u001B[30m";
