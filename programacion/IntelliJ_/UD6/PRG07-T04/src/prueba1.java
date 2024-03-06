@@ -1,9 +1,14 @@
 public class prueba1 {
     public static void main(String[] args) {
-        String primerLinea = "▓▓\t│";
-        String segundaLinea = "♛\t│";
+        final String negro = "░░";
+        final String blanco = "▓▓";
 
-        System.out.println(primerLinea);
-        System.out.println(segundaLinea);
+
+
+
+        System.out.println(" │ "+negro+" │ ");
+
+
+
     }
 }
