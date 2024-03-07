@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="biblioteca" type="bibliotecaType"></xs:element>
+
+    <xs:complexType name="bibliotecaType">
+        <xs:sequence>
+            <xs:element name="libros" type="librosType"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="librosType">
+        <xs:sequence>
+            <xs:element name="libro" type="libroType" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="libroType">
+        <xs:sequence>
+            <xs:element name="titulo" type="xs:string"></xs:element>
+            <xs:element name="autor" type="autorType" maxOccurs="unbounded"></xs:element>
+            <xs:element name="editorial" type="xs:string"></xs:element>
+            <xs:element name="paginas" type="xs:integer"></xs:element>
+            <xs:element name="edicionElectronica" type="xs:string" minOccurs="0"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="publicacion" type="xs:integer" use="required"/>
+        <xs:attribute name="edicion" type="xs:integer" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="autorType">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"></xs:element>
+            <xs:element name="apellidos" type="xs:string"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
