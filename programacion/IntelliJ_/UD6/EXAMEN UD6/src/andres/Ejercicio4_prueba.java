@@ -1,5 +1,6 @@
 package andres;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio4_prueba {
@@ -27,6 +28,44 @@ public class Ejercicio4_prueba {
                 matrizB[i][j] = entrada.nextInt();
             }
         }
+
+
+
+        //Cálculo de caracteres
+
+        String[]matrizS = new String[tamanho*4];
+
+        for (int i = 0; i < tamanho; i++) {
+            for (int j = 0; j < tamanho; j++) {
+                int variable = matrizA[i][j];
+                matrizS[i] = String.valueOf(variable);
+            }
+        }
+
+        for (int i = 0; i < tamanho; i++) {
+            for (int j = 0; j < tamanho; j++) {
+                int variable = matrizB[i][j];
+                matrizS[i+tamanho] = String.valueOf(variable);
+            }
+        }
+
+        System.out.println(Arrays.toString(matrizS));
+
+
+        /*
+        for (int i = 0; i < tamanho; i++) {
+            for (int j = 0; j < tamanho; j++) {
+
+            }
+        }
+*/
+
+
+
+
+
+
+
 
         // Matriz A
         imprimirMatriz("A", matrizA, tamanho);
