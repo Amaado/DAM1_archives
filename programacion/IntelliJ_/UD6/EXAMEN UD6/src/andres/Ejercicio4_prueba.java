@@ -33,33 +33,28 @@ public class Ejercicio4_prueba {
 
         //Cálculo de caracteres
 
-        String[]matrizS = new String[tamanho*4];
+        String[] matrizS = new String[tamanho * tamanho * 2];
 
         for (int i = 0; i < tamanho; i++) {
             for (int j = 0; j < tamanho; j++) {
                 int variable = matrizA[i][j];
-                matrizS[i] = String.valueOf(variable);
+                matrizS[i*tamanho + j] = String.valueOf(variable);
             }
         }
 
         for (int i = 0; i < tamanho; i++) {
             for (int j = 0; j < tamanho; j++) {
                 int variable = matrizB[i][j];
-                matrizS[i+tamanho] = String.valueOf(variable);
+                matrizS[i*tamanho + j + tamanho*tamanho] = String.valueOf(variable);
             }
         }
+
+
+        //Ordena la matrizS dejando en la posición 0 el numero con más caracteres
+        Arrays.sort(matrizS, (s1, s2) -> Integer.compare(s2.length(), s1.length()));
+        int caracteres = matrizS[0].length();
 
         System.out.println(Arrays.toString(matrizS));
-
-
-        /*
-        for (int i = 0; i < tamanho; i++) {
-            for (int j = 0; j < tamanho; j++) {
-
-            }
-        }
-*/
-
 
 
 
@@ -68,17 +63,17 @@ public class Ejercicio4_prueba {
 
 
         // Matriz A
-        imprimirMatriz("A", matrizA, tamanho);
+        imprimirMatriz("A", matrizA, tamanho, caracteres);
 
         // Matriz B
-        imprimirMatriz("B", matrizB, tamanho);
+        imprimirMatriz("B", matrizB, tamanho, caracteres);
 
         // Matriz A+B
-        imprimirMatrizSuma("A+B", matrizA, matrizB, tamanho);
+        imprimirMatrizSuma("A+B", matrizA, matrizB, tamanho, caracteres);
 
     }
 
-    public static void imprimirMatriz(String nombre, int[][] matriz, int tamanho) {
+    public static void imprimirMatriz(String nombre, int[][] matriz, int tamanho, int caracteres) {
         // Imprime las aperturas iniciales
         System.out.printf("%7s ╭", "");
         for (int i = 0; i < tamanho; i++) {
@@ -90,9 +85,19 @@ public class Ejercicio4_prueba {
             for (int j = 0; j < tamanho; j++) {
                 if (j == 0) {
                     System.out.printf("%7s │\t%d", (i == tamanho / 2 && j == 0) ? nombre + " =" : "", matriz[i][j]);
+
+                    int caracteresAanhadir = caracteres-String.valueOf(matriz[i][j]).length();
+                    for (int k=0;k<caracteresAanhadir-1;k++){
+                        System.out.print(" ");
+                    }
                     continue;
                 }
                 System.out.printf("\t%d", matriz[i][j]);
+
+                int caracteresAanhadir = caracteres-String.valueOf(matriz[i][j]).length();
+                for (int k=0;k<caracteresAanhadir-1;k++){
+                    System.out.print(" ");
+                }
             }
             System.out.println("\t│");
         }
@@ -105,7 +110,9 @@ public class Ejercicio4_prueba {
         System.out.println("╯\n");
     }
 
-    public static void imprimirMatrizSuma(String nombre, int[][] matrizA, int[][] matrizB, int tamanho) {
+    public static void imprimirMatrizSuma(String nombre, int[][] matrizA, int[][] matrizB, int tamanho, int caracteres) {
+        String espacio = " ";
+
         // Imprime las aperturas iniciales
         System.out.printf("%9s ╭", "");
         for (int i = 0; i < tamanho; i++) {
@@ -116,11 +123,41 @@ public class Ejercicio4_prueba {
         for (int i = 0; i < tamanho; i++) {
             for (int j = 0; j < tamanho; j++) {
                 if (j == 0) {
-                    System.out.printf("%9s │\t%d+%d", (i == tamanho / 2 && j == 0) ? nombre + " =" : "", matrizA[i][j],
-                            matrizB[i][j]);
+                    int caracteresAanhadirA = caracteres - String.valueOf(matrizA[i][j]).length();
+                    int caracteresAanhadirB = caracteres - String.valueOf(matrizB[i][j]).length();
+
+                    System.out.printf("%9s │\t%d", (i == tamanho / 2 && j == 0) ? nombre + " =" : "", matrizA[i][j]);
+
+                    for (int k = 0; k < caracteresAanhadirA; k++) {
+                        System.out.print(espacio);
+                    }
+
+                    System.out.print(" + ");
+
+                    for (int k = 0; k < caracteresAanhadirB; k++) {
+                        System.out.print(espacio);
+                    }
+                    System.out.printf("%d", matrizB[i][j]);
+
+                    System.out.print("\t\t");
                     continue;
                 }
-                System.out.printf("\t%d+%d", matrizA[i][j], matrizB[i][j]);
+                int caracteresAanhadirA = caracteres - String.valueOf(matrizA[i][j]).length();
+                int caracteresAanhadirB = caracteres - String.valueOf(matrizB[i][j]).length();
+
+                System.out.print("\t\t");
+                System.out.printf("\t%d", matrizA[i][j]);
+                for (int k = 0; k < caracteresAanhadirA; k++) {
+                    System.out.print(espacio);
+                }
+
+                System.out.print(" + ");
+
+                for (int k = 0; k < caracteresAanhadirB; k++) {
+                    System.out.print(espacio);
+                }
+                System.out.printf("%d", matrizB[i][j]);
+
             }
             System.out.println("\t│");
         }
