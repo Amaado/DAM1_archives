@@ -32,15 +32,15 @@ public class Ejercicio4 {
             }
         }
 
-        /*System.out.println("A matriz suma é:");
+        System.out.println("A matriz suma é:");
         for (int i=0;i<tamanho;i++){
             for (int j=0;j<tamanho;j++){
                 int suma = matrizA[i][j]+matrizB[i][j];
                 System.out.print(suma+" ");
             }
             System.out.println("");
-        }*/
-
+        }
+/*
         //MATRIZ A
         //Imprime las aperturas iniciales
         System.out.print("\n\n    ╭\t");
@@ -178,6 +178,6 @@ public class Ejercicio4 {
             System.out.print("\t");
         }
         System.out.print("╯\n\n");
-
+*/
     }
 }
