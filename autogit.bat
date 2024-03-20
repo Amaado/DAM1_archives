@@ -8,6 +8,6 @@ set ip_address=%ip_address:~1%
 
 # Agregar los comandos de Git
 git add --all
-git commit -m "autoCommit %date:~-4%/%date:~3,2%/%date:~0,2%. Hora: %time:~0,2%:%time:~3,2% | IP: %ip_address%"
+git commit -m "%date:~-4%/%date:~3,2%/%date:~0,2%. Hora: %time:~0,2%:%time:~3,2% | IP: %ip_address%"
 git push
 exit
