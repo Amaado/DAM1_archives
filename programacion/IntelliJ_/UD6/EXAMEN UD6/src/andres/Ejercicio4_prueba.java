@@ -76,7 +76,12 @@ public class Ejercicio4_prueba {
     public static void imprimirMatriz(String nombre, int[][] matriz, int tamanho, int caracteres) {
         // Imprime las aperturas iniciales
         System.out.printf("%7s ╭", "");
-        for (int i = 0; i < tamanho; i++) {
+        System.out.print("\t");
+
+        for (int i=0;i<tamanho;i++){
+            for (int j=0;j<caracteres-1;j++){
+                System.out.print(" ");
+            }
             System.out.print("\t");
         }
         System.out.println("╮");
@@ -87,7 +92,7 @@ public class Ejercicio4_prueba {
                     System.out.printf("%7s │\t%d", (i == tamanho / 2 && j == 0) ? nombre + " =" : "", matriz[i][j]);
 
                     int caracteresAanhadir = caracteres-String.valueOf(matriz[i][j]).length();
-                    for (int k=0;k<caracteresAanhadir-1;k++){
+                    for (int k=0;k<caracteresAanhadir;k++){
                         System.out.print(" ");
                     }
                     continue;
@@ -95,28 +100,65 @@ public class Ejercicio4_prueba {
                 System.out.printf("\t%d", matriz[i][j]);
 
                 int caracteresAanhadir = caracteres-String.valueOf(matriz[i][j]).length();
-                for (int k=0;k<caracteresAanhadir-1;k++){
+                for (int k=0;k<caracteresAanhadir;k++){
                     System.out.print(" ");
                 }
             }
             System.out.println("\t│");
         }
 
+
         // Imprime los cierres finales
         System.out.printf("%7s ╰", "");
-        for (int i = 0; i < tamanho; i++) {
+        System.out.print("\t");
+
+        for (int i=0;i<tamanho;i++){
+            for (int j=0;j<caracteres-1;j++){
+                System.out.print(" ");
+            }
             System.out.print("\t");
         }
-        System.out.println("╯\n");
+        System.out.println("╯");
     }
 
     public static void imprimirMatrizSuma(String nombre, int[][] matrizA, int[][] matrizB, int tamanho, int caracteres) {
         String espacio = " ";
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // Imprime las aperturas iniciales
         System.out.printf("%9s ╭", "");
-        for (int i = 0; i < tamanho; i++) {
-            System.out.print("\t");
+        System.out.print("\t");
+
+        for (int i=0;i<tamanho;i++){
+
+            for (int j=0;j<caracteres-1;j++){
+                System.out.print(" ");
+            }
+            System.out.print("   ");
+            for (int j=0;j<caracteres-1;j++){
+                System.out.print(" ");
+            }
+
+            if (i!= tamanho-1){
+                System.out.print("\t\t\t");
+            }else{
+                System.out.print("\t");
+            }
+
         }
         System.out.println("╮");
 
@@ -139,7 +181,7 @@ public class Ejercicio4_prueba {
                     }
                     System.out.printf("%d", matrizB[i][j]);
 
-                    System.out.print("\t\t");
+                    //System.out.print("\t\t");
                     continue;
                 }
                 int caracteresAanhadirA = caracteres - String.valueOf(matrizA[i][j]).length();
@@ -159,15 +201,54 @@ public class Ejercicio4_prueba {
                 System.out.printf("%d", matrizB[i][j]);
 
             }
-            System.out.println("\t│");
+
+            System.out.print("\t│  ");
+
+            for (int j = 0; j < tamanho; j++) {
+                if (j == 0) {
+                    int suma = matrizA[i][j]+matrizB[i][j];
+                    System.out.printf("%s │\t%d", " =  ", suma);
+
+                    int caracteresAanhadir = caracteres-String.valueOf(suma).length();
+                    for (int k=0;k<caracteresAanhadir;k++){
+                        System.out.print(" ");
+                    }
+                    continue;
+                }
+
+                int suma = matrizA[i][j]+matrizB[i][j];
+                System.out.printf("\t%d", suma);
+
+                int caracteresAanhadir = caracteres-String.valueOf(suma).length();
+                for (int k=0;k<caracteresAanhadir;k++){
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("\t│\n");
         }
 
         // Imprime los cierres finales
         System.out.printf("%9s ╰", "");
-        for (int i = 0; i < tamanho; i++) {
-            System.out.print("\t");
+        System.out.print("\t");
+
+        for (int i=0;i<tamanho;i++){
+
+            for (int j=0;j<caracteres-1;j++){
+                System.out.print(" ");
+            }
+            System.out.print("   ");
+            for (int j=0;j<caracteres-1;j++){
+                System.out.print(" ");
+            }
+
+            if (i!= tamanho-1){
+                System.out.print("\t\t\t");
+            }else{
+                System.out.print("\t");
+            }
+
         }
-        System.out.println("╯\n");
+        System.out.println("╯");
     }
 
 }
