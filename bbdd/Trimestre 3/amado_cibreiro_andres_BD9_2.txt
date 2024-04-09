@@ -1,0 +1,59 @@
+--1.
+CREATE USER 'jefe'@'localhost' IDENTIFIED BY 'abc123.';
+GRANT ALL ON videoclub.* TO 'jefe'@'localhost';
+
+--2. 
+CREATE USER 'usuario1'@'localhost' IDENTIFIED BY 'abc123.';
+GRANT CREATE, ALTER, DROP ON videoclub.* TO 'usuario1'@'localhost';
+DROP USER 'usuario1'@'localhost';
+
+--3.
+CREATE USER 'usuario1'@'%' IDENTIFIED BY 'abc123.';
+GRANT CREATE, ALTER, DROP ON videoclub.* TO 'usuario1'@'%';
+
+--4.
+CREATE USER 'usuario2'@'%' IDENTIFIED BY 'abc123.';
+GRANT CREATE, UPDATE, INSERT ON videoclub.socios TO 'usuario2'@'%';
+REVOKE UPDATE ON videoclub.socios FROM 'usuario2'@'%';
+
+--5.
+CREATE USER 'paco'@'localhost';
+CREATE USER 'maria'@'localhost';
+mariadb -u paco
+mariadb -u maria
+
+--6.
+GRANT SELECT ON videoclub.socios TO 'paco'@'localhost';
+
+--7.
+GRANT SELECT, INSERT, UPDATE ON videoclub.* TO 'maria'@'localhost';
+
+--8.
+GRANT GRANT OPTION ON videoclub.* TO 'maria'@'localhost';
+exit
+mariadb -u maria
+GRANT SELECT ON videoclub.peliculas TO 'paco'@'localhost';
+
+--9.
+REVOKE SELECT ON videoclub.socios FROM 'paco'@'localhost';
+
+--10.
+--Paco no tiene privilegios
+REVOKE ALL PRIVILEGES ON videoclub.* FROM 'maria'@'localhost';
+
+--11.
+DROP USER 'maria'@'localhost';
+
+--12.
+CREATE ROLE viewer;
+
+--13.
+GRANT SELECT ON videoclubs.* TO viewer;
+
+--14.
+GRANT viewer TO 'paco'@'localhost';
+
+--15.
+REVOKE viewer FROM 'paco'@'localhost';
+
+

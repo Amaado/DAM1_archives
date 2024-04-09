@@ -1,0 +1,49 @@
+@startuml
+class ejercicio7.Employee {
+- String nombre
+- String direccion
+- double salario
+- String cargo
++ String getNombre()
++ String getDireccion()
++ double getSalario()
++ String getCargo()
++ double calcularBonus()
++ String generarInformesRendimiento()
+}
+
+
+class ejercicio7.Manager {
+- int subordinados
++ int getSubordinados()
++ double calcularBonus()
++ String generarInformesRendimiento()
++ void managerProyecto()
+}
+
+
+class ejercicio7.Programmer {
++ double calcularBonus()
++ String generarInformesRendimiento()
++ void debugCodigo()
+}
+
+class ejercicio7.Developer {
+- String LenguajeProgramacion
++ String getLenguajeProgramacion()
++ double calcularBonus()
++ String generarInformesRendimiento()
++ void escribirCodigo()
+}
+
+
+class ejercicio7.App {
++ {static} void main(String[])
+}
+
+
+
+ejercicio7.Employee <|-- ejercicio7.Manager
+ejercicio7.Developer <|-- ejercicio7.Programmer
+ejercicio7.Employee <|-- ejercicio7.Developer
+@enduml

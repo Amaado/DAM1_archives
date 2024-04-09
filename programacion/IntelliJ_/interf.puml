@@ -1,0 +1,14 @@
+@startuml
+class interf.Libro {
+}
+interface interf.Producto {
+~ {static} double IVA_G
+~ {static} double IVA_R
+~ {static} double IVA_SR
+~ double getPrecio()
+~ String getNombre()
++ {static} double getTotal(Producto[])
+}
+
+
+@enduml
