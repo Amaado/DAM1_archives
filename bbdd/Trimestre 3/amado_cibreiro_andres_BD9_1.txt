@@ -1,0 +1,16 @@
+1.
+a) mariadb-dump -u root -ptoor --databases videoclub
+
+b) mariadb-dump -u root -ptoor --databases videoclub --no-data 
+
+c) mariadb-dump -u root -ptoor --databases videoclub --ignore-table=videoclub.prestamos
+
+d) mariadb-dump -u root -ptoor --databases videoclub --ignore-table-data=videoclub.prestamos
+
+e) mariadb-dump -u root -ptoor --databases videoclub --complete-insert --skip-extended-insert
+
+f) mariadb-dump -u root -ptoor --skip-extend-insert --no-create-db --no-create-info videoclub
+
+
+2.
+0 4 * * * mariadb-dump -u root -ptoor --no-create-db --no-create-info videoclub > backup_videoclub.sql

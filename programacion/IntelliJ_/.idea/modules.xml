@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/UD4/EXAMEN UD4/EXAMEN UD4.iml" filepath="$PROJECT_DIR$/UD4/EXAMEN UD4/EXAMEN UD4.iml" />
       <module fileurl="file://$PROJECT_DIR$/UD5/EXAMEN UD5/EXAMEN UD5.iml" filepath="$PROJECT_DIR$/UD5/EXAMEN UD5/EXAMEN UD5.iml" />
       <module fileurl="file://$PROJECT_DIR$/UD6/GIF/GIF.iml" filepath="$PROJECT_DIR$/UD6/GIF/GIF.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD7/Herencia/Herencia.iml" filepath="$PROJECT_DIR$/UD7/Herencia/Herencia.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/IntelliJ_.iml" filepath="$PROJECT_DIR$/.idea/IntelliJ_.iml" />
       <module fileurl="file://$PROJECT_DIR$/UD2/PRG02-Examen/PRG02-Examen.iml" filepath="$PROJECT_DIR$/UD2/PRG02-Examen/PRG02-Examen.iml" />
       <module fileurl="file://$PROJECT_DIR$/UD2/PRG02-T00_1/PRG02-T00_1.iml" filepath="$PROJECT_DIR$/UD2/PRG02-T00_1/PRG02-T00_1.iml" />
@@ -38,8 +39,11 @@
       <module fileurl="file://$PROJECT_DIR$/UD6/PRG06-T01/PRG06-T01.iml" filepath="$PROJECT_DIR$/UD6/PRG06-T01/PRG06-T01.iml" />
       <module fileurl="file://$PROJECT_DIR$/UD6/PRG06-T02/PRG06-T02.iml" filepath="$PROJECT_DIR$/UD6/PRG06-T02/PRG06-T02.iml" />
       <module fileurl="file://$PROJECT_DIR$/UD6/PRG06-T03/PRG06-T03.iml" filepath="$PROJECT_DIR$/UD6/PRG06-T03/PRG06-T03.iml" />
-      <module fileurl="file://$PROJECT_DIR$/UD6/PRG07-T04/PRG07-T04.iml" filepath="$PROJECT_DIR$/UD6/PRG07-T04/PRG07-T04.iml" />
-      <module fileurl="file://$PROJECT_DIR$/UD6/PRG07-T05/PRG07-T05.iml" filepath="$PROJECT_DIR$/UD6/PRG07-T05/PRG07-T05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD6/PRG06-T04/PRG06-T04.iml" filepath="$PROJECT_DIR$/UD6/PRG06-T04/PRG06-T04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD6/PRG06-T05/PRG06-T05.iml" filepath="$PROJECT_DIR$/UD6/PRG06-T05/PRG06-T05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD7/PRG07-T00/PRG07-T00.iml" filepath="$PROJECT_DIR$/UD7/PRG07-T00/PRG07-T00.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD7/PRG07-T01/PRG07-T01.iml" filepath="$PROJECT_DIR$/UD7/PRG07-T01/PRG07-T01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD7/PRG07-T02/PRG07-T02.iml" filepath="$PROJECT_DIR$/UD7/PRG07-T02/PRG07-T02.iml" />
       <module fileurl="file://$PROJECT_DIR$/contornos/PRUEBAS Junit/PRUEBAS Junit.iml" filepath="$PROJECT_DIR$/contornos/PRUEBAS Junit/PRUEBAS Junit.iml" />
       <module fileurl="file://$PROJECT_DIR$/REPASO ORIENTACION OBJETOS/REPASO ORIENTACION OBJETOS.iml" filepath="$PROJECT_DIR$/REPASO ORIENTACION OBJETOS/REPASO ORIENTACION OBJETOS.iml" />
       <module fileurl="file://$PROJECT_DIR$/UD5/SOLUCIONS_repaso/SOLUCIONS_repaso.iml" filepath="$PROJECT_DIR$/UD5/SOLUCIONS_repaso/SOLUCIONS_repaso.iml" />
@@ -49,6 +53,7 @@
       <module fileurl="file://$PROJECT_DIR$/UD4/UD4.iml" filepath="$PROJECT_DIR$/UD4/UD4.iml" />
       <module fileurl="file://$PROJECT_DIR$/UD5/UD5.iml" filepath="$PROJECT_DIR$/UD5/UD5.iml" />
       <module fileurl="file://$PROJECT_DIR$/UD6/UD6.iml" filepath="$PROJECT_DIR$/UD6/UD6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD7/UD7.iml" filepath="$PROJECT_DIR$/UD7/UD7.iml" />
       <module fileurl="file://$PROJECT_DIR$/contornos/contornos.iml" filepath="$PROJECT_DIR$/contornos/contornos.iml" />
     </modules>
   </component>
