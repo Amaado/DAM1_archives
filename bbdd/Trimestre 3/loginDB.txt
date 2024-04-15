@@ -1,0 +1,3 @@
+CREATE DATABASE IF NOT EXISTS usuarios (nombre varchar(30) not null, apellido varchar(30) not null, email varchar(50), contrasenha varchar(50) not null, tipo varchar(6) not null, primary key (email)) engine = InnoDB;
+INSERT INTO usuarios (nombre,apellido,email,contrasenha,tipo) VALUES ('Andrés', 'Amado','andresamadocibreiro22@gmail.com','abc123.','Admin');
+INSERT INTO usuarios (nombre,apellido,email,contrasenha,tipo) VALUES ('Rubén', 'Agra','ruben.agra@gmail.com','abc123.abc123.','Normal');
