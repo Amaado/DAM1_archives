@@ -21,8 +21,8 @@ public class App {
         figura1.subirPrecio(7);
 
         Coleccion coleccion = new Coleccion("Coleccion1");
-        coleccion.addF
-        coleccion.toString();
+        //coleccion.addF
+        //coleccion.toString();
 
     }
 }
