@@ -3,10 +3,10 @@ package Inmobiliaria;
 import java.util.Objects;
 
 public abstract sealed class Inmueble permits Local, InmuebleVivienda {
-    private int id;
-    private String direccion;
-    private double precio;
-    private double m2;
+    protected int id;
+    protected String direccion;
+    protected double precio;
+    protected double m2;
 
     public Inmueble(int id, String direccion, double precio, double m2) {
         this.id = id;
