@@ -1,0 +1,111 @@
+:root {
+    --hoverColor: #b3f5ed;
+    --cellColor: #eee6b865;
+    
+}
+
+body {
+    box-sizing: border-box;
+    margin-top: 15px;
+    background-color: #5c44179a;
+    z-index: -1;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    text-decoration:underline;
+    text-decoration-color: #abdbd6;
+}
+
+table {
+    margin: auto;
+    width: 40%;
+    min-width: 650px;
+    height: 80%;
+    text-align: center;
+    border: solid black 4px;
+    
+    
+    
+}
+
+#Pattern{
+    background-image: url('pattern-louis-vuitton.png');
+    mix-blend-mode:lighten;
+    background-repeat: repeat;
+    background-size: 40%;
+    
+}
+
+table, td{
+    border-collapse: collapse;
+    padding: 10;
+    height: 80px;
+    
+    
+}
+
+td {
+    border: solid rgb(44, 16, 4) 2px;
+}
+
+.coloreado {
+    background-color: var(--cellColor) ;
+    mix-blend-mode: hard-light;
+}
+
+input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 30;
+    text-align: center;
+}
+
+
+
+td:hover, .coloreado:hover {
+    /*background-color: var(--hoverColor);*/
+}
+
+.limitador {
+    border-right: solid black 4px;
+}
+
+.limitadorFilas {
+    border-bottom: solid black 4px;
+}
+
+.hover-row, .hover-column{
+    background-color: #c7ba7165;
+}
+
+#Boton{
+    margin: auto;
+    background-color: var(--cellColor);
+    border: solid 1px black;
+    width: 20%;
+    height: 50px;
+    align-content: center;
+    align-items: center;
+}
+
+section div{
+    display: flex;
+    flex-direction: column;
+    gap:30px
+}
+
+@media only screen and (max-width: 768px) {
+    table {
+        min-width: 650px;
+    }
+
+}
+
+
+
+
