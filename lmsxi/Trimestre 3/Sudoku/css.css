@@ -1,0 +1,162 @@
+:root {
+    --hoverColor: #c7ba7165;
+    --cellColor: #eee6b865;
+    
+}
+
+body {
+    box-sizing: border-box;
+    margin-top: 15px;
+    background-color: #5c44179a;
+    z-index: -1;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    text-decoration:underline;
+    text-decoration-color: #4a3a07bd;
+    
+}
+
+table {
+    margin: auto;
+    width: 750px;
+    height: 80px;
+    text-align: center;
+    border: solid black 4px;
+    
+}
+
+table, td{
+    border-collapse: collapse;
+    padding: 10;
+    height: 80px;
+    
+    
+    
+}
+
+td {
+    border: solid rgb(44, 16, 4) 2px;
+    
+}
+
+.coloreado {
+    background-color: var(--cellColor) ;
+}
+
+input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    -webkit-text-stroke: 2px black;
+    color: #c8bda1;
+    font-size: 40;
+    text-align: center;
+}
+
+
+td:hover, .coloreado:hover {
+    background-color: #c7ba71bc;
+}
+
+.limitador {
+    border-right: solid black 4px;
+}
+
+.limitadorFilas {
+    border-bottom: solid black 4px;
+}
+
+section div{
+    display: flex;
+    flex-direction: column;
+    gap:30px
+}
+
+@media only screen and (max-width: 768px) {
+    table {
+        min-width: 650px;
+    }
+
+}
+
+/* Patrón de fondo */
+#Pattern{
+    background-image: url('pattern-louis-vuitton2.png');
+    background-repeat: repeat;
+    background-size: 40%;
+    
+}
+
+/* Columnas y filas marcadas (cruz) */
+.hover-row, .hover-column{
+    background-color: #c7ba7165;
+}
+
+
+/* Botones*/
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.gap{
+    width: 30%;
+}
+
+.boton {
+    cursor: pointer;
+    margin: auto;
+    background-color: var(--cellColor);
+    border: solid 1px black;
+    width: 10%;
+    height: 50px;
+    align-content: center;
+    text-align: center;
+    font-size: 22;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    border-radius: 10px;
+  }
+  .boton:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #675B4D;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border-radius: 10px;
+  }
+  .boton:hover, .boton:focus, .boton:active {
+    color: #c8bda1;
+  }
+  .boton:hover:before, .boton:focus:before, .boton:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
