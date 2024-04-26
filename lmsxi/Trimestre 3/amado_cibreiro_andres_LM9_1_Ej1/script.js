@@ -1,10 +1,10 @@
 while (true){
     variable = prompt ('Escribe alguna orden:');
-    if(variable=="salir"){
+    if(variable.toLowerCase()=="salir"){
         break;
-    }
-
-    if(isNaN(variable)){
+    }else if(variable.isBlank){
+        alert ('Introduce algo!');
+    }else if(isNaN(variable)){
         alert (variable +' no es un numero');
     }else{
         alert (variable +' es un numero');

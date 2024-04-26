@@ -1,7 +1,26 @@
-let input = document.getElementById("input" + 1);
-let celda = document.getElementById("celda" + 1);
 
-document.getElementById("botonComprobar").onclick = function comprobar() {
+  
+  for(let i=1; i<=9; i++){
+      for(let j=1; j<=9; j++){
+      
+          document.getElementById('input'+i+'.'+j).onblur = function comprobar() {
+          let input = document.getElementById("input"+i+'.'+j);
+          let celda = document.getElementById(i+'.'+j);
+  
+          if(isNaN (input.value)){
+              celda.style.backgroundColor = "#b82200a9";
+  
+          }else if(0<input.value){
+              celda.style.backgroundColor = "";
+  
+          }else{
+              celda.style.backgroundColor = "#45ff34ad";
+          }
+      }
+  }
+}
+
+document.getElementById("botonComprobar").onclick = function comprobarBoton() {
     for(let i=1; i<=9; i++){
         for(let j=1; j<=9; j++){
             
@@ -21,7 +40,7 @@ document.getElementById("botonComprobar").onclick = function comprobar() {
     }
 }
 
-document.getElementById("botonLimpiar").onclick = function comprobar() {
+document.getElementById("botonLimpiar").onclick = function limpiar() {
     for(let i=1; i<=9; i++){
       for(let j=1; j<=9; j++){
           
@@ -43,16 +62,16 @@ function restaurarHover() {
       cell.style.backgroundColor = '';
   });
 }
-
-function CeroProhibido(input) {
+/*
+function ForbidenInput(input) {
   var valor = input.value;
 
-  if (valor === '0') {
+  if (valor === '0' || isNaN(valor)) {
       input.value = '';
       
   }
 }
-
+*/
 document.addEventListener('DOMContentLoaded', function hovers() {
   var cells = document.querySelectorAll('td');
 
@@ -68,6 +87,9 @@ document.addEventListener('DOMContentLoaded', function hovers() {
     cells.forEach(function(target) {
       if (target.id.startsWith(row + '.')) {
         target.classList.add('hover-row');
+      }
+      if(target.id.endsWith('.' + 3) || target.id.endsWith('.' + 6) || target.id.endsWith('.' + 9)){
+        target.classList.add('hover-border-replace');
       }
     });
 
@@ -90,4 +112,5 @@ document.addEventListener('DOMContentLoaded', function hovers() {
       });
     }
   });
-})
+});
+
