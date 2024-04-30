@@ -7,4 +7,12 @@ public class CuentaAhorro extends CuentaBancaria {
     public String DevolverInfoString() {
         return null;
     }
+
+    public double getTipoInteresAnual() {
+        return TipoInteresAnual;
+    }
+
+    public void setTipoInteresAnual(double tipoInteresAnual) {
+        TipoInteresAnual = tipoInteresAnual;
+    }
 }
