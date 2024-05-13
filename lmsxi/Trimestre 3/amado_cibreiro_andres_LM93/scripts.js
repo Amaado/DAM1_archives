@@ -1,168 +1,175 @@
 window.onload = function () {
     let nombres = ['1', '2', '3', '4', '5', '6', '7', '8'];
-    let mainContainer = document.createElement('div');
-    let score = 0;
-    let attempts = 0;
-    let scoreBoard = null;
-    let audio = new Audio('img/mp3.mp3'); // Ruta al archivo MP3
-    mainContainer.classList.add("mainContainer");
+    let mainContenedorCartas = document.createElement('div');
+    let puntuacion = 0;
+    let intentos = 0;
+    let mainContenedorInfo = null;
+    let audio = new Audio('img/mp3.mp3');
+    mainContenedorCartas.classList.add("mainContenedorCartas");
 
-    let scoreText, attemptsText; // Definir globalmente para fácil acceso
+    let puntuacionTexto, intentosTexto;
 
 
-    function setupScoreBoard() {
-        if (!scoreBoard) {
+    function crearBarrasInfo() {
+        if (!mainContenedorInfo) {
             let blank1 = document.createElement('div');
             blank1.classList.add('blank1');
 
-            scoreBoard = document.createElement('div');
-            scoreBoard.classList.add('score-board');
+            mainContenedorInfo = document.createElement('div');
+            mainContenedorInfo.classList.add('mainContenedorInfo');
+
             
-            let scoreImg = document.createElement('img');
-            scoreImg.src = 'img/scoreIcon.png';
-            scoreImg.alt = 'Puntuación';
-            scoreImg.classList.add('scoreIcon');
-            scoreImg.style.userSelect = "none";
-            scoreImg.draggable = false;
-
-            let attemptsImg = document.createElement('img');
-            attemptsImg.src = 'img/attemptsIcon.png';
-            attemptsImg.alt = 'Intentos';
-            attemptsImg.classList.add('attemptsIcon');
-            attemptsImg.style.userSelect = "none";
-            attemptsImg.draggable = false;
-
-            scoreText = document.createElement('span'); // Ahora son accesibles globalmente
-            attemptsText = document.createElement('span');
             
-            scoreText.textContent = '0';
-            attemptsText.textContent = '0';
+            let puntuacionImg = document.createElement('img');
+            puntuacionImg.src = 'img/scoreIcon.png';
+            puntuacionImg.alt = 'Puntuación';
+            puntuacionImg.classList.add('puntuacionIcono');
+            puntuacionImg.style.userSelect = "none";
+            puntuacionImg.draggable = false;
+
+            let intentosImg = document.createElement('img');
+            intentosImg.src = 'img/attemptsIcon.png';
+            intentosImg.alt = 'Intentos';
+            intentosImg.classList.add('intentosIcono');
+            intentosImg.style.userSelect = "none";
+            intentosImg.draggable = false;
+
+            puntuacionTexto = document.createElement('span');
+            intentosTexto = document.createElement('span');
             
-            let scoreContainer = document.createElement('div');
-            scoreContainer.classList.add('scoreContainer');
-            scoreContainer.style.userSelect = "none";
+            puntuacionTexto.textContent = '0';
+            intentosTexto.textContent = '0';
+            
+            let contenedorInfo = document.createElement('div');
+            contenedorInfo.classList.add('contenedorInfo');
+            contenedorInfo.style.userSelect = "none";
 
-            let resetButton = document.createElement('div');
-            resetButton.classList.add('resetButton');
-            resetButton.style.userSelect = "none";
+            let resetBoton = document.createElement('div');
+            resetBoton.classList.add('resetBoton');
+            resetBoton.style.userSelect = "none";
 
-            resetButton.style.userSelect = "none";
-            resetButton.style.cursor = "pointer";  // Cambiar el cursor para indicar que es clickable
+            resetBoton.style.userSelect = "none";
+            resetBoton.style.cursor = "pointer";
 
-            // Establecer el texto dentro del div
-            resetButton.textContent = "Reset";
+            resetBoton.textContent = "Reset";
 
-            // Añadir un evento de clic para resetear la página
-            resetButton.onclick = function() {
-                window.location.reload(); // Esto recargará la página
+            resetBoton.onclick = function() {
+                window.location.reload();
             };
 
-            scoreContainer.appendChild(scoreText);
-            scoreContainer.appendChild(scoreImg);
-            scoreContainer.appendChild(document.createTextNode('   '));
-            scoreContainer.appendChild(attemptsText);
-            scoreContainer.appendChild(attemptsImg);
+            contenedorInfo.appendChild(puntuacionTexto);
+            contenedorInfo.appendChild(puntuacionImg);
+            contenedorInfo.appendChild(document.createTextNode('   '));
+            contenedorInfo.appendChild(intentosTexto);
+            contenedorInfo.appendChild(intentosImg);
             
 
             
-            scoreBoard.appendChild(scoreContainer);
-            scoreBoard.appendChild(resetButton);
+            mainContenedorInfo.appendChild(contenedorInfo);
+            mainContenedorInfo.appendChild(resetBoton);
+            
+            
             document.body.appendChild(blank1);
             
         }
     }
     
-    setupScoreBoard();
+    crearBarrasInfo();
 
-    function updateScore(isMatch) {
-        if (isMatch) {
-            score += 10;
+    function actualizarInfo(hayCoincidencia) {
+        if (hayCoincidencia) {
+            puntuacion += 10;
         } else {
-            score -= 2;
-            score = Math.max(0, score);  // Prevenir puntuaciones negativas
+            puntuacion -= 2;
+            puntuacion = Math.max(0, puntuacion);
         }
-        attempts++;
-        scoreText.textContent = score; // Asegura que estos son los elementos correctos
-        attemptsText.textContent = attempts;
+        intentos++;
+        puntuacionTexto.textContent = puntuacion;
+        intentosTexto.textContent = intentos;
     }
 
-    function checkForMatch() {
-        if (flippedCards[0].dataset.cardName === flippedCards[1].dataset.cardName) {
-            flippedCards.forEach(card => {
-                card.classList.add('matched');
-                const overlay = card.querySelector('.overlay');
-                overlay.classList.add('active-marker');
+    function buscarCoincidencia() {
+        if (cartasVolteadas[0].dataset.cartaNombre === cartasVolteadas[1].dataset.cartaNombre) {
+            cartasVolteadas.forEach(carta => {
+                carta.classList.add('coincidencia');
+                const overlay = carta.querySelector('.overlay');
+                overlay.classList.add('activa');
             });
-            updateScore(true);  // Actualizar la puntuación aquí por coincidencia
-            resetFlips();
-            // Comprobar si se ha ganado la partida
-            if (document.querySelectorAll('.matched').length === nombres.length * 2) {
-                showWinAnimation(); // Llamar a la función que muestra el video
+            actualizarInfo(true);
+            resetearVolteo();
+
+            if (document.querySelectorAll('.coincidencia').length === nombres.length * 2) {
+                enseñarAnimacionVictoria();
+                localStorage.removeItem('puntuación');
+                localStorage.removeItem('puntuación');
+                localStorage.setItem('puntuación',puntuacionTexto.textContent);
+                localStorage.setItem('intentos',intentosTexto.textContent);
             }
         } else {
             setTimeout(() => {
-                flippedCards.forEach(card => {
-                    card.classList.remove('flipped');
-                    const overlay = card.querySelector('.overlay');
-                    overlay.classList.remove('active-marker');
+                cartasVolteadas.forEach(carta => {
+                    carta.classList.remove('volteada');
+                    const overlay = carta.querySelector('.overlay');
+                    overlay.classList.remove('activa');
                 });
-                updateScore(false);
-                resetFlips();
+                actualizarInfo(false);
+                resetearVolteo();
             }, 1000);
         }
     }
     
-    function showWinAnimation() {
-        let frameIndex = 0;
-        const totalFrames = 675; // Total number of PNG images from 00000 to 00763
-        let animationContainer = document.createElement('div');
-        animationContainer.style.position = 'fixed';
-        animationContainer.style.top = '0';
-        animationContainer.style.left = '0';
-        animationContainer.style.width = '100vw';
-        animationContainer.style.height = '100vh';
-        animationContainer.style.display = 'flex';
-        animationContainer.style.alignItems = 'center';
-        animationContainer.style.justifyContent = 'center';
-        animationContainer.style.zIndex = '10000';
-        animationContainer.style.overflow = 'hidden';  // Prevent any scrolling
+    function enseñarAnimacionVictoria() {
+        let fotogramaIndex = 0;
+        const fotogramasTotales = 675;
+        let animacionContendor = document.createElement('div');
+        animacionContendor.style.position = 'fixed';
+        animacionContendor.style.top = '0';
+        animacionContendor.style.left = '0';
+        animacionContendor.style.width = '100vw';
+        animacionContendor.style.height = '100vh';
+        animacionContendor.style.display = 'flex';
+        animacionContendor.style.alignItems = 'center';
+        animacionContendor.style.justifyContent = 'center';
+        animacionContendor.style.zIndex = '10000';
+        animacionContendor.style.overflow = 'hidden';
 
-        let animationImage = document.createElement('img');
-        animationImage.draggable = false; // Prevent image from being dragged
-        animationImage.onmousedown = () => false; // Prevent interaction while animation is playing
-        animationContainer.appendChild(animationImage);
-        document.body.appendChild(animationContainer);
+        let animacionImg = document.createElement('img');
+        animacionImg.draggable = false;
+        animacionImg.onmousedown = () => false;
+        animacionContendor.appendChild(animacionImg);
+        document.body.appendChild(animacionContendor);
 
         audio.play();
 
-        const updateFrame = () => {
-            if (frameIndex < totalFrames) {
-                let frameNumber = frameIndex.toString().padStart(5, '0'); // Ensure the frame number is zero-padded
-                animationImage.src = `img/secuencia/win_${frameNumber}.png`; // Adjust the path
-                frameIndex++;
+        const actualizarFotograma = () => {
+            if (fotogramaIndex < fotogramasTotales) {
+                let fotogramaActual = fotogramaIndex.toString().padStart(5, '0');
+                animacionImg.src = `img/secuencia/win_${fotogramaActual}.png`;
+                fotogramaIndex++;
             } else {
-                clearInterval(intervalId);
-                document.body.removeChild(animationContainer);
+                clearInterval(fotogramaIntervalo);
+                document.body.removeChild(animacionContendor);
             }
         };
 
-        let intervalId = setInterval(updateFrame, 15); // Update every 21ms, approx 48 FPS for 2x speed
+        let fotogramaIntervalo = setInterval(actualizarFotograma, 15);
     }
 
-    function shuffleArray(array) {
+    function barajarCartas(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
         }
     }
 
-    let allNames = [...nombres, ...nombres];
-    shuffleArray(allNames);
+    let fullCartas = [...nombres, ...nombres];
+    //Comentar la linea de abajo para desactivar la aleatoriedad de las cartas
+    barajarCartas(fullCartas);
 
-    function createCard(src) {
-        let card = document.createElement('div');
-        card.classList.add('card');
-        card.dataset.cardName = src; // Identificador de la carta
+    function crearCartas(src) {
+        let carta = document.createElement('div');
+        carta.classList.add('carta');
+        carta.dataset.cartaNombre = src;
     
         let imgBack = document.createElement('img');
         imgBack.src = 'img/back.png';
@@ -188,68 +195,120 @@ window.onload = function () {
         overlay.draggable = false;
         overlay.style.userSelect = "none";
         
-        card.appendChild(imgBack);
-        card.appendChild(imgFront);
-        card.appendChild(overlay);
+        carta.appendChild(imgBack);
+        carta.appendChild(imgFront);
+        carta.appendChild(overlay);
     
-        card.onclick = function() {
-            if (waiting || card.classList.contains('flipped') || card.classList.contains('matched')) return;
-            card.classList.add('flipped');
-            flippedCards.push(card);
+        carta.onclick = function() {
+            if (espera || carta.classList.contains('volteada') || carta.classList.contains('coincidencia')) return;
+            carta.classList.add('volteada');
+            cartasVolteadas.push(carta);
         
-            if (flippedCards.length === 2) {
-                waiting = true;
-                checkForMatch();
+            if (cartasVolteadas.length === 2) {
+                espera = true;
+                buscarCoincidencia();
             }
         };
     
-        return card;
+        return carta;
     }
 
-    function addImagesToContainer(container, imageNames) {
-        imageNames.forEach(nombre => {
-            container.appendChild(createCard(nombre));
+    function añadirImagenesMainContainer(container, imgNombre) {
+        imgNombre.forEach(nombre => {
+            container.appendChild(crearCartas(nombre));
         });
     }
 
-    let flippedCards = [];
-    let waiting = false;
+    let cartasVolteadas = [];
+    let espera = false;
 
-    function flipCard(card) {
-        if (waiting || card.classList.contains('flipped') || card.classList.contains('matched')) return;
-        card.classList.add('flipped');
-        flippedCards.push(card);
-    
-        if (flippedCards.length === 2) {
-            waiting = true;
-            checkForMatch();
-        }
-    }
+    function resetearVolteo() {
 
-    function resetFlips() {
-        // Remueve la clase 'flipped' de todas las cartas que no han coincidido
-        flippedCards.forEach(card => {
-            if (!card.classList.contains('matched')) {
-                card.classList.remove('flipped');
+        cartasVolteadas.forEach(carta => {
+            if (!carta.classList.contains('coincidencia')) {
+                carta.classList.remove('volteada');
             }
         });
-        // Limpia el array de cartas volteadas
-        flippedCards = [];
-        // Permite nuevas acciones
-        waiting = false;
+        cartasVolteadas = [];
+        espera = false;
     }
 
     let container1 = document.createElement('div');
     container1.classList.add("container");
-    addImagesToContainer(container1, allNames.slice(0, 8));
+    añadirImagenesMainContainer(container1, fullCartas.slice(0, 8));
 
     let container2 = document.createElement('div');
     container2.classList.add("container");
-    addImagesToContainer(container2, allNames.slice(8));
+    añadirImagenesMainContainer(container2, fullCartas.slice(8));
 
-    mainContainer.appendChild(container1);
-    mainContainer.appendChild(container2);
+    mainContenedorCartas.appendChild(container1);
+    mainContenedorCartas.appendChild(container2);
+    
+    document.body.appendChild(mainContenedorCartas);
 
-    document.body.appendChild(mainContainer);
-    document.body.appendChild(scoreBoard);
+    document.body.appendChild(mainContenedorInfo);
+
+    if(localStorage.getItem('puntuación') !== null || localStorage.getItem('puntuación') !== 0 ){
+        let puntuacionImg2 = document.createElement('img');
+        puntuacionImg2.src = 'img/scoreIcon.png';
+        puntuacionImg2.alt = 'Puntuación';
+        puntuacionImg2.classList.add('puntuacionIcono2');
+        puntuacionImg2.style.userSelect = "none";
+        puntuacionImg2.draggable = false;
+
+        let intentosImg2 = document.createElement('img');
+        intentosImg2.src = 'img/attemptsIcon.png';
+        intentosImg2.alt = 'Intentos';
+        intentosImg2.classList.add('intentosIcono2');
+        intentosImg2.style.userSelect = "none";
+        intentosImg2.draggable = false;
+
+        puntuacionTexto2 = document.createElement('span');
+        intentosTexto2 = document.createElement('span');
+        
+        
+
+        let blank2 = document.createElement('div');
+        blank2.classList.add('blank2');
+        blank2.style.userSelect = "none";
+
+
+        let contenedorInfo2 = document.createElement('div');
+        contenedorInfo2.classList.add('contenedorInfo2');
+        contenedorInfo2.style.userSelect = "none";
+        puntuacionTexto2.textContent = localStorage.getItem('puntuación');
+        intentosTexto2.textContent = localStorage.getItem('intentos');
+
+        let ultimaPartidaContenedor = document.createElement('div');
+        ultimaPartidaContenedor.classList.add('ultimaPartidaContenedor');
+        ultimaPartidaContenedor.style.userSelect = "none";
+
+        let ultimaPartidaTexto = document.createElement('div');
+        ultimaPartidaTexto.textContent = "Last match";
+        ultimaPartidaTexto.classList.add('ultimaPartidaTexto');
+        ultimaPartidaTexto.style.userSelect = "none";
+        
+
+        
+        let ultimaPartidaInfo = document.createElement('div');
+        ultimaPartidaInfo.classList.add('ultimaPartidaInfo');
+        ultimaPartidaInfo.style.userSelect = "none";
+
+        ultimaPartidaInfo.appendChild(puntuacionTexto2);
+        ultimaPartidaInfo.appendChild(puntuacionImg2);
+        ultimaPartidaInfo.appendChild(document.createTextNode('   '));
+        ultimaPartidaInfo.appendChild(intentosTexto2);
+        ultimaPartidaInfo.appendChild(intentosImg2);
+
+        contenedorInfo2.appendChild(ultimaPartidaTexto);
+        contenedorInfo2.appendChild(ultimaPartidaInfo);
+
+        mainContenedorInfo2 = document.createElement('div');
+        mainContenedorInfo2.classList.add('mainContenedorInfo2');
+
+        mainContenedorInfo2.appendChild(contenedorInfo2);
+        mainContenedorInfo2.appendChild(blank2);
+        document.body.appendChild(mainContenedorInfo2);
+    }
+    
 };

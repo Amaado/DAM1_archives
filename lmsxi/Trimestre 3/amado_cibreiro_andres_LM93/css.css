@@ -5,6 +5,12 @@
 }
 
 .body {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    
     width: 100%;
     height: 100vh;
     display: flex;
@@ -20,7 +26,7 @@ body{
     background-size: cover;
 }
 
-.score-board {
+.mainContenedorInfo {
     color: white;
     padding: 10px;
     z-index: 1;  
@@ -35,7 +41,7 @@ body{
     
 }
 
-.scoreContainer{
+.contenedorInfo{
     background-color: rgba(181, 181, 181, 0.627);
     border-radius: 10px;
     display: flex;
@@ -50,7 +56,8 @@ body{
 
 }
 
-.resetButton{
+.resetBoton{
+    cursor: pointer;
     background-color: rgba(181, 181, 181, 0.627);
     border-radius: 10px;
     display: flex;
@@ -64,7 +71,78 @@ body{
 -moz-box-shadow: 0px 0px 14px 12px rgba(255,255,255,0.50);
 }
 
-.mainContainer{
+.mainContenedorInfo2 {
+    padding: 10px;
+    z-index: 1;  
+    font-size: 14px;
+    width: 100%;
+    height: 3lvh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    
+}
+
+.contenedorInfo2{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 25px;
+    gap: 5px;
+    
+
+}
+
+.ultimaPartidaTexto{
+    text-shadow: 0px 0px 5px rgb(177, 177, 177);
+    text-decoration: underline;
+}
+
+.ultimaPartidaInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(90, 90, 90, 0.3);
+    border-radius: 5px;
+    width: 90px;
+    height: 25px;
+    text-shadow: 0px 0px 5px rgb(177, 177, 177);
+
+}
+
+.blank2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 50px;
+    
+}
+
+.puntuacionIcono2{
+    width: 14px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+    margin-right: 10px;
+
+}
+
+.intentosIcono2{
+    width: 12px;
+    margin-left: 5px;
+    margin-bottom: 1px;
+
+
+}
+
+.mainContenedorCartas{
     width: 100%;
     height: 40lvh;
     display: flex;
@@ -106,7 +184,7 @@ img {
     
 }
 
-.scoreIcon{
+.puntuacionIcono{
     width: 25px;
     margin-left: 5px;
     margin-bottom: 2px;
@@ -114,45 +192,44 @@ img {
 
 }
 
-.attemptsIcon{
+.intentosIcono{
     width: 18px;
     margin-left: 5px;
 
 }
 
-.card {
+.carta {
     width: 100px;
     height: 140px;
     perspective: 1000px;
     position: relative;
-    transform-style: preserve-3d;  /* Importante para el efecto 3D en los hijos */
+    transform-style: preserve-3d; 
 }
 
-/* Estilos para el frente y el reverso de la carta */
-.card img {
+.carta img {
     width: 100%;
     height: 100%;
     transition: transform 0.6s;
-    transform-style: preserve-3d;  /* Habilita transformaciones 3D en este elemento */
+    transform-style: preserve-3d; 
     position: absolute;
-    backface-visibility: hidden;  /* Oculta el reverso de la imagen cuando está girada */
+    backface-visibility: hidden; 
 }
 
-.card .front,
-.card .back {
-    transform-origin: center; /* Centra el punto de origen para las transformaciones */
+.carta .front,
+.carta .back {
+    transform-origin: center; 
 }
 
-.card .front {
+.carta .front {
     transform: rotateY(180deg);
 }
 
-.card.flipped .back {
-    transform: rotateY(180deg) translateZ(30px);  /* Añade un pequeño desplazamiento en Z cuando está volteada */
+.carta.volteada .back {
+    transform: rotateY(180deg) translateZ(30px); 
 }
 
-.card.flipped .front {
-    transform: rotateY(0deg) translateZ(30px);  /* Añade un pequeño desplazamiento en Z para simular grosor */
+.carta.volteada .front {
+    transform: rotateY(0deg) translateZ(30px);
 }
 
 
@@ -161,8 +238,8 @@ img {
     transition: opacity 0.6s ease-in-out  0.2s;
 }
 
-.active-marker {
-    opacity: 1; /* Opacidad completa */
+.activa {
+    opacity: 1;
     box-shadow: 1px 0px 11px 2px rgba(38,168,66,0.78);
 -webkit-box-shadow: 1px -1px 11px 2px rgba(38,168,66,0.78);
 -moz-box-shadow: 1px 0px 11px 2px rgba(38,168,66,0.78);
