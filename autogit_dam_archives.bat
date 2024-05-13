@@ -12,9 +12,4 @@ git add --all
 git commit -m "%date:~-4%/%date:~3,2%/%date:~0,2%. Hora: %time:~0,2%:%time:~3,2% | IP: %ip_address%"
 git push
 
-cd ..\
-git add --all
-git commit -m "%date:~-4%/%date:~3,2%/%date:~0,2%. Hora: %time:~0,2%:%time:~3,2% | IP: %ip_address%"
-git push
-
 exit
