@@ -22,11 +22,15 @@ window.onload = function () {
             scoreImg.src = 'img/scoreIcon.png';
             scoreImg.alt = 'Puntuación';
             scoreImg.classList.add('scoreIcon');
-            
+            scoreImg.style.userSelect = "none";
+            scoreImg.draggable = false;
+
             let attemptsImg = document.createElement('img');
             attemptsImg.src = 'img/attemptsIcon.png';
             attemptsImg.alt = 'Intentos';
             attemptsImg.classList.add('attemptsIcon');
+            attemptsImg.style.userSelect = "none";
+            attemptsImg.draggable = false;
 
             scoreText = document.createElement('span'); // Ahora son accesibles globalmente
             attemptsText = document.createElement('span');
@@ -36,15 +40,33 @@ window.onload = function () {
             
             let scoreContainer = document.createElement('div');
             scoreContainer.classList.add('scoreContainer');
+            scoreContainer.style.userSelect = "none";
+
+            let resetButton = document.createElement('div');
+            resetButton.classList.add('resetButton');
+            resetButton.style.userSelect = "none";
+
+            resetButton.style.userSelect = "none";
+            resetButton.style.cursor = "pointer";  // Cambiar el cursor para indicar que es clickable
+
+            // Establecer el texto dentro del div
+            resetButton.textContent = "Reset";
+
+            // Añadir un evento de clic para resetear la página
+            resetButton.onclick = function() {
+                window.location.reload(); // Esto recargará la página
+            };
 
             scoreContainer.appendChild(scoreText);
             scoreContainer.appendChild(scoreImg);
             scoreContainer.appendChild(document.createTextNode('   '));
             scoreContainer.appendChild(attemptsText);
             scoreContainer.appendChild(attemptsImg);
+            
 
             
             scoreBoard.appendChild(scoreContainer);
+            scoreBoard.appendChild(resetButton);
             document.body.appendChild(blank1);
             
         }
@@ -163,6 +185,8 @@ window.onload = function () {
         overlay.style.height = '100%';
         overlay.style.background = 'rgba(0,0,0,0)';
         overlay.style.pointerEvents = 'none';
+        overlay.draggable = false;
+        overlay.style.userSelect = "none";
         
         card.appendChild(imgBack);
         card.appendChild(imgFront);
