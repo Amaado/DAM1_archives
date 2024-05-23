@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Figuras</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        div {
+            width: 400px;
+            height: 150px;
+            background-color: #FAEBD7;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <svg height="150" width="500">
+            <defs>
+                <pattern id="imgPattern" patternUnits="userSpaceOnUse" width="400" height="400">
+                    <image href="amado_cibreiro_andres_LM96_img.png" x="20" y="-130" width="400" height="400" />
+                </pattern>
+            </defs>
+            <polygon points="0,0 0,150 150,150 150,0" style="fill: #42E742;" />
+            <circle id="myCircle" cx="210" cy="75" r="75" style="fill:#6384E7;" />
+            <polygon points="320,0 250,150 400,150" style="fill: #E7C600;" />
+        </svg>
+    </div>
+
+    <script>
+        let contador = 1;
+        document.getElementById("myCircle").addEventListener("click", function() {
+          contador++;
+            if (contador%2) {
+              this.style.fill = "#6384E7";
+            } else {
+                this.style.fill = "url(#imgPattern)";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+INSERT INTO bd101 (idpedido, elusuario, pedido) VALUES (1, ROW('horhito69', 'Horhe', "Herreroh', '11111111Z', ROW('Calle de los horhes', 69, '6ºZ', 696969)), ROW('2069-01-01', ROW('Producto1', 'Producto hecho artesanalmente por HorhitoPadre que sirve para hacer horhitos hijos', 100.0, 69)));
