@@ -1,1 +1,19 @@
+CREATE DATABASE BD101;
+
+\c BD101
+
+CREATE TYPE Direccion AS (calle TEXT, numero INTEGER, piso TEXT, codPostal INTEGER);
+
+CREATE TYPE Usuario AS (login TEXT, nombre TEXT, apellidos TEXT, dni TEXT, direccion Direccion);
+
+CREATE TYPE Producto AS (nombre TEXT, descripcion TEXT, precio REAL, cantidad INTEGER);
+
+CREATE TYPE Pedido AS (fecha DATE, producto Producto);
+
+CREATE TABLE bd101 (idPedido INTEGER, elUsuario Usuario, Pedido Pedido);
+
+\d bd101
+
 INSERT INTO bd101 (idpedido, elusuario, pedido) VALUES (1, ROW('horhito69', 'Horhe', "Herreroh', '11111111Z', ROW('Calle de los horhes', 69, '6ºZ', 696969)), ROW('2069-01-01', ROW('Producto1', 'Producto hecho artesanalmente por HorhitoPadre que sirve para hacer horhitos hijos', 100.0, 69)));
+
+INSERT INTO bd101 (idpedido, elusuario, pedido) VALUES (1, ROW('mariaguadalup27', 'Maria', "Guadalupe', '11111111Z', ROW('Calle de los horhes', 69, '6ºZ', 696969)), ROW('2069-01-01', ROW('Producto1', 'Producto hecho artesanalmente por HorhitoPadre que sirve para hacer horhitos hijos', 100.0, 69)));
