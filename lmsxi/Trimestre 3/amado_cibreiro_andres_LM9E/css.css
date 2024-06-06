@@ -1,0 +1,159 @@
+body{
+    display: flex;
+    flex-direction: row;
+    font-family: Arial;
+}
+
+#registrarUsuarios{
+    width:50vw;
+    max-height: 80vh;
+    background-color: #FFEBCD;
+    border: 1px solid black;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+}
+
+#buscarUsuarios{
+    width:50vw;
+    max-height: 80vh;
+    background-color: #E6E6FA;
+    border: 1px solid black;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+}
+
+.titulo{
+    background-color: #FFFFF0;
+    border: 1px solid black;
+    padding: 3px;
+    font-size: 30;
+    width: 45vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barraBusqueda{
+    width: 600px;
+    height: 40px;
+    text-align:center;
+}
+
+.container{
+    width: 45vw;
+    height: 100%;
+    padding: 3px;
+    border: 1px solid black;
+    background-color: #FFFFF0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.containerFormulario{
+    width: 30vw;
+    height: 57%;
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 18;
+}
+
+.campoContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    width: 90%;
+}
+
+.campoTexto{
+    display: flex;
+    align-items: left;
+    width: 100px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.campoInput{
+    align-items: right;
+    width: 400px;
+    height: 40px;
+    margin-top: 30px;
+    
+}
+
+#botonRegistrar{
+    margin-top: 30px;
+    font-size: 20;
+    width: 300px;
+    height: 40px;
+}
+
+#buscarImg{
+    width: 20px;
+    position: absolute;
+    margin-left: -560px;
+    background-color: #FFFFFF;
+}
+
+#containerAnhadirTitulo{
+    font-size: 24;
+    text-decoration: underline;
+    padding: 20px;
+}
+
+.usuario{
+    width: 30vw;
+    height: 240px;
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 18;
+}
+
+.usuarioContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    width: 80%;
+}
+
+.usuarioTexto{
+    display: flex;
+    align-items: left;
+    width: 100px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.usuarioInput{
+    align-items: right;
+    width: 100px;
+    margin-top: 30px;
+    
+}
+
+#mensaje{
+    margin-top: 20px;
+    color: red;
+    text-align: center;
+    width: 800px;
+    height: 30px;
+    visibility: hidden;
+
+}
