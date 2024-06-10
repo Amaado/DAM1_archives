@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title> Figuras </title>
+        <link rel="icon" href=""/>
+        <link rel="stylesheet" type="text/css" href="css.css"/>
+        <script defer src="js.js"></script>
+    </head>
+    <body>
+        <header>Seleccion de productos</header>
+        <div id="containerBlank">
+            <div id="container">
+                <div class="cuadradoContainer">
+                    <div class="cuadradoFigura">
+                        <svg width="30" height="30">
+                            <polygon points="0,0 0,30 30,30 30,0" style="fill:#C9B1CF;"></polygon>
+                        </svg>
+                        <div class="titulo">Cuadrado</div>
+                        <div class="precioContainer">
+                            <div>Precio: </div>
+                            <div class="precio">10</div>
+                            <div>€</div>
+                        </div>
+                    </div>
+                    <button id="botonCuadrado">Añadir</button>
+                </div>
+
+                <div class="circuloContainer">
+                    <div class="circuloFigura">
+                        <svg width="30" height="30">
+                            <defs>
+                                <pattern id="imgPattern" patternUnits="userSpaceOnUse" width="50" height="50">
+                                    <image href="img.png" x="-13" y="-15" width="60" height="60" />
+                                </pattern>
+                            </defs>
+                            <circle class="myCircle" cx="15" cy="15" r="15" style="fill:#D88994;"></circle>
+                        </svg>
+                        <div class="titulo">Círculo</div>
+                        <div class="precioContainer">
+                            <div>Precio: </div>
+                            <div class="precio">15</div>
+                            <div>€</div>
+                        </div>
+                    </div>
+                    <button id="botonCirculo">Añadir</button>
+                </div>
+
+                <div class="trianguloContainer">
+                    <div class="trianguloFigura">
+                        <svg width="30" height="30">
+                            <polygon points="15,0 0,30 30,30" style="fill:#85C3BF;"></polygon>
+                        </svg>
+                        <div class="titulo">Triángulo</div>
+                        <div class="precioContainer">
+                            <div>Precio: </div>
+                            <div class="precio">20</div>
+                            <div>€</div>
+                        </div>
+                    </div>
+                    <button id="botonTriangulo">Añadir</button>
+                </div>
+                
+            </div>
+            <div id="carritoContainer">
+                <div class="tituloCarrito">Carrito</div>
+                <div class="container">
+
+                </div>
+                <hr/>
+                <div class="precioContainer">
+                    <div>Total: </div>
+                    <div id="precioTotal">0</div>
+                    <div>€</div>
+                </div>
+                
+            </div>
+        </div>
+        <footer>© Lenguajes de marcas y sistemas de gestion de la información</footer>
+    </body>
+</html>
