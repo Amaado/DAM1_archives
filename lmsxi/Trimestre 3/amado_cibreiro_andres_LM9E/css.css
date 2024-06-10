@@ -39,13 +39,13 @@ body{
     justify-content: center;
 }
 
-.barraBusqueda{
+#barraBusqueda{
     width: 600px;
     height: 40px;
     text-align:center;
 }
 
-.container{
+.containerRegistrar{
     width: 45vw;
     height: 100%;
     padding: 3px;
@@ -54,8 +54,18 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
+
+.containerAnhadir{
+    width: 45vw;
+    height: 100%;
+    padding: 3px;
+    border: 1px solid black;
+    background-color: #FFFFF0;
+    display: flex;
+    flex-direction: column;
+}
+
 
 .containerFormulario{
     width: 30vw;
@@ -98,6 +108,14 @@ body{
     font-size: 20;
     width: 300px;
     height: 40px;
+    min-height: 40px;
+}
+
+#botonRegistrar:hover{
+    background-color: greenyellow;
+    border: 1px solid grey;
+    border-radius: 2.5px;
+    min-height: 40px;
 }
 
 #buscarImg{
@@ -107,43 +125,32 @@ body{
     background-color: #FFFFFF;
 }
 
-#containerAnhadirTitulo{
-    font-size: 24;
-    text-decoration: underline;
+#containerAnhadir{
+    overflow: auto;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 14.2vw 14.2vw 14.2vw;
     padding: 20px;
+    grid-gap: 20px 20px;
+    top: 0;
 }
 
 .usuario{
-    width: 30vw;
+    width: 14.2vw;
     height: 240px;
+    min-height: 240px;
     border: 1px solid black;
-    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 3px;
     font-size: 18;
 }
 
-.usuarioContainer{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 30px;
-    width: 80%;
-}
-
-.usuarioTexto{
-    display: flex;
-    align-items: left;
-    width: 100px;
-    font-weight: bold;
-    margin-top: 30px;
-}
-
 .usuarioInput{
-    align-items: right;
-    width: 100px;
+    align-items: center;
+    text-align: center;
+    width: 200px;
     margin-top: 30px;
     
 }

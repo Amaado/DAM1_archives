@@ -51,76 +51,113 @@ document.getElementById("botonRegistrar").onclick = function botonRegistro() {
         
         mensaje.style.visibility = "visible";
         mensaje.textContent = "No dejes campos en blanco!";
+        return;
+
     } else {
-        mensaje.style.visibility = "hidden";
+        let dniTodos = document.getElementsByClassName("dni");
+        let dniRepetido = false;
 
-        let etiquetaNombreG = document.createElement("div");
-        etiquetaNombreG.classList.add("usuarioTexto");
-        etiquetaNombreG.textContent = "Nombre:";
+        for (let i = 0; i < dniTodos.length; i++) {
+            if (dni.value === dniTodos[i].textContent.trim()) {
+                dniRepetido = true;
+                break;
+            }
+        }
 
-        let valorNombreG = document.createElement("div");
-        valorNombreG.classList.add("usuarioInput");
-        valorNombreG.classList.add("nombre");
-        valorNombreG.textContent = nombre.value;
+        if (dniRepetido) {
+            etiquetaDni.style.color = "red";
+            etiquetaDni.textContent = "*DNI:";
+            dni.style.backgroundColor = "#ff00004f";
+            mensaje.style.visibility = "visible";
+            mensaje.textContent = "El DNI ya existe";
+            return;
+        }else{
+            mensaje.style.visibility = "hidden";
 
-        let usuarioContainerNombre = document.createElement("div");
-        usuarioContainerNombre.classList.add("usuarioContainer");
+            let valorNombreG = document.createElement("div");
+            valorNombreG.classList.add("usuarioInput");
+            valorNombreG.classList.add("nombre");
+            valorNombreG.textContent = nombre.value;
 
-        usuarioContainerNombre.appendChild(etiquetaNombreG,valorNombreG);
-
-
-        let etiquetaApellidoG = document.createElement("div");
-        etiquetaApellidoG.classList.add("usuarioTexto");
-        etiquetaApellidoG.textContent = "Apellido:";
-
-        let valorApellidoG = document.createElement("div");
-        valorApellidoG.classList.add("usuarioInput");
-        valorApellidoG.classList.add("apellido");
-        valorApellidoG.textContent = apellido.value;
-
-        let usuarioContainerApellido = document.createElement("div");
-        usuarioContainerApellido.classList.add("usuarioContainer");
-
-        usuarioContainerApellido.appendChild(etiquetaApellidoG,valorApellidoG);
+            let usuarioContainerNombre = document.createElement("div");
+            usuarioContainerNombre.classList.add("usuarioContainer");
 
 
 
-        let etiquetaDniG = document.createElement("div");
-        etiquetaDniG.classList.add("usuarioTexto");
-        etiquetaDniG.textContent = "DNI:";
+            let valorApellidoG = document.createElement("div");
+            valorApellidoG.classList.add("usuarioInput");
+            valorApellidoG.classList.add("apellido");
+            valorApellidoG.textContent = apellido.value;
 
-        let valorDniG = document.createElement("div");
-        valorDniG.classList.add("usuarioInput");
-        valorDniG.classList.add("dni");
-        valorDniG.textContent = dni.value;
-
-        let usuarioContainerDni = document.createElement("div");
-        usuarioContainerDni.classList.add("usuarioContainer");
-
-        usuarioContainerDni.appendChild(etiquetaDniG,valorDniG);
+            let usuarioContainerApellido = document.createElement("div");
+            usuarioContainerApellido.classList.add("usuarioContainer");
 
 
 
-        let etiquetaEmailG = document.createElement("div");
-        etiquetaEmailG.classList.add("usuarioTexto");
-        etiquetaEmailG.textContent = "Email:";
+            let valorDniG = document.createElement("div");
+            valorDniG.classList.add("usuarioInput");
+            valorDniG.classList.add("dni");
+            valorDniG.textContent = dni.value;
 
-        let valorEmailG = document.createElement("div");
-        valorEmailG.classList.add("usuarioInput");
-        valorEmailG.classList.add("email");
-        valorEmailG.textContent = email.value;
-
-        let usuarioContainerEmail = document.createElement("div");
-        usuarioContainerEmail.classList.add("usuarioContainer");
-
-        usuarioContainerEmail.appendChild(etiquetaEmailG,valorEmailG);
+            let usuarioContainerDni = document.createElement("div");
+            usuarioContainerDni.classList.add("usuarioContainer");
 
 
-        let usuario = document.createElement("div");
-        usuario.classList.add("usuario");
 
-        usuario.appendChild(usuarioContainerNombre, usuarioContainerApellido,
-            usuarioContainerDni, usuarioContainerEmail);
-        document.getElementById("containerAnhadir").appendChild(usuario);
+            let valorEmailG = document.createElement("div");
+            valorEmailG.classList.add("usuarioInput");
+            valorEmailG.classList.add("email");
+            valorEmailG.textContent = email.value;
+
+            let usuarioContainerEmail = document.createElement("div");
+            usuarioContainerEmail.classList.add("usuarioContainer");
+
+
+
+            let usuario = document.createElement("div");
+            usuario.classList.add("usuario");
+
+            usuario.appendChild(valorNombreG);
+            usuario.appendChild(valorApellidoG);
+            usuario.appendChild(valorDniG);
+            usuario.appendChild(valorEmailG);
+            document.getElementById("containerAnhadir").appendChild(usuario);
+        }
     }
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    let barraBusqueda = document.getElementById("barraBusqueda");
+    let usuarios = document.getElementsByClassName("usuario");
+    let nombres = document.getElementsByClassName("nombre");
+
+    if (barraBusqueda) {
+        barraBusqueda.addEventListener("input", function() {
+            let resultadoBusqueda = barraBusqueda.value.trim().toLowerCase();
+            
+
+            if (resultadoBusqueda !== "") {
+                for(let i=0; i<usuarios.length; i++){
+                    let nombreActual = nombres[i].textContent.toLowerCase();
+
+                    if(nombreActual.includes(resultadoBusqueda)){
+                        usuarios[i].style.display = "flex";
+                    }else{
+                        usuarios[i].style.display = "none";
+                    }
+                }
+            }else{
+                for(let i=0; i<usuarios.length; i++){
+                    usuarios[i].style.display = "flex";
+                }
+
+            }
+
+
+        });
+
+    }
+});
+
+

@@ -11,7 +11,7 @@
             <div class="titulo">
                 Registrar Usuarios
             </div>
-            <div class="container">
+            <div class="containerRegistrar">
                 <div class="containerFormulario">
                     <div class="campoContainer">
                         <div id="etiquetaNombre" class="campoTexto">Nombre:</div>
@@ -39,32 +39,18 @@
                 Buscar Usuarios
             </div>
             <div class="titulo">
-                <input class="barraBusqueda" type="text">
+                <input id="barraBusqueda" type="text" placeholder="Introduce un nombre...">
                     <img id="buscarImg" src="buscar.png">
                 </input>
             </div>
-            <div id="containerAnhadir"class="container">
-                <div>
-                    <div id="containerAnhadirTitulo">Usuarios Registrados</div>
-                </div>
+            <div id="containerAnhadir"class="containerAnhadir">
                 <div class="usuario">
-                    <div class="usuarioContainer">
-                        <div class="usuarioTexto">Nombre:</div>
-                        <div id="nombre" class="usuarioInput">Andres</div>
-                    </div>
-                    <div class="usuarioContainer">
-                        <div class="usuarioTexto">Email:</div>
-                        <div id="apellido" class="usuarioInput">Amado</div>
-                    </div>
-                    <div class="usuarioContainer">
-                        <div class="usuarioTexto">DNI:</div>
-                        <div id="dni" class="usuarioInput">11111111H</div>
-                    </div>
-                    <div class="usuarioContainer">
-                        <div class="usuarioTexto">Email:</div>
-                        <div id="email" class="usuarioInput">ejemplo@ejemplo.ejemplo</div>
-                    </div>
+                    <div class="usuarioInput nombre">Andres</div>
+                    <div class="usuarioInput apellido">Amado</div>
+                    <div class="usuarioInput dni">11111111H</div>
+                    <div class="usuarioInput email">ejemplo@ejemplo.ejemplo</div>
                 </div>
+                
             </div>
         </div>
     </body>

@@ -1,0 +1,164 @@
+html, body{
+    justify-content: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+#container{
+    width: 400px;
+    height: 400px;
+    margin-top: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-user-drag: none;
+}
+
+#paleta{
+    width: 400px;
+    height: 80px;
+    margin-top: 1.5vh;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-user-drag: none;
+}
+
+
+.celda{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    box-shadow: inset 0px 0px 0px 1px #6c757d;
+    z-index: 1;
+    -webkit-user-drag: none;
+}
+
+.celdaPaleta{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    box-shadow: inset 0px 0px 0px 1px #6c757d;
+    z-index: 1;
+    -webkit-user-drag: none;
+}
+
+.celdaPaleta:hover{
+    height: 40px;
+}
+
+.celdaPaletaFocus{
+    width: 20px;
+    height: 40px;
+    display: flex;
+    box-shadow: inset 0px 0px 0px 1px #6c757d;
+    z-index: 1;
+    -webkit-user-drag: none;
+}
+
+#boton{
+    margin-bottom: 20vh;
+    height: 40px;
+    font-size: 20;
+}
+
+
+.color1{
+    background-color: #FFFFFF;
+
+}
+
+.color2{
+    background-color: #E6E6E6;
+
+}
+
+.color3{
+    background-color: #CCCCCC;
+
+}
+
+.color4{
+    background-color: #B3B3FF;
+
+}
+
+.color5{
+    background-color: #9999FF;
+
+}
+
+.color6{
+    background-color: #80BFFF;
+
+}
+
+.color7{
+    background-color: #66CCCC;
+
+}
+
+.color8{
+    background-color: #4DC3A1;
+
+}
+
+.color9{
+    background-color: #33CC66;
+
+}
+
+.color10{
+    background-color: #29A329;
+
+}
+
+.color11{
+    background-color: #669900;
+
+}
+
+.color12{
+    background-color: #999900;
+
+}
+
+.color13{
+    background-color: #FF9933;
+
+}
+
+.color14{
+    background-color: #FF6600;
+
+}
+
+.color15{
+    background-color: #FF5050;
+
+}
+
+.color16{
+    background-color: #CC0000;
+
+}
+
+.color17{
+    background-color: #993366;
+
+}
+
+.color18{
+    background-color: #666666;
+
+}
+
+.color19{
+    background-color: #333333;
+
+}
+
+.color20{
+    background-color: #000000;
+
+}
