@@ -11,7 +11,7 @@ It is ordered by subjects and pretty well structured, but some of them might be 
 
 ### Social media & Contact
 
-<table border="1" cellspacing="0" cellpadding="0" style="border-color:#ffffff00;">
+<table cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
   <tr>
     <td valign="middle" height="40" style="border-color:#ffffff00;">
       <a href="https://github.com/Amaado" target="_blank" style="text-decoration:none;">
