@@ -4,7 +4,8 @@
 
 ### General Information
 
-I use this repository basicly for storagying all my work from my 1st year of what I'm studying, Multiplatform Application Development (FP DAM).  
+I use this repository basicly for storagying all my work from my 1st year of what I'm studying, Multiplatform Application Development (FP DAM).
+
 It is ordered by subjects and pretty well structured, but some of them might be a little messy, so don’t get angry if files are duplicated or incomplete.
 
 
