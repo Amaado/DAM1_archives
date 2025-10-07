@@ -13,7 +13,7 @@ It is ordered by subjects and pretty well structured, but some of them might be 
 
 ### Social media & Contact
 
-<p align="center">
+<p align="left">
   <a href="https://github.com/Amaado" target="_blank">
     <img width="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub"/>
   </a>
