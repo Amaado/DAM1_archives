@@ -1,13 +1,15 @@
 <a align="center" href="#">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=280&color=0:B43A4E,50:FD1D1D,100:FCB045&text=1ºDAM%20Archives📕&fontAlign=50&reversal=false&textBg=false&desc=Yust%20the%20files%20of%20my%20studies%20year&descAlign=55&descAlignY=61&fontAlignY=42&fontColor=0D1117" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=280&color=0:020024,50:090979,100:146E80&text=1º%20DAM%20Web🌐&fontAlign=50&reversal=false&textBg=false&desc=A%20better%20main%20%20menu%20for%20my%20studies%20web%20page&descAlign=48&descAlignY=61&fontAlignY=42&fontColor=FFFFFF"/>
 </a>
 
 ### General Information
 
-I use this repository basicly for storagying all my work from my 1st year of what I'm studying, Multiplatform Application Development (FP DAM).  
-It is ordered by subjects and pretty well structured, but some of them might be a little messy, so don’t get angry if files are duplicated or incomplete.
+I created this website because my institute’s main menu was horrible.
 
----
+This custom and huge improvement makes me work more comfortably.
+
+
+<br>
 
 ### Social media & Contact
 
