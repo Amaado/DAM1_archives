@@ -11,30 +11,4 @@ It is ordered by subjects and pretty well structured, but some of them might be 
 
 ### Social media & Contact
 
-<table cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
-  <tr>
-    <td valign="middle" height="40" style="border-color:#ffffff00;">
-      <a href="https://github.com/Amaado" target="_blank" style="text-decoration:none;">
-        <img width="39" src="https://icones.pro/wp-content/uploads/2021/06/icone-github-violet.png" alt="GitHub"/>
-      </a>
-    </td>
-    <td style="border-color:#ffffff00;">&nbsp;&nbsp;</td>
-    <td valign="middle" height="40" style="border-color:#ffffff00;">
-      <a href="https://mail.google.com/mail/?view=cm&to=andresamadocibreiro22@gmail.com" target="_blank" style="text-decoration:none;">
-        <img width="35" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Antu_gmail.svg/640px-Antu_gmail.svg.png" alt="Gmail"/>
-      </a>
-    </td>
-    <td style="border-color:#ffffff00;">&nbsp;&nbsp;</td>
-    <td valign="middle" height="40" style="border-color:#ffffff00;">
-      <a href="https://www.instagram.com/amaado_/" target="_blank" style="text-decoration:none;">
-        <img width="35" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram"/>
-      </a>
-    </td>
-    <td style="border-color:#ffffff00;">&nbsp;&nbsp;</td>
-    <td valign="middle" height="40" style="border-color:#ffffff00;">
-      <a href="https://x.com/amaado__" target="_blank" style="text-decoration:none;">
-        <img width="55" src="https://images.freeimages.com/image/large-previews/4d8/x-twitter-light-blue-logo-5694248.png?fmt=webp&h=350" alt="X (Twitter)"/>
-      </a>
-    </td>
-  </tr>
-</table>
+<p align="left"><a href="https://github.com/Amaado" target="_blank" style="text-decoration:none;"><img width="39" height="39" src="https://icones.pro/wp-content/uploads/2021/06/icone-github-violet.png" alt="GitHub" style="vertical-align:middle; margin-right:60px;"/></a><a href="https://mail.google.com/mail/?view=cm&to=andresamadocibreiro22@gmail.com" target="_blank" style="text-decoration:none;"><img width="35" height="35" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Antu_gmail.svg/640px-Antu_gmail.svg.png" alt="Gmail" style="vertical-align:middle; margin-right:60px;"/></a><a href="https://www.instagram.com/amaado_/" target="_blank" style="text-decoration:none;"><img width="35" height="35" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram" style="vertical-align:middle; margin-right:60px;"/></a><a href="https://x.com/amaado__" target="_blank" style="text-decoration:none;"><img width="55" height="55" src="https://images.freeimages.com/image/large-previews/4d8/x-twitter-light-blue-logo-5694248.png?fmt=webp&h=350" alt="X (Twitter)" style="vertical-align:middle;"/></a></p>
